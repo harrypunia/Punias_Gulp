@@ -157,6 +157,28 @@ button:focus {
     url('../../assets/fonts/raleway-thin-webfont.ttf') format('truetype');
     font-weight: 200;
 }
+@-webkit-keyframes buttonSpan {
+    0% {
+        background-position: left center;
+    }
+    50% {
+        background-position: right center;
+    }
+    100% {
+        background-position: left center;
+    }
+}
+@keyframes buttonSpan {
+    0% {
+        background-position: left center;
+    }
+    50% {
+        background-position: right center;
+    }
+    100% {
+        background-position: left center;
+    }
+}
 .wrapper {
     width: 100vw;
     padding: 25px 50px;
@@ -186,41 +208,58 @@ button:focus {
             background-position: center center;
             transition: background-size .2s ease-out, background-position .2s ease-out;
         }
+/*Sizes & Features*/
 .button--medium {
+        position: relative;
         cursor: pointer;
         box-shadow: 0 0 20px -5px black;
         font-size: 1.5rem;
         padding: .5em 1em;
-        border-radius: 2em;
+        border-radius: 5em;
         transition: box-shadow .2s ease-in, -webkit-transform .2s ease-in;
         transition: transform .2s ease-in, box-shadow .2s ease-in;
         transition: transform .2s ease-in, box-shadow .2s ease-in, -webkit-transform .2s ease-in;
+        background-color: transparent;
     }
-.button--medium--extra::after {
-            position: absolute;
+.button--medium:hover {
+            /*            background-color: transparent;*/
+            box-shadow: none;
+            -webkit-transform: scale(.95) translateX(-5%);
+                    transform: scale(.95) translateX(-5%);
+            transition: box-shadow .2s ease-out, -webkit-transform .2s ease-out;
+            transition: transform .2s ease-out, box-shadow .2s ease-out;
+            transition: transform .2s ease-out, box-shadow .2s ease-out, -webkit-transform .2s ease-out;
+        }
+.button--medium:active {
+            -webkit-transform: scale(.925) translateX(-5%);
+                    transform: scale(.925) translateX(-5%);
+        }
+.button--add-now:after {
+            position: relative;
             content: ' now';
             opacity: 0;
-            margin-left: -20px;
+            margin-left: -2em;
             transition: opacity .2s ease-in, margin-left .2s ease-in;
         }
-.button--medium--extra:hover::after {
+.button--add-now:hover:after {
+            position: relative;
             opacity: 1;
-            margin-left: 10px;
+            margin-left: 0;
             transition: opacity .2s ease-out, margin-left .2s ease-out;
         }
-.button--medium:hover {
-        background: transparent;
-        box-shadow: none;
-        -webkit-transform: scale(.95) translateX(-5%);
-                transform: scale(.95) translateX(-5%);
-        transition: box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
-        transition: transform .2s ease-out, box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out;
-        transition: transform .2s ease-out, box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
-    }
-.button--red {
-        background: #f44669;
-        color: white;
-    }
+/*Colors*/
+.button__color--red {
+            background-color: #f44669;
+            color: white;
+        }
+.button__color--gradient {
+            background-image: linear-gradient(to right, #f44669, #f97a59);
+            background-size: 200% 100%;
+            -webkit-animation: buttonSpan 5s ease-in-out infinite;
+                    animation: buttonSpan 5s ease-in-out infinite;
+            color: white;
+        }
+/*Other*/
 .button--l-margin-correction {
         -webkit-transform: translateX(-5%);
                 transform: translateX(-5%);
@@ -252,6 +291,7 @@ button:focus {
             font-size: 1rem;
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
+            text-shadow: 1px 1px 5px black;
         }
 .hero {
     position: fixed;
@@ -313,7 +353,7 @@ button:focus {
                             transform: translate(-110%, 50%);
                     width: 250px;
                     height: 10px;
-                    background: White;
+                    background-color: White;
                     transition: -webkit-transform .2s ease-in;
                     transition: transform .2s ease-in;
                     transition: transform .2s ease-in, -webkit-transform .2s ease-in;

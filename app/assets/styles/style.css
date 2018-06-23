@@ -3,6 +3,7 @@
 @import 'base/_global';
 @import 'base/_fonts';
 @import 'base/_mixins';
+@import 'base/_animations';
 @import 'modules/_wrapper';
 @import 'modules/_text-hover';
 @import 'modules/_button';
