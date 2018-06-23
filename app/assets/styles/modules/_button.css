@@ -1,6 +1,4 @@
 .button {
-    background: $mainDark;
-    color: white;
 
     &--medium {
         cursor: pointer;
@@ -28,7 +26,16 @@
     &--medium:hover {
         background: transparent;
         box-shadow: none;
-        transform: scale(.95);
+        transform: scale(.95) translateX(-5%);
         transition: transform .2s ease-out, box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out;
+    }
+
+    &--red {
+        background: $mainRed;
+        color: white;
+    }
+
+    &--l-margin-correction {
+        transform: translateX(-5%);
     }
 }

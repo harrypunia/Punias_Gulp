@@ -7,12 +7,12 @@
         background-size: 0% 5%;
         background-position: 100% 75%;
         transition: background-size .2s ease-in;
-    }
 
-    a:hover {
-        background-size: 100% 5%;
-        background-position: 0% 75%;
-        transition: background-size .2s ease-out;
+        &:hover {
+            background-size: 100% 5%;
+            background-position: 0% 75%;
+            transition: background-size .2s ease-out;
+        }
     }
 
     &--vertical {
@@ -21,11 +21,13 @@
         background-position: center bottom;
         background-size: 100% 50%;
         transition: background-size .2s ease-in, background-position .2s ease-in;
-    }
 
-    &--vertical:hover {
-        background-size: 100% 10%;
-        background-position: center center;
-        transition: background-size .2s ease-out, background-position .2s ease-out;
+
+
+        &:hover {
+            background-size: 100% 10%;
+            background-position: center center;
+            transition: background-size .2s ease-out, background-position .2s ease-out;
+        }
     }
 }
