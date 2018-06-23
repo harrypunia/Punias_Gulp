@@ -170,10 +170,10 @@ button:focus {
         transition: background-size .2s ease-in;
     }
 .text-hover a:hover {
-        background-size: 100% 5%;
-        background-position: 0% 75%;
-        transition: background-size .2s ease-out;
-    }
+            background-size: 100% 5%;
+            background-position: 0% 75%;
+            transition: background-size .2s ease-out;
+        }
 .text-hover--vertical {
         background-image: linear-gradient(#f44669, #f44669);
         background-repeat: no-repeat;
@@ -182,14 +182,10 @@ button:focus {
         transition: background-size .2s ease-in, background-position .2s ease-in;
     }
 .text-hover--vertical:hover {
-        background-size: 100% 10%;
-        background-position: center center;
-        transition: background-size .2s ease-out, background-position .2s ease-out;
-    }
-.button {
-    background: #16171e;
-    color: white;
-}
+            background-size: 100% 10%;
+            background-position: center center;
+            transition: background-size .2s ease-out, background-position .2s ease-out;
+        }
 .button--medium {
         cursor: pointer;
         box-shadow: 0 0 20px -5px black;
@@ -215,11 +211,19 @@ button:focus {
 .button--medium:hover {
         background: transparent;
         box-shadow: none;
-        -webkit-transform: scale(.95);
-                transform: scale(.95);
+        -webkit-transform: scale(.95) translateX(-5%);
+                transform: scale(.95) translateX(-5%);
         transition: box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
         transition: transform .2s ease-out, box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out;
         transition: transform .2s ease-out, box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+    }
+.button--red {
+        background: #f44669;
+        color: white;
+    }
+.button--l-margin-correction {
+        -webkit-transform: translateX(-5%);
+                transform: translateX(-5%);
     }
 .header {
     position: fixed;
@@ -259,6 +263,7 @@ button:focus {
 }
 .hero__text {
         position: absolute;
+        width: 100%;
         bottom: 80px;
         font-family: 'Roboto', sans-serif;
         color: white;
@@ -279,6 +284,40 @@ button:focus {
                 letter-spacing: .2em;
                 line-height: 1;
             }
+.hero__text__subheading {
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: .25em;
+        }
+.hero__text__subheading--rotate {
+                cursor: pointer;
+                position: absolute;
+                padding: 0px 10px;
+                right: 50px;
+                bottom: 100px;
+                -webkit-transform: rotate(-90deg);
+                        transform: rotate(-90deg);
+            }
+.hero__text__subheading--rotate:hover:before {
+                    -webkit-transform: translate(-130%, 50%);
+                            transform: translate(-130%, 50%);
+                    transition: -webkit-transform .2s ease-out;
+                    transition: transform .2s ease-out;
+                    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+                }
+.hero__text__subheading--rotate:before {
+                    content: '';
+                    pointer-events: none;
+                    position: absolute;
+                    -webkit-transform: translate(-110%, 50%);
+                            transform: translate(-110%, 50%);
+                    width: 250px;
+                    height: 10px;
+                    background: White;
+                    transition: -webkit-transform .2s ease-in;
+                    transition: transform .2s ease-in;
+                    transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+                }
 .hero__image {
         position: absolute;
         left: 50%;
