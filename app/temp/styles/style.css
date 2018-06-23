@@ -33,7 +33,6 @@ s,
 samp,
 small,
 strike,
-strong,
 sub,
 sup,
 tt,
@@ -124,6 +123,19 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
+* {
+    box-sizing: border-box;
+}
+button {
+    border: none;
+}
+button:focus {
+    outline: none;
+}
 @font-face {
     font-family: 'Raleway';
     src: url('../../assets/fonts/raleway-bold-webfont.woff2') format('woff2'),
@@ -145,29 +157,84 @@ table {
     url('../../assets/fonts/raleway-thin-webfont.ttf') format('truetype');
     font-weight: 200;
 }
+.wrapper {
+    width: 100vw;
+    padding: 25px 50px;
+}
+.text-hover a {
+        display: block;
+        background-image: linear-gradient(white, white);
+        background-repeat: no-repeat;
+        background-size: 0% 5%;
+        background-position: 100% 75%;
+        transition: background-size .2s ease-in;
+    }
+.text-hover a:hover {
+        background-size: 100% 5%;
+        background-position: 0% 75%;
+        transition: background-size .2s ease-out;
+    }
+.text-hover--vertical {
+        background-image: linear-gradient(#f44669, #f44669);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% 50%;
+        transition: background-size .2s ease-in, background-position .2s ease-in;
+    }
+.text-hover--vertical:hover {
+        background-size: 100% 10%;
+        background-position: center center;
+        transition: background-size .2s ease-out, background-position .2s ease-out;
+    }
+.button {
+    background: #16171e;
+    color: white;
+}
+.button--medium {
+        cursor: pointer;
+        box-shadow: 0 0 20px -5px black;
+        font-size: 1.5rem;
+        padding: .5em 1em;
+        border-radius: 2em;
+        transition: box-shadow .2s ease-in, -webkit-transform .2s ease-in;
+        transition: transform .2s ease-in, box-shadow .2s ease-in;
+        transition: transform .2s ease-in, box-shadow .2s ease-in, -webkit-transform .2s ease-in;
+    }
+.button--medium--extra::after {
+            position: absolute;
+            content: ' now';
+            opacity: 0;
+            margin-left: -20px;
+            transition: opacity .2s ease-in, margin-left .2s ease-in;
+        }
+.button--medium--extra:hover::after {
+            opacity: 1;
+            margin-left: 10px;
+            transition: opacity .2s ease-out, margin-left .2s ease-out;
+        }
+.button--medium:hover {
+        background: transparent;
+        box-shadow: none;
+        -webkit-transform: scale(.95);
+                transform: scale(.95);
+        transition: box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+        transition: transform .2s ease-out, box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out;
+        transition: transform .2s ease-out, box-shadow .2s ease-out, background .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+    }
 .header {
     position: fixed;
-    width: 100vw;
     height: 50px;
-    background-color: #efefef;
-    color: #070d10;
-    opacity: 0.8;
-    -webkit-backdrop-filter: blur(15px);
-    z-index: 10;
+    z-index: 1;
 }
 .header__logo {
-        position: relative;
         float: left;
-        margin-left: 25px;
         width: 80px;
         cursor: pointer;
+        margin-right: 20px;
+        margin-top: 1px;/*Logo height correction*/
     }
 .header__navigation {
-        position: relative;
-        float: right;
-        margin-right: 25px;
         cursor: default;
-        display: block;
     }
 .header__navigation li {
             display: inline-block;
@@ -178,18 +245,10 @@ table {
                 -ms-user-select: none;
                     user-select: none;
             cursor: pointer;
-            font-family: 'Raleway';
-            font-weight: 200;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
         }
-.header__navigation li a {
-                color: #070d10;
-                font-size: 1rem;
-            }
-@media(max-width: 800px) {
-.header__navigation {
-            display: none
-    }
-    }
 .hero {
     position: fixed;
     float: left;
@@ -200,28 +259,26 @@ table {
 }
 .hero__text {
         position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        color: #070d10;
-        z-index: 10;
-        font-family: 'Raleway', sans-serif;
+        bottom: 80px;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        font-weight: 100;
     }
 .hero__text__heading {
-            font-size: 6rem;
-            font-weight: 600;
+            cursor: default;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            letter-spacing: .025em;
         }
-.hero__text__subheading {
-            font-size: 1.5rem;
-            font-weight: 200;
-            letter-spacing: .5rem;
-            margin-top: 25px;
-        }
+.hero__text__heading--hollow {
+                color: transparent;
+                -webkit-text-stroke: 1px white;
+            }
+.hero__text__heading--large {
+                font-size: 4.5rem;
+                letter-spacing: .2em;
+                line-height: 1;
+            }
 .hero__image {
         position: absolute;
         left: 50%;
@@ -229,8 +286,6 @@ table {
         -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
         min-height: 100vh;
-        -webkit-filter: grayscale(50%);
-                filter: grayscale(50%);
     }
 main {
     position: relative;
@@ -239,7 +294,7 @@ main {
 }
 .wel {
     position: relative;
-    background: #070d10;
+    background: #16171e;
     float: left;
     width: 100vw;
     height: 500px;
@@ -251,7 +306,7 @@ main {
         width: 80%;
         margin: 0 auto;
         margin-top: 150px;
-        color: #efefef;
+        color: white;
         font-family: 'Raleway', sans-serif;
         line-height: 5rem;
     }
@@ -269,5 +324,5 @@ main {
             font-size: 1.5rem;
         }
 .wel__text__right span {
-                color: #b92b2b;
+                color: #f44669;
             }

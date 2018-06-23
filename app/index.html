@@ -10,24 +10,30 @@
 
 <body>
     <header class="header">
-        <a class="header__logo" href="index.html">
-            <img src="assets/img/logo_dark.svg" alt="PUNIAS">
+        <div class="wrapper">
+            <a class="header__logo" href="index.html">
+            <img src="assets/img/logo_white.svg" alt="PUNIAS">
         </a>
-        <nav class="header__navigation">
-            <ul class="Rob">
-                <li><a class="dark-text" href="#wel">Services</a></li>
-                <li><a class="dark-text" href="in-progress.html">Softwares</a></li>
-                <li><a class="dark-text" href="in-progress.html">Contact Us</a></li>
-            </ul>
-        </nav>
+            <nav class="header__navigation text-hover">
+                <ul class="Rob">
+                    <li><a class="dark-text" href="#wel">Services</a></li>
+                    <li><a class="dark-text" href="in-progress.html">Softwares</a></li>
+                    <li><a class="dark-text" href="in-progress.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <div class="hero">
-        <div class="hero__text">
-            <h1 class="hero__text__heading">PUNIAS</h1>
-            <h2 class="hero__text__subheading">Simplying Data Management</h2>
+        <picture>
+            <img class="hero__image" srcset="assets/img/hero-large.jpg 1439w, assets/img/hero-large-hi-dpi.jpg 2877w" alt="Night city view.">
+            <!--Photo by ve on Unsplash-->
+        </picture>
+        <div class="wrapper">
+            <div class="hero__text">
+                <h1 class="hero__text__heading">Experts at <span class="text-hover--vertical">KILLING</span><br /><strong>DATA</strong> clutters from your<br /><strong class="hero__text__heading--hollow hero__text__heading--large">BUSINESS</strong></h1>
+                <button class="button button--medium button--medium--extra">Get in Touch</button>
+            </div>
         </div>
-        <!--Photo by Morre Christophe on Unsplash-->
-        <img class="hero__image" srcset="assets/img/hero-large-hi-dpi.jpg 4896w" alt="Night city view.">
     </div>
     <main>
         <div class="wel">
