@@ -36,9 +36,13 @@ main {
         &__right {
             text-align: right;
             font-size: 1.5rem;
+        }
+        &__contact-us {
+            cursor: pointer;
+            display: inline-block;
             
-            span {
-                color: $mainRed;
+            a {
+                color: $mainRed !important;
             }
         }
     }

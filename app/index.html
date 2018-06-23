@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="temp/styles/style.css">
     <title>Punias Marketing and Consulting LLP</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,8 +18,7 @@
             <nav class="header__navigation text-hover">
                 <ul class="Rob">
                     <li><a class="dark-text" href="#wel">Services</a></li>
-                    <li><a class="dark-text" href="in-progress.html">Team</a></li>
-                    <li><a class="dark-text" href="in-progress.html">Contact</a></li>
+                    <li><a class="dark-text" onclick="phonePage()">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,20 +31,40 @@
         <div class="wrapper">
             <div class="hero__text">
                 <h1 class="hero__text__heading">Experts at <span class="text-hover--vertical">KILLING</span><br /><strong>DATA</strong> clutters from your<br /><strong class="hero__text__heading--hollow hero__text__heading--large">BUSINESS</strong></h1>
-                <button class="button--red button--medium button--medium--extra button--l-margin-correction">Get in Touch</button>
-                <h2 class="hero__text__subheading hero__text__subheading--rotate">Services</h2>
+                <button class="button--red button--medium button--medium--extra button--l-margin-correction" onclick="phonePage()">Get in Touch</button>
+                <h2 class="hero__text__subheading hero__text__subheading--rotate"><a href="#wel">Services</a></h2>
             </div>
         </div>
     </div>
     <main>
-        <div class="wel">
+        <div id="phonePage" class="phone">
+            <i class="phone__icon fas fa-times" onclick="closePage()"></i>
+            <div class="wrapper--phone">
+                <h1 class="phone__number">+91 93111-19814</h1>
+            </div>
+        </div>
+        <div id="wel" class="wel">
             <div class="wel__text">
-                <div class="wel__text__left">We Know</div>
-                <div class="wel__text__center">DATA MANAGEMENT</div>
-                <div class="wel__text__right">can be <span>irritating</span></div>
+                <div class="wel__text__left">We apologize for the inconvenience</div>
+                <div class="wel__text__center">We're under construction.</div>
+                <div class="wel__text__right"><span class="wel__text__contact-us text-hover"><a onclick="phonePage()">Contact us</a></span> for enquiries</div>
             </div>
         </div>
     </main>
+
+    <script>
+        var pPage = document.getElementById('phonePage'),
+            button = document.getElementById('servicesButton');
+
+        function phonePage() {
+            pPage.style.left = '0px';
+        }
+
+        function closePage() {
+            pPage.style.left = '-100vw';
+        }
+
+    </script>
 </body>
 
 </html>

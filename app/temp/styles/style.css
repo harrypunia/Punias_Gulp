@@ -161,6 +161,13 @@ button:focus {
     width: 100vw;
     padding: 25px 50px;
 }
+.wrapper--phone {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
 .text-hover a {
         display: block;
         background-image: linear-gradient(white, white);
@@ -363,6 +370,37 @@ main {
             text-align: right;
             font-size: 1.5rem;
         }
-.wel__text__right span {
-                color: #f44669;
+.wel__text__contact-us {
+            cursor: pointer;
+            display: inline-block;
+        }
+.wel__text__contact-us a {
+                color: #f44669 !important;
             }
+.phone {
+    position: fixed;
+    left: -100vw;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.9;
+    background: #f97a59;
+    z-index: 10;
+    text-align: center;
+    transition: left .4s ease-in-out;
+    -webkit-backdrop-filter: blur(15px);
+}
+.phone__number {
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 5rem;
+        font-weight: 100;
+    }
+.phone__icon {
+        cursor: pointer;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        color: white;
+        font-size: 2rem;
+    }

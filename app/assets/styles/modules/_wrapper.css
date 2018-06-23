@@ -1,4 +1,8 @@
 .wrapper {
     width: 100vw;
     padding: 25px 50px;
+    
+    &--phone {
+        @mixin absCenter;
+    }
 }
