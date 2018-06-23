@@ -66,6 +66,7 @@
 
     &__image {
         @mixin absCenter;
+        min-width: 110vw;
         min-height: 100vh;
     }
 }
