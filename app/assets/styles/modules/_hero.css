@@ -8,36 +8,32 @@
 
     &__text {
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        color: $mainDark;
-        z-index: 10;
-        font-family: 'Raleway', sans-serif;
+        bottom: 80px;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        font-weight: 100;
 
         &__heading {
-            font-size: 6rem;
-            font-weight: 600;
-        }
+            cursor: default;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            letter-spacing: .025em;
 
-        &__subheading {
-            font-size: 1.5rem;
-            font-weight: 200;
-            letter-spacing: .5rem;
-            margin-top: 25px;
+            &--hollow {
+                color: transparent;
+                -webkit-text-stroke: 1px white;
+            }
+
+            &--large {
+                font-size: 4.5rem;
+                letter-spacing: .2em;
+                line-height: 1;
+            }
         }
     }
-
+    
     &__image {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        @mixin absCenter;
         min-height: 100vh;
-        filter: grayscale(50%);
     }
 }

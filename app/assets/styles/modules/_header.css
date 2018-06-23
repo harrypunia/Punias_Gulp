@@ -1,27 +1,18 @@
 .header {
     position: fixed;
-    width: 100vw;
     height: 50px;
-    background-color: $mainWhite;
-    color: $mainDark;
-    opacity: 0.8;
-    -webkit-backdrop-filter: blur(15px);
-    z-index: 10;
+    z-index: 1;
 
     &__logo {
-        position: relative;
         float: left;
-        margin-left: 25px;
         width: 80px;
         cursor: pointer;
+        margin-right: 20px;
+        margin-top: 1px;/*Logo height correction*/
     }
 
     &__navigation {
-        position: relative;
-        float: right;
-        margin-right: 25px;
         cursor: default;
-        display: block;
 
         li {
             display: inline-block;
@@ -29,16 +20,9 @@
             margin: 0 20px;
             user-select: none;
             cursor: pointer;
-            font-family: 'Raleway';
-            font-weight: 200;
-
-            a {
-                color: $mainDark;
-                font-size: 1rem;
-            }
-        }
-        @mixin tab {
-            display: none;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
         }
     }
 }
