@@ -57,7 +57,7 @@
                     transform: translate(-110%, 50%);
                     width: 250px;
                     height: 10px;
-                    background: White;
+                    background-color: White;
                     transition: transform .2s ease-in;
                 }
             }
