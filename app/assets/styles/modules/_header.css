@@ -8,7 +8,8 @@
         width: 80px;
         cursor: pointer;
         margin-right: 20px;
-        margin-top: 1px;/*Logo height correction*/
+        margin-top: 1px;
+        /*Logo height correction*/
     }
 
     &__navigation {
