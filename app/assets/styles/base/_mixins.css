@@ -22,3 +22,17 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+@define-mixin absRight {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@define-mixin absLeft {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -14,3 +14,10 @@ button {
 button:focus {
     outline: none;
 }
+
+hr {
+    border: none;
+    height: 1px;
+    background: white;
+    width: auto;
+}

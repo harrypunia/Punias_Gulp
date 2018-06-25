@@ -1,0 +1,42 @@
+.row {
+    width: 100%;
+    height: 90vh;
+    
+    &--tall {
+        height: 110vh;
+    }
+
+    &__column-4 {
+        position: relative;
+        float: left;
+        width: 33.33%;
+        height: inherit;
+        overflow: hidden;
+    }
+
+    &__column-8 {
+        position: relative;
+        float: left;
+        width: 66.66%;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &--oversize {
+        height: 100vh;
+        box-shadow: 0 0 10px black;
+        z-index: 10;
+        &-right {
+            @mixin absRight;
+        }
+        &-left {
+            @mixin absLeft;
+        }
+    }
+    &--right {
+        position: relative;
+        float: right;
+    }
+}

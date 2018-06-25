@@ -4,9 +4,21 @@
 @import 'base/_fonts';
 @import 'base/_mixins';
 @import 'base/_animations';
+<<<<<<< HEAD
 @import 'modules/_wrapper';
 @import 'modules/_text-hover';
 @import 'modules/_button';
+=======
+@import 'modules/_sections';
+@import 'modules/_wrapper';
+@import 'modules/_headings';
+@import 'modules/_text-hover';
+@import 'modules/_button';
+@import 'modules/_row';
+>>>>>>> Services-section
 @import 'modules/_header';
 @import 'modules/_hero';
 @import 'modules/_intro';
+@import 'modules/_erp';
+@import 'modules/_services';
+@import 'modules/_more-services';
