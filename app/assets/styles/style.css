@@ -3,10 +3,10 @@
 @import 'base/_global';
 @import 'base/_fonts';
 @import 'base/_mixins';
+@import 'modules/_headings';
 @import 'base/_animations';
 @import 'modules/_sections';
 @import 'modules/_wrapper';
-@import 'modules/_headings';
 @import 'modules/_text-hover';
 @import 'modules/_button';
 @import 'modules/_row';
