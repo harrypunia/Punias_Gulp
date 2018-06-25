@@ -1,45 +1,27 @@
-main {
-    position: relative;
-    width: 100vw;
-    height: auto;
-}
-
-.wel {
-    position: relative;
-    background: $mainDark;
-    float: left;
-    width: 100vw;
-    height: 500px;
-    margin-top: 100vh;
+.intro {
     box-shadow: 0 -10px 40px -15px black;
 
     &__text {
-        position: relative;
-        width: 80%;
         margin: 0 auto;
-        margin-top: 150px;
-        color: white;
-        font-family: 'Raleway', sans-serif;
-        line-height: 5rem;
+        text-align: center;
 
-        &__left {
+        &--small-width {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        &--medium-width {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        &__subheading {
+            letter-spacing: .35em;
+            text-indent: 0.35em;
+        }
+
+        &__para {
             text-align: left;
-            font-size: 1.5rem;
-        }
-
-        &__center {
-            text-align: center;
-            font-size: 5rem;
-            font-weight: 600;
-        }
-
-        &__right {
-            text-align: right;
-            font-size: 1.5rem;
-            
-            span {
-                color: $mainRed;
-            }
         }
     }
 }

@@ -11,55 +11,30 @@
         width: 100%;
         bottom: 80px;
         font-family: 'Roboto', sans-serif;
-        color: white;
         font-weight: 100;
 
-        &__heading {
-            cursor: default;
-            font-size: 1.6rem;
-            line-height: 1.2;
-            letter-spacing: .025em;
+        &--rotate {
+            cursor: pointer;
+            position: absolute;
+            padding: 0px 10px;
+            right: 50px;
+            bottom: 100px;
+            transform: rotate(-90deg);
 
-            &--hollow {
-                color: transparent;
-                -webkit-text-stroke: 1px white;
+            &:hover:before {
+                transform: translate(-130%, 50%);
+                transition: transform .2s ease-out;
             }
 
-            &--large {
-                font-size: 4.5rem;
-                letter-spacing: .2em;
-                line-height: 1;
-            }
-        }
-
-        &__subheading {
-            font-weight: 600;
-            font-size: 1.2rem;
-            letter-spacing: .25em;
-
-            &--rotate {
-                cursor: pointer;
+            &:before {
+                content: '';
+                pointer-events: none;
                 position: absolute;
-                padding: 0px 10px;
-                right: 50px;
-                bottom: 100px;
-                transform: rotate(-90deg);
-
-                &:hover:before {
-                    transform: translate(-130%, 50%);
-                    transition: transform .2s ease-out;
-                }
-
-                &:before {
-                    content: '';
-                    pointer-events: none;
-                    position: absolute;
-                    transform: translate(-110%, 50%);
-                    width: 250px;
-                    height: 10px;
-                    background-color: White;
-                    transition: transform .2s ease-in;
-                }
+                transform: translate(-110%, 50%);
+                width: 250px;
+                height: 10px;
+                background-color: white;
+                transition: transform .2s ease-in;
             }
         }
     }

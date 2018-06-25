@@ -1,0 +1,42 @@
+.services {
+    font-family: 'Roboto', sans-serif;
+
+    &__text {
+        @mixin absCenter;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        z-index: 1;
+
+        &__icon {
+            width: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__learn {
+            text-align: center;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &__para {
+            overflow: hidden;
+            height: 0px;
+        }
+    }
+
+    &__row:hover &__image {
+        filter: brightness(50%);
+        height: 100%;
+        transition: filter .2s ease-in, height .3s ease-out;
+    }
+
+    &__image {
+        @mixin absCenter;
+        filter: brightness(30%);
+        height: 105%;
+        width: auto;
+        transition: filter .2s ease-in, height .3s ease-out;
+    }
+}

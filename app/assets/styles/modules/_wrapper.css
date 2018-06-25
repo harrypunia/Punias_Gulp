@@ -1,4 +1,25 @@
 .wrapper {
-    width: 100vw;
     padding: 25px 50px;
+    margin: 0 auto;
+    width: 100%;
+
+    &--medium {
+        width: 80vw;
+    }
+
+    &--t-extra-padding {
+        padding-top: 150px;
+    }
+    
+    &--tb-tiny-padding {
+        padding: 40px 50px;
+    }
+    
+    &--tb-padding {
+        padding: 80px 50px;
+    }
+    
+    &--tb-extra-padding {
+        padding: 150px 50px;
+    }
 }

@@ -1,0 +1,49 @@
+.erp {
+    
+    &__image {
+        width: auto;
+        height: 100%;
+        filter: hue-rotate(90deg) brightness(50%);
+    }
+
+    &__image-text {
+        @mixin absCenter;
+        z-index: 1;
+
+        & h4 {
+            width: 50%;
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        &__icon {
+            width: 50px;
+        }
+
+        &__definition {
+            text-align: left;
+        }
+        &__services-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 40%;
+                max-height: 200px;
+                padding: 20px 10px;
+            }
+
+            &__icon {
+                width: 50px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

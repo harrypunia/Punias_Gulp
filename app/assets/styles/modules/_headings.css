@@ -1,0 +1,116 @@
+.define-text {
+
+    /*    Categories*/
+    &__heading {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        
+        &--medium {
+            font-size: 3.5rem;
+            letter-spacing: .025em;
+            line-height: 1.2;
+        }
+
+        &--large {
+            font-size: 4.5rem;
+            letter-spacing: .2em;
+            line-height: 1;
+        }
+    }
+    &__small-heading {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        letter-spacing: .025em;
+    }
+    &__subheading {
+        font-size: 1.2rem;
+        line-height: 1;
+
+        &--small {
+            font-size: 1rem;
+        }
+        
+        &--tiny {
+            font-size: .8rem;
+        }
+    }
+    &__para {
+        font-size: 1rem;
+        line-height: 2;
+        
+        &--tiny {
+            font-size: .6rem;
+        }
+        &--small {
+            font-size: .8rem;
+        }
+    }
+    &__quote {
+        text-align: right !important;
+    }
+    /*    Modifiers*/
+    &--light {
+        font-weight: 200;
+    }
+    &--bold {
+        font-weight: 600;
+    }
+    &--extra-bold {
+        font-weight: 800;
+    }
+    &--highlight {
+        color: $mainOrange;
+    }
+    &--no-select {
+        cursor: default;
+        user-select: none;
+
+        &--pointer {
+            user-select: none;
+            cursor: pointer;
+        }
+    }
+    &--invert {
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+    }
+    &--shadow {
+        text-shadow: 1px 1px 2px black;
+    }
+    &--t-margin {
+        &-tiny {
+            margin-top: 10px;
+        }
+        &-small {
+            margin-top: 20px;
+        }
+        &-medium {
+            margin-top: 30px;
+        }
+        &-large {
+            margin-top: 40px;
+        }
+    }
+    &--dim {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    &--spacing {
+        &-tiny {
+            letter-spacing: .05em;
+            text-indent: .05em;
+        }
+        &-small {
+            letter-spacing: .1em;
+            text-indent: .1em;
+        }
+        &-medium {
+            letter-spacing: .2em;
+            text-indent: .2em;
+        }
+        &-large {
+            letter-spacing: .3em;
+            text-indent: .3em;
+        }
+        
+    }
+}
