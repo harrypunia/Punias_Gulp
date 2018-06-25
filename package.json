@@ -5,6 +5,7 @@
     "autoprefixer": "^8.6.3",
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^7.0.1",
     "gulp-watch": "^5.0.0",
     "postcss-hexrgba": "^1.0.1",
