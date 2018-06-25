@@ -18,10 +18,6 @@
     &__text {
         text-align: center;
 
-        &__icon {
-            width: 50px;
-        }
-
         &__definition {
             text-align: left;
         }

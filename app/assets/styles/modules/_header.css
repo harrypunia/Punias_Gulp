@@ -6,11 +6,10 @@
 
     &__logo {
         float: left;
-        width: 80px;
         cursor: pointer;
         margin-right: 20px;
-        /*Logo height correction*/
-        margin-top: 1px;
+        margin-top: 25px;
+        transform: translateY(-50%);
     }
 
     &__navigation li {
