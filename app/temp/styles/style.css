@@ -359,6 +359,20 @@ hr {
             background-position: center center;
             transition: background-size .2s ease-out, background-position .2s ease-out;
         }
+.text-hover--underline {
+        transition: -webkit-transform .2s ease-in;
+        transition: transform .2s ease-in;
+        transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+    }
+.text-hover--underline:hover {
+            -webkit-transform: translateX(5px);
+                    transform: translateX(5px);
+            text-decoration: underline;
+            color: white;
+            transition: -webkit-transform .2s ease-out;
+            transition: transform .2s ease-out;
+            transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+        }
 /*Sizes & Features*/
 .button--medium {
         position: relative;
@@ -441,6 +455,7 @@ hr {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        overflow: hidden;
     }
 .row--oversize {
         height: 100vh;
@@ -705,6 +720,49 @@ hr {
         transition: filter .2s ease-in, height .3s ease-out;
         transition: filter .2s ease-in, height .3s ease-out, -webkit-filter .2s ease-in;
     }
+.more-services__list {
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 200px;
+        height: 80%;
+        border-radius: 0 50px 50px 0px;
+        box-shadow: 0px 0px 30px -8px black;
+        transition: box-shadow .2s ease-in;
+        z-index: 10;
+    }
+.more-services__list:hover {
+            box-shadow: 0px 0px 15px -4px black;
+            transition: box-shadow .2s ease-out;
+        }
+.more-services__list ul {
+            margin: 0 auto;
+        }
+.more-services__list ul li {
+                margin: 15px 0;
+                cursor: pointer;
+            }
+.more-services__text {
+        margin-left: 64%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        width: 500px;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+.more-services__text__para {
+            text-align: left;
+        }
 .more-services__image-text {
         position: absolute;
         left: 50%;

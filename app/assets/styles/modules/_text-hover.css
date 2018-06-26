@@ -30,4 +30,15 @@
             transition: background-size .2s ease-out, background-position .2s ease-out;
         }
     }
+
+    &--underline {
+        transition: transform .2s ease-in;
+
+        &:hover {
+            transform: translateX(5px);
+            text-decoration: underline;
+            color: white;
+            transition: transform .2s ease-out;
+        }
+    }
 }

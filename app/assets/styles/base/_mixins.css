@@ -36,3 +36,10 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+@define-mixin flexCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
