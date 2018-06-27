@@ -15,11 +15,6 @@
             margin: 0 auto;
         }
 
-        &__subheading {
-            letter-spacing: .35em;
-            text-indent: 0.35em;
-        }
-
         &__para {
             text-align: left;
         }

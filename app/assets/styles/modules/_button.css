@@ -28,23 +28,6 @@
         }
     }
 
-    &--add-now {
-        &:after {
-            position: relative;
-            content: ' now';
-            opacity: 0;
-            margin-left: -2em;
-            transition: opacity .2s ease-in, margin-left .2s ease-in;
-        }
-
-        &:hover:after {
-            position: relative;
-            opacity: 1;
-            margin-left: 0;
-            transition: opacity .2s ease-out, margin-left .2s ease-out;
-        }
-    }
-
     /*Colors*/
     &__color {
         &--red {

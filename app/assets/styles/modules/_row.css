@@ -1,9 +1,21 @@
 .row {
     width: 100%;
     height: 90vh;
-    
+
     &--tall {
         height: 110vh;
+    }
+
+    &--parent-height {
+        height: 100%;
+    }
+
+    &__column-2 {
+        position: relative;
+        float: left;
+        width: 16.66%;
+        height: inherit;
+        overflow: hidden;
     }
 
     &__column-4 {
@@ -18,10 +30,15 @@
         position: relative;
         float: left;
         width: 66.66%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__column-10 {
+        position: relative;
+        float: left;
+        width: 83.33%;
         height: inherit;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
         overflow: hidden;
     }
 
@@ -39,5 +56,8 @@
     &--right {
         position: relative;
         float: right;
+    }
+    &--content-center {
+        @mixin flexCenter;
     }
 }
