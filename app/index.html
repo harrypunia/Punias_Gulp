@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="temp/styles/style.css">
     <title>Punias Marketing and Consulting LLP</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 
 <body>
@@ -21,12 +22,12 @@
             </nav>
         </div>
     </header>
-    <div class="hero">
+    <div id="hero" class="hero">
         <picture>
-            <img class="hero__image" srcset="assets/img/hero-large.jpg 1439w, assets/img/hero-large-hi-dpi.jpg 2877w" alt="Night city view.">
+            <img id="heroImg" class="hero__image" end-movement="0.25" smooth-parallax style="transform: translate3d(-50%, -50%, 0)" src="assets/img/hero-large.jpg" alt="Night city view.">
         </picture>
         <div class="wrapper">
-            <div class="hero__text">
+            <div id="heroText" class="hero__text">
                 <h1 class="define-text__small-heading define-text--no-select">Experts at <span class="text-hover--vertical">KILLING</span><br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
                 <button class="button--medium button__color--red button--medium--l-margin-correction">Get in Touch</button>
                 <h2 class="define-text-subheading define-text--bold define-text--spacing-large hero__text--rotate">Services</h2>
@@ -219,6 +220,7 @@
             </div>
         </div>
     </main>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

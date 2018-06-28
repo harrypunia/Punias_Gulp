@@ -122,9 +122,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-body {
-    -webkit-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
+main {
+    position: relative;
+    z-index: 2;
 }
 a {
     text-decoration: none;
@@ -583,7 +583,6 @@ hr {
     }
 .hero {
     position: fixed;
-    float: left;
     width: 100vw;
     height: 100vh;
     overflow: hidden;

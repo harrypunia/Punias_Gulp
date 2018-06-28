@@ -1,5 +1,6 @@
-body {
-    transform: translate3d(0,0,0);
+main {
+    position: relative;
+    z-index: 2;
 }
 
 a {

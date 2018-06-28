@@ -3,40 +3,34 @@
         @mixin-content;
     }
 }
-
 @define-mixin tab {
     @media(max-width: 800px) {
         @mixin-content;
     }
 }
-
 @define-mixin desktop {
     @media(max-width: 1200px) {
         @mixin-content;
     }
 }
-
 @define-mixin absCenter {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
 @define-mixin absRight {
     position: absolute;
     right: 0px;
     top: 50%;
     transform: translateY(-50%);
 }
-
 @define-mixin absLeft {
     position: absolute;
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
 }
-
 @define-mixin flexCenter {
     display: flex;
     flex-direction: column;
