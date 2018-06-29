@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     vars = require('postcss-simple-vars'),
     mixins = require('postcss-mixins'),
     cssImport = require('postcss-import'),
-    rgbahex = require('postcss-rgbahex')
+    rgbahex = require('postcss-hexrgba')
 
 gulp.task('styles', function () {
     return gulp.src('./app/assets/styles/style.css')

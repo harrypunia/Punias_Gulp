@@ -37,14 +37,14 @@
             </div>
         </div>
         <main>
-            <div class="intro section section--clear-top section--dark">
+            <div id="intro" class="intro section section--clear-top section--dark">
                 <div class="wrapper wrapper--tb-extra-padding">
                     <div class="intro__text define-text--light">
-                        <div class="intro__text--small-width define-text__heading">
+                        <div id="intro--heading" class="intro__text--small-width define-text__heading">
                             <h1 class="define-text__heading">Everyone knows, poor <span class="define-text--highlight define-text--bold">DATA MANAGEMENT</span> can destroy any <span class="define-text--highlight define-text--bold">BUSINESS</span></h1>
                             <h4 class="intro__text__subheading define-text--t-margin-small define-text__subheading define-text--light define-text--spacing-large">Your business needs you more than your data.</h4>
                         </div>
-                        <div class="intro__text--medium-width define-text__para">
+                        <div id="intro--para" class="intro__text--medium-width define-text__para">
                             <p class="intro__text__para define-text--t-margin-large">With help of correct technology and SAP integration, we regulate an autmated system, which organzies and gives you the hands on control over all of your data. The information is easy to digest, graphically pleasing and always at your finger tips with help of cloud services.<br />
                             </p>
                             <p class="define-text__quote"><em>“Those who rule data will rule the entire world.” —Masayoshi Son</em></p>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="erp section">
+            <div id="erpImage" class="erp section">
                 <div class="row">
                     <div class="row__column-4">
                         <div class="erp__image-text">
@@ -62,8 +62,8 @@
                             <h1 class="define-text__heading--medium define-text--bold">BECOME A CENTRALIZED ENTERPRISE.</h1>
                         </div>
                         <picture>
-                           <source sized="33.333vw" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen." />
-                           <img class="erp__image" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen.">
+                            <source sized="33.333vw" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen." />
+                            <img class="erp__image" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen.">
                         </picture>
                     </div>
                     <div class="row__column-8 row--content-center row--oversize row--oversize-right section--mid-tone define-text--light">
@@ -137,6 +137,17 @@
             </div>
             <div class="more-services section">
                 <div class="row">
+                    <div class="row__column-4 row--right">
+                        <div class="more-services__image-text">
+                            <h4 class="define-text__subheading--tiny define-text--light">GET MORE FORM US
+                                <hr />
+                            </h4>
+                            <h1 class="define-text__heading--medium define-text--bold">WE HAVE MORE TO OFFER.</h1>
+                        </div>
+                        <picture>
+                            <img class="more-services__image" sizes="35vw" srcset="assets/img/more-services_large.jpg 2700w" alt="Crowded market.">
+                        </picture>
+                    </div>
                     <div class="row__column-8 section--mid-tone define-text-light row--oversize row--oversize-left">
                         <div class="more-services__list section--mid-tone">
                             <ul class="define-text__para define-text--light">
@@ -170,17 +181,6 @@
                             <h1 class="more-services__text__heading define-text__heading">MS-Excel Macros</h1>
                             <p class="more-services__text__para define-text__para define-text--light define-text--t-margin-large">PUNIAS has done projects on MS-Excel Macro tools for companies like KOHLER and Exicom. As of today many users are stuck with performing same complex tasks in Excel every day or week or month. We develop macros for such repetitive and complex excel worksheets thereby reducing time wasted on such manual excel work and saving lot of cost for the Company. We have developed and E-Way Bill tool using excel macros for generation of bulk e-way bills through government portal.</p>
                         </div>
-                    </div>
-                    <div class="row__column-4 row--right">
-                        <div class="more-services__image-text">
-                            <h4 class="define-text__subheading--tiny define-text--light">GET MORE FORM US
-                                <hr />
-                            </h4>
-                            <h1 class="define-text__heading--medium define-text--bold">WE HAVE MORE TO OFFER</h1>
-                        </div>
-                        <picture>
-                            <img class="more-services__image" sizes="33.33vw" srcset="assets/img/more-services_large.jpg 2700w" alt="Crowded market.">
-                        </picture>
                     </div>
                 </div>
             </div>
@@ -225,6 +225,23 @@
         </main>
     </div>
     <script src="assets/js/app.js"></script>
+    <script>
+        function scrollToView(id, offset, className) {
+            var object = document.getElementById(id),
+                objectPos = object.getBoundingClientRect().top,
+                y = window.pageYOffset;
+//            console.log('id: ' + id + '| y: ' +  objectPos);
+            if(objectPos < offset) {
+                object.classList.add(className);
+            }
+        }
+
+        window.addEventListener('scroll', function() {
+            scrollToView('intro--heading', 550, 'lazy--opacity');
+            scrollToView('intro--para', 550, 'lazy--opacity');
+        }, false)
+
+    </script>
 </body>
 
 </html>

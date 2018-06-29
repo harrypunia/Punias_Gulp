@@ -12,16 +12,16 @@
         font-family: 'Roboto', sans-serif;
         
         @mixin phone {
-            width: 80%;
-            top: 55vh;
-            left: 50vw;
-            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 100%;
+            top: 30vh;
+            margin: 0 auto;
             text-align: center;
         }
         
         @mixin phone {
             button {
-                margin-top: 25vh;
+                margin-top: 20vh;
             }
         }
 
@@ -41,7 +41,9 @@
         }
     }
     &__image {
-        @mixin absCenter;
+        position: absolute;
+        left: 0px;
+        right: 0px;
         min-width: 110vw;
         min-height: 100vh;
     }

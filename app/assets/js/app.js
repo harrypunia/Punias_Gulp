@@ -12,7 +12,9 @@ var mobileTest = new Vue({
             }
         },
         changeButton: function () {
-            document.getElementById('getInTouch').setAttribute('href', "tel: +19311119814");
+            var btn = document.getElementById('getInTouch');
+            btn.setAttribute('href', "tel: +19311119814");
+            btn.innerHTML('Call');
         }
     },
     created: function () {
@@ -24,23 +26,28 @@ var mobileTest = new Vue({
         }
     }
 });
-
-var hero = new Vue({
+var parallax = new Vue({
     el: '#hero',
     methods: {
-        parallaxValues: function () {
-            var heroImg = document.getElementById('heroImg'),
-                yPos = (window.pageYOffset / 5000)
-
-            this.parallaxDim(heroImg, yPos);
-            requestAnimationFrame(this.parallaxValues);
-        },
         parallaxDim: function (id, val) {
             id.style.filter = 'brightness(' + (1 - 5 * val) + ')';
         },
+        parallaxTranslate: function (id, val) {
+            id.style.transform = 'translate3d(0, ' + val + 'px, 0)';
+        },
+        parallaxDraw: function () {
+            var heroImg = document.getElementById('heroImg'),
+                heroText = document.getElementById('heroText'),
+                yPos = (window.pageYOffset / 4000),
+                mouseX = event
+
+            this.parallaxDim(heroImg, yPos);
+            this.parallaxTranslate(heroImg, (yPos * -1000));
+            this.parallaxTranslate(heroText, (yPos * 1000));
+            requestAnimationFrame(this.parallaxDraw);
+        }
     },
     created: function () {
-        //Start parallax.
-        window.addEventListener("DOMContentLoaded", this.parallaxValues, false);
-    },
+        window.addEventListener("DOMContentLoaded", this.parallaxDraw, false);
+    }
 });

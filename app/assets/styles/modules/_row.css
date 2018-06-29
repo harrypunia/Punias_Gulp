@@ -5,9 +5,6 @@
     @mixin tab {
         float: left;
         height: 100vh;
-    }
-
-    @mixin tab {
         height: auto;
     }
 
@@ -23,58 +20,60 @@
         height: 100%;
     }
 
-    &__column-2 {
-        position: relative;
-        float: left;
-        width: 16.66%;
-        height: inherit;
-        overflow: hidden;
-        @mixin tab {
-            width: 100%;
+    &__column {
+        &-2 {
+            position: relative;
+            float: left;
+            width: 16.66%;
+            height: inherit;
+            overflow: hidden;
+            @mixin tab {
+                width: 100%;
+            }
         }
-    }
 
-    &__column-4 {
-        position: relative;
-        float: left;
-        width: 33.33%;
-        height: inherit;
-        overflow: hidden;
-        @mixin tab {
-            width: 100%;
-            height: auto;
+        &-4 {
+            position: relative;
+            float: left;
+            width: 33.33%;
+            height: inherit;
+            overflow: hidden;
+            @mixin tab {
+                width: 100%;
+                height: auto;
+            }
         }
-    }
 
-    &__column-8 {
-        position: relative;
-        float: left;
-        width: 66.66%;
-        height: 100%;
-        overflow: hidden;
-        
-        @mixin tab {
-            width: 100%;
-            height: auto;
+        &-8 {
+            position: relative;
+            float: left;
+            width: 66.66%;
+            height: 100%;
+            overflow: hidden;
+
+            @mixin tab {
+                width: 100%;
+                height: auto;
+            }
         }
-    }
 
-    &__column-10 {
-        position: relative;
-        float: left;
-        width: 83.33%;
-        height: inherit;
-        overflow: hidden;
-        @mixin tab {
-            width: 100%;
+        &-10 {
+            position: relative;
+            float: left;
+            width: 83.33%;
+            height: inherit;
+            overflow: hidden;
+            @mixin tab {
+                width: 100%;
+            }
         }
-    }
 
+    }
     &--oversize {
         height: 100vh;
         box-shadow: 0 0 10px black;
         z-index: 10;
-        
+
         @mixin tab {
             height: auto;
         }
@@ -87,23 +86,27 @@
         @mixin tab {
             &-right {
                 position: relative;
+                float: left;
                 transform: none;
                 left: none;
                 top: none;
             }
             &-left {
                 position: relative;
+                float: left;
                 transform: none;
                 left: none;
                 top: none;
             }
         }
     }
-    &--right {
-        position: relative;
-        float: right;
-    }
     &--content-center {
         @mixin flexCenter;
+    }
+    &--right {
+        float: right;
+        @mixin tab {
+            float: left;
+        }
     }
 }
