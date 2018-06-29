@@ -4,12 +4,23 @@
     width: 100vw;
     z-index: 1;
 
+    @mixin phone {
+        background: $mainDark;
+        z-index: 5;
+    }
+
     &__logo {
         float: left;
         cursor: pointer;
         margin-right: 20px;
         margin-top: 25px;
         transform: translateY(-50%);
+
+        @mixin phone {
+            position: relative;
+            margin: 2px 0 0 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__navigation li {
@@ -17,5 +28,9 @@
         font-family: 'Roboto', sans-serif;
         line-height: 50px;
         margin: 0 20px;
+
+        @mixin phone {
+            display: none;
+        }
     }
 }

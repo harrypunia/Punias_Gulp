@@ -1,9 +1,13 @@
 .erp {
-    
     &__image {
         width: auto;
         height: 100%;
         filter: hue-rotate(90deg) brightness(50%);
+        
+        @mixin tab {
+            width: 100vw;
+            height: auto;
+        }
     }
 
     &__image-text {

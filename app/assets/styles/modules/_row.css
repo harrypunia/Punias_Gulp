@@ -2,8 +2,21 @@
     width: 100%;
     height: 90vh;
 
+    @mixin tab {
+        float: left;
+        height: 100vh;
+    }
+
+    @mixin tab {
+        height: auto;
+    }
+
     &--tall {
         height: 110vh;
+
+        @mixin tab {
+            height: 100vh;
+        }
     }
 
     &--parent-height {
@@ -16,6 +29,9 @@
         width: 16.66%;
         height: inherit;
         overflow: hidden;
+        @mixin tab {
+            width: 100%;
+        }
     }
 
     &__column-4 {
@@ -24,6 +40,10 @@
         width: 33.33%;
         height: inherit;
         overflow: hidden;
+        @mixin tab {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__column-8 {
@@ -32,6 +52,11 @@
         width: 66.66%;
         height: 100%;
         overflow: hidden;
+        
+        @mixin tab {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__column-10 {
@@ -40,17 +65,38 @@
         width: 83.33%;
         height: inherit;
         overflow: hidden;
+        @mixin tab {
+            width: 100%;
+        }
     }
 
     &--oversize {
         height: 100vh;
         box-shadow: 0 0 10px black;
         z-index: 10;
+        
+        @mixin tab {
+            height: auto;
+        }
         &-right {
             @mixin absRight;
         }
         &-left {
             @mixin absLeft;
+        }
+        @mixin tab {
+            &-right {
+                position: relative;
+                transform: none;
+                left: none;
+                top: none;
+            }
+            &-left {
+                position: relative;
+                transform: none;
+                left: none;
+                top: none;
+            }
         }
     }
     &--right {

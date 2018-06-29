@@ -5,6 +5,16 @@
         margin: 0 auto;
         text-align: center;
 
+        @mixin phone {
+            text-align: left;
+        }
+                
+        &__subheading {
+            @mixin tab {
+                display: none;
+            }
+        }
+
         &--small-width {
             max-width: 800px;
             margin: 0 auto;

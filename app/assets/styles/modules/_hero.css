@@ -8,9 +8,22 @@
     &__text {
         position: absolute;
         width: 100%;
-        bottom: 80px;
+        bottom: 100px;
         font-family: 'Roboto', sans-serif;
-        font-weight: 100;
+        
+        @mixin phone {
+            width: 80%;
+            top: 55vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        @mixin phone {
+            button {
+                margin-top: 25vh;
+            }
+        }
 
         &--rotate {
             cursor: pointer;
@@ -19,6 +32,12 @@
             right: 50px;
             bottom: 100px;
             transform: rotate(-90deg);
+        }
+        
+        &__services {
+            @mixin phone {
+                display: none;
+            }
         }
     }
     &__image {
