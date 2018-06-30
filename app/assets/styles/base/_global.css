@@ -1,6 +1,13 @@
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 main {
     position: relative;
     z-index: 2;
+    width: 100vw;
 }
 
 a {

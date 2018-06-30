@@ -1,0 +1,15 @@
+.span-enter-active {
+    transition: left .3s ease-out, opacity .3s ease-out;
+}
+.span-leave-active {
+    transition: left .3s ease-out, opacity .3s ease-out;
+}
+
+.span-enter {
+    left: 100%;
+    opacity: 0;
+}
+.span-leave-to {
+    left: 0%;
+    opacity: 0;
+}

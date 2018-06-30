@@ -10,244 +10,188 @@
 </head>
 
 <body>
-    <div id="loader">
-        <header class="header">
-            <div class="wrapper">
-                <a class="header__logo sprite-icon sprite-icon--logo_white"></a>
-                <nav class="header__navigation define-text--no-select text-hover">
-                    <ul class="Rob">
-                        <li><a class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Services</a></li>
-                        <li><a class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Team</a></li>
-                        <li><a class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Contact</a></li>
-                    </ul>
-                </nav>
+    <header class="header">
+        <div class="wrapper">
+            <a class="header__logo sprite-icon sprite-icon--logo_white"></a>
+            <nav class="header__navigation define-text--no-select text-hover">
+                <ul class="Rob">
+                    <li><a class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Services</a></li>
+                    <li><a class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Team</a></li>
+                    <li><a class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="hero" class="hero">
+        <picture>
+            <source media="(min-width: 600px)" srcset="assets/img/hero-large-hi-dpi.jpg 2877w, assets/img/hero-large.jpg 1439w" alt="Night city view." />
+            <img id="heroImg" class="hero__image" srcset="assets/img/hero-small-hi-dpi.jpg 1000w, assets/img/hero-small.jpg 500w" alt="Night city view.">
+        </picture>
+        <div class="wrapper">
+            <div id="heroText" class="hero__text">
+                <h1 class="define-text__small-heading define-text--light define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
+                <button class="button--medium button__color--red button--medium--l-margin-correction"><a id="getInTouch" href="mailto:support@punias.com">Get in Touch</a></button>
+                <h2 class="hero__text__services define-text-subheading define-text--bold define-text--spacing-large hero__text--rotate">Services</h2>
             </div>
-        </header>
-        <div id="hero" class="hero">
-            <picture>
-                <source media="(min-width: 600px)" srcset="assets/img/hero-large-hi-dpi.jpg 2877w, assets/img/hero-large.jpg 1439w" alt="Night city view." />
-                <img id="heroImg" class="hero__image" srcset="assets/img/hero-small-hi-dpi.jpg 1000w, assets/img/hero-small.jpg 500w" alt="Night city view.">
-            </picture>
-            <div class="wrapper">
-                <div id="heroText" class="hero__text">
-                    <h1 class="define-text__small-heading define-text--light define-text--no-select">Experts at <span class="text-hover--vertical">KILLING</span><br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
-                    <button class="button--medium button__color--red button--medium--l-margin-correction"><a id="getInTouch" href="mailto:support@punias.com">Get in Touch</a></button>
-                    <h2 class="hero__text__services define-text-subheading define-text--bold define-text--spacing-large hero__text--rotate">Services</h2>
+        </div>
+    </div>
+    <main>
+        <div id="intro" class="intro section section--clear-top section--dark">
+            <div class="wrapper wrapper--tb-extra-padding">
+                <div class="intro__text define-text--light">
+                    <div id="intro--heading" class="intro__text--small-width define-text__heading">
+                        <h1 class="define-text__heading">Everyone knows, poor <span class="define-text--highlight define-text--bold">DATA MANAGEMENT</span> can destroy any <span class="define-text--highlight define-text--bold">BUSINESS</span></h1>
+                        <h4 class="intro__text__subheading define-text--t-margin-small define-text__subheading define-text--light define-text--spacing-large">Your business needs you more than your data.</h4>
+                    </div>
+                    <div id="intro--para" class="intro__text--medium-width define-text__para">
+                        <p class="intro__text__para define-text--t-margin-large">With help of correct technology and SAP integration, we regulate an autmated system, which organzies and gives you the hands on control over all of your data. The information is easy to digest, graphically pleasing and always at your finger tips with help of cloud services.<br />
+                        </p>
+                        <p class="define-text__quote"><em>“Those who rule data will rule the entire world.” —Masayoshi Son</em></p>
+                    </div>
                 </div>
             </div>
         </div>
-        <main>
-            <div id="intro" class="intro section section--clear-top section--dark">
-                <div class="wrapper wrapper--tb-extra-padding">
-                    <div class="intro__text define-text--light">
-                        <div id="intro--heading" class="intro__text--small-width define-text__heading">
-                            <h1 class="define-text__heading">Everyone knows, poor <span class="define-text--highlight define-text--bold">DATA MANAGEMENT</span> can destroy any <span class="define-text--highlight define-text--bold">BUSINESS</span></h1>
-                            <h4 class="intro__text__subheading define-text--t-margin-small define-text__subheading define-text--light define-text--spacing-large">Your business needs you more than your data.</h4>
-                        </div>
-                        <div id="intro--para" class="intro__text--medium-width define-text__para">
-                            <p class="intro__text__para define-text--t-margin-large">With help of correct technology and SAP integration, we regulate an autmated system, which organzies and gives you the hands on control over all of your data. The information is easy to digest, graphically pleasing and always at your finger tips with help of cloud services.<br />
-                            </p>
-                            <p class="define-text__quote"><em>“Those who rule data will rule the entire world.” —Masayoshi Son</em></p>
-                        </div>
+        <div id="erpImage" class="erp section">
+            <div id="erp__rows" class="lazy--rows row">
+                <div class="row__column-4">
+                    <div class="lazy--rows-image-text erp__image-text">
+                        <h4 class="define-text__subheading--tiny define-text--light">A SMARTER CHOICE
+                            <hr />
+                        </h4>
+                        <h1 class="define-text__heading--medium define-text--bold">BECOME A CENTRALIZED ENTERPRISE.</h1>
+                    </div>
+                    <picture>
+                        <source sized="33.333vw" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen." />
+                        <img class="erp__image" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen.">
+                    </picture>
+                </div>
+                <div class="lazy--rows-right row__column-8 row--content-center row--oversize row--oversize-right section--mid-tone define-text--light">
+                    <div class="lazy--rows-right-text erp__text wrapper wrapper--tb-tiny-padding">
+                        <span class="erp__text__icon sprite-icon sprite-icon--line-chart"></span>
+                        <h1 class="define-text__heading define-text--bold define-text--t-margin-tiny">SAP S/4HANA</h1>
+                        <p class="erp__text__definition define-text__para define-text--t-margin-small define-text--light">SAP is without a doubt, one of the best ERP(Enterprise Resource Planning) software available in the market. Implementation of SAP centralizes your organization and brings in numerous benifits like:
+                        </p>
+                        <ul class="erp__text__services-list define-text--t-margin-large">
+                            <li>
+                                <span class="erp__text__services-list__icon sprite-icon sprite-icon--network"></span>
+                                <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">
+                                    Effective Data Communication
+                                </h4>
+                                <p class="define-text__para--small define-text--t-margin-tiny">Prevents confusion between multiple departments.</p>
+                            </li>
+                            <li>
+                                <span class="erp__text__services-list__icon sprite-icon sprite-icon--clock"></span>
+                                <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Timely Information</h4>
+                                <p class="define-text__para--small define-text--t-margin-tiny">Improve pre-planning and never loose a customer again</p>
+                            </li>
+                            <li>
+                                <span class="erp__text__services-list__icon sprite-icon sprite-icon--duplicate"></span>
+                                <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Duplication Prevention
+                                </h4>
+                                <p class="define-text__para--small define-text--t-margin-tiny">Eliminates data duplication and inconsistencies</p>
+                            </li>
+                            <li>
+                                <span class="erp__text__services-list__icon sprite-icon sprite-icon--coin"></span>
+                                <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Lower Resource Costs
+                                </h4>
+                                <p class="define-text__para--small define-text--t-margin-tiny">For inventory, materials &amp; human resources</p>
+                            </li>
+                        </ul>
+                        <button class="button--medium button__color--gradient define-text--t-margin-large"><a target="_blank" rel="noreferrer noopener" href="https://www.sap.com/products/s4hana-erp-cloud.html">Learn about SAP</a></button>
+                        <p class="define-text__para--tiny define-text--dim define-text--t-margin-tiny">Redirects to SAP official website</p>
                     </div>
                 </div>
             </div>
-            <div id="erpImage" class="erp section">
-                <div class="row">
-                    <div class="row__column-4">
-                        <div class="erp__image-text">
-                            <h4 class="define-text__subheading--tiny define-text--light">A SMARTER CHOICE
-                                <hr />
-                            </h4>
-                            <h1 class="define-text__heading--medium define-text--bold">BECOME A CENTRALIZED ENTERPRISE.</h1>
-                        </div>
-                        <picture>
-                            <source sized="33.333vw" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen." />
-                            <img class="erp__image" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen.">
-                        </picture>
+        </div>
+        <div id="services" class="lazy--services services section section--dark">
+            <div class="row row--tall">
+                <div class="row__column-4 services__row">
+                    <div class="services__text">
+                        <span class="services__text__icon sprite-icon sprite-icon--services_implement-icon"></span>
+                        <button id="implement" @click='showText($event)' class="active define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">IMPLEMENT</button>
+                        <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                     </div>
-                    <div class="row__column-8 row--content-center row--oversize row--oversize-right section--mid-tone define-text--light">
-                        <div class="erp__text wrapper wrapper--tb-tiny-padding">
-                            <span class="erp__text__icon sprite-icon sprite-icon--line-chart"></span>
-                            <h1 class="define-text__heading define-text--bold define-text--t-margin-tiny">SAP S/4HANA</h1>
-                            <p class="erp__text__definition define-text__para define-text--t-margin-small define-text--light">SAP is without a doubt, one of the best ERP(Enterprise Resource Planning) software available in the market. Implementation of SAP centralizes your organization and brings in numerous benifits like:
-                            </p>
-                            <ul class="erp__text__services-list define-text--t-margin-large">
-                                <li>
-                                    <span class="erp__text__services-list__icon sprite-icon sprite-icon--network"></span>
-                                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">
-                                        Effective Data Communication
-                                    </h4>
-                                    <p class="define-text__para--small define-text--t-margin-tiny">Prevents confusion between multiple departments.</p>
-                                </li>
-                                <li>
-                                    <span class="erp__text__services-list__icon sprite-icon sprite-icon--clock"></span>
-                                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Timely Information</h4>
-                                    <p class="define-text__para--small define-text--t-margin-tiny">Improve pre-planning and never loose a customer again</p>
-                                </li>
-                                <li>
-                                    <span class="erp__text__services-list__icon sprite-icon sprite-icon--duplicate"></span>
-                                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Duplication Prevention
-                                    </h4>
-                                    <p class="define-text__para--small define-text--t-margin-tiny">Eliminates data duplication and inconsistencies</p>
-                                </li>
-                                <li>
-                                    <span class="erp__text__services-list__icon sprite-icon sprite-icon--coin"></span>
-                                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Lower Resource Costs
-                                    </h4>
-                                    <p class="define-text__para--small define-text--t-margin-tiny">For inventory, materials &amp; human resources</p>
-                                </li>
-                            </ul>
-                            <button class="button--medium button__color--gradient define-text--t-margin-large"><a target="_blank" rel="noreferrer noopener" href="https://www.sap.com/products/s4hana-erp-cloud.html">Learn about SAP</a></button>
-                            <p class="define-text__para--tiny define-text--dim define-text--t-margin-tiny">Redirects to SAP official website</p>
-                        </div>
+                    <img sizes="33.33vw" class="services__image" srcset="assets/img/services_implement.jpg 3069w" alt="A man weilding.">
+                </div>
+                <div class="row__column-4 services__row">
+                    <div class="services__text">
+                        <span class="services__text__icon sprite-icon sprite-icon--services_maintain-icon"></span>
+                        <button id="maintain" @click='showText($event)' class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">MAINTAIN</button>
+                        <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
+                    </div>
+                    <img sizes="33.33vw" class="services__image" srcset="assets/img/services_maintain.jpg 4160w" alt="Stones balancing">
+                </div>
+                <div class="row__column-4 services__row">
+                    <div class="services__text">
+                        <span class="services__text__icon sprite-icon sprite-icon--services_upgrade-icon"></span>
+                        <button id="upgrade" @click='showText($event)' class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">UPGRADE</button>
+                        <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
+                    </div>
+                    <img sizes="33.33vw" class="services__image" srcset="assets/img/services_upgrade.jpg 3648w" alt="Building tools">
+                </div>
+            </div>
+        </div>
+        <div id="moreServices" class="lazy--more-services more-services section">
+            <div class="row">
+                <div class="row__column-4 row--right">
+                    <div class="more-services__image-text">
+                        <h4 class="define-text__subheading--tiny define-text--light">GET MORE FORM US
+                            <hr />
+                        </h4>
+                        <h1 class="define-text__heading--medium define-text--bold">WE HAVE MORE TO OFFER.</h1>
+                    </div>
+                    <picture>
+                        <img class="more-services__image" sizes="35vw" srcset="assets/img/more-services_large.jpg 2700w" alt="Crowded market.">
+                    </picture>
+                </div>
+                <div class="more-services__row row__column-8 section--mid-tone define-text-light row--oversize row--oversize-left">
+                    <div class="lazy--services-list more-services__list section--mid-tone">
+                        <ul class="define-text__para define-text--light">
+                            <li @click="switchServices($event, index)" class="text-hover--underline" v-for="(service, index) in services">
+                                <p>{{service.name}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lazy--services-text more-services__text">
+                        <transition name="span">
+                            <h1 :key="services[currListItem].name" class="more-services__text__heading define-text__heading">{{services[currListItem].name}}</h1>
+                        </transition>
+                        <transition name="span">
+                            <p :key="services[currListItem].description" class="more-services__text__para define-text__para define-text--light define-text--t-margin-large">{{services[currListItem].description}}</p>
+                        </transition>
                     </div>
                 </div>
             </div>
-            <div class="services section section--dark">
-                <div class="row row--tall">
-                    <div class="row__column-4 services__row">
-                        <div class="services__text">
-                            <span class="services__text__icon sprite-icon sprite-icon--services_implement-icon"></span>
-                            <button class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">IMPLEMENT</button>
-                            <p class="define-text--t-margin-tiny services__text__learn define-text__para define-text--light">Learn more</p>
-                            <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
+        </div>
+        <div id="team" class="team section section--dark">
+            <div class="wrapper wrapper--t-extra-padding">
+                <div class="team__headings define-text--no-select">
+                    <h1 class="define-text__heading define-text--light">Your potential <span class="define-text--bold define-text--highlight">TEAM</span></h1>
+                    <h4 class="define-text__subheading define-text--t-margin-small define-text--light define-text--spacing-large">We're always here to help you take your business to another level.</h4>
+                </div>
+                <div class="row row--parent-height team__employee define-text--t-margin-jumbo">
+                    <div class="team__employee__list row__column-4">
+                        <h4 class="team__employee__list--members define-text--xlight define-text__subheading define-text--no-select define-text--b-margin-medium">Members</h4>
+
+                        <div class="personna" v-for="(em, index) in employees">
+                            <img @click="switchEmployee($event, index)" class="personna__image" :src="em.smallImage">
+                            <h4 class="personna__name define-text__subheading">{{em.name}}<br /><span class="define-text--t-margin-tiny define-text__para define-text--xlight">{{em.designation}}</span></h4>
                         </div>
-                        <img sizes="33.33vw" class="services__image" srcset="assets/img/services_implement.jpg 3069w" alt="A man weilding.">
                     </div>
-                    <div class="row__column-4 services__row">
-                        <div class="services__text">
-                            <span class="services__text__icon sprite-icon sprite-icon--services_maintain-icon"></span>
-                            <button class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">MAINTAIN</button>
-                            <p class="define-text--t-margin-tiny services__text__learn define-text__para define-text--light">Learn more</p>
-                            <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
+                    <div class="team__employee__current row__column-8">
+                        <h3 class="team__employee__current__above-image team__employee__current__quote define-text__small-heading define-text--xlight"><span class="team__employee__current__quote__drop define-text--bold">&ldquo;O</span>ur team is always there when you need us. We are waiting to see you in person.<span class="team__employee__current__quote__drop--right-quote">&rdquo;</span></h3>
+                        <button class="team__employee__current__above-image button--medium button--medium--unique button__color--orange define-text--t-margin-medium define-text--spacing-medium define-text--light">Email me</button>
+                        <div class="team__employee__current__above-image team__employee__current__bio">
+                            <h1 class="define-text__heading define-text--bold">{{employees[currEmployee].designation}}</h1>
+                            <p class=" define-text__para--small-line-height define-text--light define-text--t-margin-small">{{employees[currEmployee].quote}}</p>
                         </div>
-                        <img sizes="33.33vw" class="services__image" srcset="assets/img/services_maintain.jpg 4160w" alt="Stones balancing">
-                    </div>
-                    <div class="row__column-4 services__row">
-                        <div class="services__text">
-                            <span class="services__text__icon sprite-icon sprite-icon--services_upgrade-icon"></span>
-                            <button class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">UPGRADE</button>
-                            <p class="define-text--t-margin-tiny services__text__learn define-text__para define-text--light">Learn more</p>
-                            <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
-                        </div>
-                        <img sizes="33.33vw" class="services__image" srcset="assets/img/services_upgrade.jpg 3648w" alt="Building tools">
+                        <img class="team__employee__current__image" :src="employees[currEmployee].bigImage" alt="Baljit Singh Punia">
                     </div>
                 </div>
             </div>
-            <div class="more-services section">
-                <div class="row">
-                    <div class="row__column-4 row--right">
-                        <div class="more-services__image-text">
-                            <h4 class="define-text__subheading--tiny define-text--light">GET MORE FORM US
-                                <hr />
-                            </h4>
-                            <h1 class="define-text__heading--medium define-text--bold">WE HAVE MORE TO OFFER.</h1>
-                        </div>
-                        <picture>
-                            <img class="more-services__image" sizes="35vw" srcset="assets/img/more-services_large.jpg 2700w" alt="Crowded market.">
-                        </picture>
-                    </div>
-                    <div class="row__column-8 section--mid-tone define-text-light row--oversize row--oversize-left">
-                        <div class="more-services__list section--mid-tone">
-                            <ul class="define-text__para define-text--light">
-                                <li class="text-hover--underline">
-                                    <p>Licence</p>
-                                </li>
-                                <li class="text-hover--underline">
-                                    <p>Cloud</p>
-                                </li>
-                                <li class="text-hover--underline">
-                                    <p>JIRA</p>
-                                </li>
-                                <li class="text-hover--underline">
-                                    <p>GSP/ASP</p>
-                                </li>
-                                <li class="text-hover--underline">
-                                    <p>Business Analysis</p>
-                                </li>
-                                <li class="text-hover--underline">
-                                    <p>Training</p>
-                                </li>
-                                <li class="text-hover--underline">
-                                    <p>MS-Excel Macros</p>
-                                </li>
-                                <li class="text-hover--underline">
-                                    <p>Digitization</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="more-services__text">
-                            <h1 class="more-services__text__heading define-text__heading">MS-Excel Macros</h1>
-                            <p class="more-services__text__para define-text__para define-text--light define-text--t-margin-large">PUNIAS has done projects on MS-Excel Macro tools for companies like KOHLER and Exicom. As of today many users are stuck with performing same complex tasks in Excel every day or week or month. We develop macros for such repetitive and complex excel worksheets thereby reducing time wasted on such manual excel work and saving lot of cost for the Company. We have developed and E-Way Bill tool using excel macros for generation of bulk e-way bills through government portal.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="team section section--dark">
-                <div class="wrapper wrapper--t-extra-padding">
-                    <div class="team__headings define-text--no-select">
-                        <h1 class="define-text__heading define-text--light">Your potential <span class="define-text--bold define-text--highlight">TEAM</span></h1>
-                        <h4 class="define-text__subheading define-text--t-margin-small define-text--light define-text--spacing-large">We're always here to help you take your business to another level.</h4>
-                    </div>
-                    <div class="row row--parent-height team__employee define-text--t-margin-jumbo">
-                        <div class="team__employee__list row__column-4">
-                            <h4 class="team__employee__list--members define-text--xlight define-text__subheading define-text--no-select define-text--b-margin-medium">Members</h4>
-                            <div class="personna">
-                                <img class="personna__image" src="assets/img/employee1.jpg" alt="Baljit Singh Punia">
-                                <h4 class="personna__name define-text__subheading">Baljit S. Punia<br /><span class="define-text--t-margin-tiny define-text__para define-text--xlight">SEO</span></h4>
-                            </div>
-                            <div class="personna">
-                                <img class="personna__image" src="assets/img/employee2.jpg" alt="Harsimran Singh Punia">
-                                <h4 class="personna__name define-text__subheading">Harry Punia<br /><span class="define-text--t-margin-tiny define-text__para define-text--xlight">Manager</span></h4>
-                            </div>
-                            <div class="personna">
-                                <img class="personna__image" src="assets/img/employee3.jpg" alt="Dilsher Singh">
-                                <h4 class="personna__name define-text__subheading">Dilsher Singh<br /><span class="define-text--t-margin-tiny define-text__para define-text--xlight">HR Manager</span></h4>
-                            </div>
-                            <div class="personna">
-                                <img class="personna__image" src="assets/img/employee4.jpg" alt="Riya Sachdeva">
-                                <h4 class="personna__name define-text__subheading">Riya Sachdeva<br /><span class="define-text--t-margin-tiny define-text__para define-text--xlight">Developer</span></h4>
-                            </div>
-                        </div>
-                        <div class="team__employee__current row__column-8">
-                            <h3 class="team__employee__current__above-image team__employee__current__quote define-text__small-heading define-text--xlight"><span class="team__employee__current__quote__drop define-text--bold">&ldquo;R</span>andom quote comes here<br /> to promote the business and get more sales.<span class="team__employee__current__quote__drop--right-quote">&rdquo;</span></h3>
-                            <button class="team__employee__current__above-image button--medium button--medium--unique button__color--orange define-text--t-margin-medium define-text--spacing-medium define-text--light">Contact</button>
-                            <div class="team__employee__current__above-image team__employee__current__bio">
-                                <h1 class="define-text__heading define-text--bold">SEO</h1>
-                                <p class=" define-text__para--small-line-height define-text--light define-text--t-margin-small">Being the owner of the organization, I make sure that you as a consumer get, hands down, the best services in the market.</p>
-                            </div>
-                            <img class="team__employee__current__image" src="assets/img/employee1-large.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
+        </div>
+    </main>
     <script src="assets/js/app.js"></script>
-    <script>
-        function scrollToView(id, offset, addRemove, className) {
-            var object = document.getElementById(id),
-                objectPos = object.getBoundingClientRect().top,
-                y = window.pageYOffset;
-            if (addRemove == 'add') {
-                if (objectPos < offset) {
-                    object.classList.add(className);
-                }
-            } else if (addRemove == 'remove') {
-                if (objectPos < offset) {
-                    object.classList.remove(className);
-                }
-            }
-        }
-
-        window.addEventListener('scroll', function() {
-            scrollToView('intro--heading', 550, 'add', 'lazy--opacity');
-            scrollToView('intro--para', 550, 'add', 'lazy--opacity');
-            
-        }, false);
-
-    </script>
 </body>
 
 </html>

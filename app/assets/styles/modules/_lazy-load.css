@@ -1,7 +1,37 @@
 .lazy {
-    
+
     &--opacity {
         opacity: 1;
         transition: opacity .4s ease-out;
+    }
+    &--rows {
+        .lazy--rows-right {
+            width: 100vw !important;
+        }
+        
+        .lazy--rows-right-text {
+            opacity: 0;
+        }
+        
+        .lazy--rows-image-text {
+            margin-left: 200px;
+        }
+    }
+    &--services {
+        .services__row {
+            opacity: 0;
+        }
+    }
+    &--more-services {
+        
+        .more-services__row {
+            width: 100vw !important;
+        }
+        .lazy--services-list {
+            margin-left: -200px !important;
+        }
+        .lazy--services-text {
+            opacity: 0;
+        }
     }
 }

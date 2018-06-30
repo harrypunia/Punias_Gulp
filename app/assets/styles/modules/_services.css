@@ -2,26 +2,42 @@
     font-family: 'Roboto', sans-serif;
 
     &__text {
-        @mixin absCenter;
-        display: flex;
-        align-content: center;
-        flex-direction: column;
+        position: relative;
+        width: 80%;
+        height: 40%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: auto auto;
         z-index: 1;
 
         &__icon {
+            display: block;
             margin-left: auto;
             margin-right: auto;
         }
 
-        &__learn {
-            text-align: center;
-            text-decoration: underline;
-            cursor: pointer;
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         &__para {
-            overflow: hidden;
-            height: 0px;
+            float: left;
+            text-align: left;
+            opacity: 0;
+            transition: opacity .2s ease-in;
+        }
+    }
+
+    &__row {
+        transition: opacity .4s ease-out;
+
+        &:nth-child(2) {
+            transition-delay: .2s;
+        }
+        &:last-child {
+            transition-delay: .4s;
         }
     }
 
@@ -37,5 +53,13 @@
         height: 105%;
         width: auto;
         transition: filter .2s ease-in, height .3s ease-out;
+    }
+}
+
+.active {
+
+    & + .services__text__para {
+        opacity: 1;
+        transition: opacity .2s ease-out;
     }
 }
