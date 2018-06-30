@@ -41,7 +41,7 @@ var parallax = new Vue({
                 yPos = (window.pageYOffset / 4000),
                 mouseX = event
 
-            this.parallaxDim(heroImg, yPos);
+//            this.parallaxDim(heroImg, yPos);
             this.parallaxTranslate(heroImg, (yPos * -1000));
             this.parallaxTranslate(heroText, (yPos * 1000));
             requestAnimationFrame(this.parallaxDraw);

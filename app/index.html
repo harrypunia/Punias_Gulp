@@ -226,20 +226,26 @@
     </div>
     <script src="assets/js/app.js"></script>
     <script>
-        function scrollToView(id, offset, className) {
+        function scrollToView(id, offset, addRemove, className) {
             var object = document.getElementById(id),
                 objectPos = object.getBoundingClientRect().top,
                 y = window.pageYOffset;
-//            console.log('id: ' + id + '| y: ' +  objectPos);
-            if(objectPos < offset) {
-                object.classList.add(className);
+            if (addRemove == 'add') {
+                if (objectPos < offset) {
+                    object.classList.add(className);
+                }
+            } else if (addRemove == 'remove') {
+                if (objectPos < offset) {
+                    object.classList.remove(className);
+                }
             }
         }
 
         window.addEventListener('scroll', function() {
-            scrollToView('intro--heading', 550, 'lazy--opacity');
-            scrollToView('intro--para', 550, 'lazy--opacity');
-        }, false)
+            scrollToView('intro--heading', 550, 'add', 'lazy--opacity');
+            scrollToView('intro--para', 550, 'add', 'lazy--opacity');
+            
+        }, false);
 
     </script>
 </body>
