@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="temp/styles/style.css">
     <title>Punias Marketing and Consulting LLP</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="assets/js/lazysizes.min.js"></script>
 </head>
 
 <body>
@@ -61,8 +62,8 @@
                         <h1 class="define-text__heading--medium define-text--bold">BECOME A CENTRALIZED ENTERPRISE.</h1>
                     </div>
                     <picture>
-                        <source sized="33.333vw" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen." />
-                        <img class="erp__image" srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen.">
+                        <source class="lazyload" sizes="33.333vw" data-srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen." />
+                        <img class="lazyload erp__image" data-srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen.">
                     </picture>
                 </div>
                 <div class="lazy--rows-right row__column-8 row--content-center row--oversize row--oversize-right section--mid-tone define-text--light">
@@ -111,7 +112,7 @@
                         <button id="implement" @click='showText($event)' class="active define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">IMPLEMENT</button>
                         <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                     </div>
-                    <img sizes="33.33vw" class="services__image" srcset="assets/img/services_implement.jpg 3069w" alt="A man weilding.">
+                    <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_implement.jpg 3069w" alt="A man weilding.">
                 </div>
                 <div class="row__column-4 services__row">
                     <div class="services__text">
@@ -119,7 +120,7 @@
                         <button id="maintain" @click='showText($event)' class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">MAINTAIN</button>
                         <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                     </div>
-                    <img sizes="33.33vw" class="services__image" srcset="assets/img/services_maintain.jpg 4160w" alt="Stones balancing">
+                    <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_maintain.jpg 4160w" alt="Stones balancing">
                 </div>
                 <div class="row__column-4 services__row">
                     <div class="services__text">
@@ -127,7 +128,7 @@
                         <button id="upgrade" @click='showText($event)' class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">UPGRADE</button>
                         <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                     </div>
-                    <img sizes="33.33vw" class="services__image" srcset="assets/img/services_upgrade.jpg 3648w" alt="Building tools">
+                    <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_upgrade.jpg 3648w" alt="Building tools">
                 </div>
             </div>
         </div>
@@ -141,7 +142,7 @@
                         <h1 class="define-text__heading--medium define-text--bold">WE HAVE MORE TO OFFER.</h1>
                     </div>
                     <picture>
-                        <img class="more-services__image" sizes="35vw" srcset="assets/img/more-services_large.jpg 2700w" alt="Crowded market.">
+                        <img class="lazyload more-services__image" sizes="35vw" data-srcset="assets/img/more-services_large.jpg 2700w" alt="Crowded market.">
                     </picture>
                 </div>
                 <div class="more-services__row row__column-8 section--mid-tone define-text-light row--oversize row--oversize-left">
@@ -174,7 +175,7 @@
                         <h4 class="team__employee__list--members define-text--xlight define-text__subheading define-text--no-select define-text--b-margin-medium">Members</h4>
 
                         <div class="personna" v-for="(em, index) in employees">
-                            <img @click="switchEmployee($event, index)" class="personna__image" :src="em.smallImage">
+                            <img @click="switchEmployee($event, index)" class="lazyload personna__image" :data-src="em.smallImage">
                             <h4 class="personna__name define-text__subheading">{{em.name}}<br /><span class="define-text--t-margin-tiny define-text__para define-text--xlight">{{em.designation}}</span></h4>
                         </div>
                     </div>
@@ -185,7 +186,7 @@
                             <h1 class="define-text__heading define-text--bold">{{employees[currEmployee].designation}}</h1>
                             <p class=" define-text__para--small-line-height define-text--light define-text--t-margin-small">{{employees[currEmployee].quote}}</p>
                         </div>
-                        <img class="team__employee__current__image" :src="employees[currEmployee].bigImage" alt="Baljit Singh Punia">
+                        <img class="lazyload team__employee__current__image" :data-src="employees[currEmployee].bigImage" alt="Baljit Singh Punia">
                     </div>
                 </div>
             </div>
