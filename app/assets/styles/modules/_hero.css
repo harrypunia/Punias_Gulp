@@ -9,8 +9,11 @@
         position: absolute;
         width: 100%;
         bottom: 100px;
-        font-family: 'Roboto', sans-serif;
-        
+        opacity: 0;
+        animation: text-span-up .5s ease-out;
+        animation-delay: .4s;
+        animation-fill-mode: forwards;
+
         @mixin phone {
             position: absolute;
             width: 100%;
@@ -18,25 +21,49 @@
             margin: 0 auto;
             text-align: center;
         }
-        
+
         @mixin phone {
             button {
                 margin-top: 20vh;
             }
         }
 
-        &--rotate {
-            cursor: pointer;
-            position: absolute;
-            padding: 0px 10px;
-            right: 50px;
-            bottom: 100px;
-            transform: rotate(-90deg);
-        }
-        
         &__services {
-            @mixin phone {
+            position: absolute;
+            left: 92vw;
+            bottom: 10vh;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: text-span-up .5s ease-out;
+            animation-delay: .5s;
+            animation-fill-mode: forwards;
+            cursor: pointer;
+
+            @mixin tab {
                 display: none;
+            }
+
+            &__scroll-indicator {
+                position: absolute;
+                left: 50%;
+                top: 50px;
+                transform: translate(-50%, -50%);
+                width: 25px;
+                height: 40px;
+                border-radius: 25px 25px 30px 30px;
+                border: 1px solid white;
+                background-color: rgba($mainDark, 0.6);
+
+                &-ball {
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    animation: ball-scroll 3s ease-in-out infinite;
+                }
             }
         }
     }
@@ -46,5 +73,6 @@
         right: 0px;
         min-width: 110vw;
         min-height: 100vh;
+        animation: hero-zoom-out 1s ease-in-out 1;
     }
 }

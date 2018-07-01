@@ -4,7 +4,8 @@
 @import 'base/_fonts';
 @import 'base/_mixins';
 @import 'modules/_headings';
-@import 'base/_animations';
+@import 'modules/_intro-animation';
+@import 'modules/_services-animation';
 @import 'modules/_sections';
 @import 'modules/_wrapper';
 @import 'modules/_text-hover';

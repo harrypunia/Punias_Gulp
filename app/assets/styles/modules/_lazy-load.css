@@ -15,6 +15,7 @@
         
         .lazy--rows-image-text {
             margin-left: 200px;
+            opacity: 0;
         }
     }
     &--services {

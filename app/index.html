@@ -8,6 +8,7 @@
     <title>Punias Marketing and Consulting LLP</title>
     <script src="temp/scripts/vendor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="assets/js/zenscroll-min.js"></script>
 </head>
 
 <body>
@@ -32,8 +33,9 @@
             <div id="heroText" class="hero__text">
                 <h1 class="define-text__small-heading define-text--light define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
                 <button class="button--medium button__color--red button--medium--l-margin-correction"><a id="getInTouch" href="mailto:support@punias.com">Get in Touch</a></button>
-                <h2 class="hero__text__services define-text-subheading define-text--bold define-text--spacing-large hero__text--rotate">Services</h2>
             </div>
+            <h2 onclick="zen(erpImage)" class="hero__text__services define-text-subheading define-text--bold define-text--spacing-large">Services <br/> <span class="hero__text__services__scroll-indicator"><span class="hero__text__services__scroll-indicator-ball"></span></span>
+            </h2>
         </div>
     </div>
     <main>
@@ -62,8 +64,8 @@
                         <h1 class="define-text__heading--medium define-text--bold">BECOME A CENTRALIZED ENTERPRISE.</h1>
                     </div>
                     <picture>
-                        <source class="lazyload" sizes="33.333vw" data-srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen." />
-                        <img class="lazyload erp__image" data-srcset="assets/img/erp-large.jpg 1700w" alt="Data analytics on screen.">
+                        <source media="(min-width: 800px)" sizes="33.33vw" class="lazyload erp__image" data-srcset="assets/img/erp-hi-dpi.jpg 750w, assets/img/erp.jpg 500w" alt="Data analytics on screen.">
+                        <img class="lazyload erp__image" sizes="33.333vw" data-srcset="assets/img/erp_mobile-hi-dpi.jpg 750w, assets/img/erp_mobile.jpg 500w" alt="Data analytics on screen.">
                     </picture>
                 </div>
                 <div class="lazy--rows-right row__column-8 row--content-center row--oversize row--oversize-right section--mid-tone define-text--light">
@@ -112,7 +114,9 @@
                         <button id="implement" @click='showText($event)' class="active define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">IMPLEMENT</button>
                         <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                     </div>
-                    <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_implement.jpg 3069w" alt="A man weilding.">
+                    <picture>
+                        <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_implement-hi-dpi.jpg 750w, assets/img/services_implement.jpg 500w" alt="A man weilding.">
+                    </picture>
                 </div>
                 <div class="row__column-4 services__row">
                     <div class="services__text">
@@ -120,7 +124,9 @@
                         <button id="maintain" @click='showText($event)' class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">MAINTAIN</button>
                         <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                     </div>
-                    <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_maintain.jpg 4160w" alt="Stones balancing">
+                    <picture>
+                        <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_maintain-hi-dpi.jpg 750w, assets/img/services_maintain.jpg 500w" alt="Stones balancing">
+                    </picture>
                 </div>
                 <div class="row__column-4 services__row">
                     <div class="services__text">
@@ -128,7 +134,9 @@
                         <button id="upgrade" @click='showText($event)' class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">UPGRADE</button>
                         <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                     </div>
-                    <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_upgrade.jpg 3648w" alt="Building tools">
+                    <picture>
+                        <img sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services_upgrade-hi-dpi.jpg 750w, assets/img/services_upgrade.jpg 500w" alt="Building tools">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -142,7 +150,7 @@
                         <h1 class="define-text__heading--medium define-text--bold">WE HAVE MORE TO OFFER.</h1>
                     </div>
                     <picture>
-                        <img class="lazyload more-services__image" sizes="35vw" data-srcset="assets/img/more-services_large.jpg 2700w" alt="Crowded market.">
+                        <img class="lazyload more-services__image" sizes="33vw" data-srcset="assets/img/more-services.jpg 2700w" alt="Crowded market.">
                     </picture>
                 </div>
                 <div class="more-services__row row__column-8 section--mid-tone define-text-light row--oversize row--oversize-left">
@@ -165,15 +173,14 @@
             </div>
         </div>
         <div id="team" class="team section section--dark">
-            <div class="wrapper wrapper--t-extra-padding">
+            <div class="wrapper wrapper--t-extra-padding" style="height: 100%">
                 <div class="team__headings define-text--no-select">
                     <h1 class="define-text__heading define-text--light">Your potential <span class="define-text--bold define-text--highlight">TEAM</span></h1>
                     <h4 class="define-text__subheading define-text--t-margin-small define-text--light define-text--spacing-large">We're always here to help you take your business to another level.</h4>
                 </div>
-                <div class="row row--parent-height team__employee define-text--t-margin-jumbo">
+                <div class="row row--auto-height team__employee define-text--t-margin-jumbo">
                     <div class="team__employee__list row__column-4">
                         <h4 class="team__employee__list--members define-text--xlight define-text__subheading define-text--no-select define-text--b-margin-medium">Members</h4>
-
                         <div class="personna" v-for="(em, index) in employees">
                             <img @click="switchEmployee($event, index)" class="lazyload personna__image" :data-src="em.smallImage">
                             <h4 class="personna__name define-text__subheading">{{em.name}}<br /><span class="define-text--t-margin-tiny define-text__para define-text--xlight">{{em.designation}}</span></h4>
@@ -186,13 +193,18 @@
                             <h1 class="define-text__heading define-text--bold">{{employees[currEmployee].designation}}</h1>
                             <p class=" define-text__para--small-line-height define-text--light define-text--t-margin-small">{{employees[currEmployee].quote}}</p>
                         </div>
-                        <img class="lazyload team__employee__current__image" :data-src="employees[currEmployee].bigImage" alt="Baljit Singh Punia">
                     </div>
+                    <img class="lazyload team__employee__current__image" :src="employees[currEmployee].bigImage" alt="Baljit Singh Punia">
                 </div>
             </div>
         </div>
     </main>
     <script src="/temp/scripts/app.js"></script>
+    <script>
+        function zen(id) {
+            zenscroll.to(id);
+        }
+    </script>
 </body>
 
 </html>

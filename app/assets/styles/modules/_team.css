@@ -1,5 +1,7 @@
 .team {
-    overflow: hidden;
+    overflow: visible;
+    height: 1000px;
+    
 
     &__headings {
         text-align: center;
@@ -8,9 +10,11 @@
     &__employee {
 
         &__list {
+            overflow: visible;
 
             &--members {
                 margin-left: 30px;
+                margin-top: -50px;
             }
         }
 
@@ -18,7 +22,8 @@
             position: relative;
             padding: 0 40px;
             overflow: visible;
-            
+            height: 550px;
+
             @mixin phone {
                 display: none;
             }
@@ -42,24 +47,21 @@
                     margin-left: -.45em;
                 }
             }
-
             button {
                 clear: both;
             }
 
             &__image {
-                position: relative;
-                float: left;
-                margin-top: -20%;
-                margin-left: 100px;
-                width: 800px;
+                position: absolute;
+                right: -50px;
+                bottom: 0px;
                 z-index: 1;
             }
 
             &__bio {
                 position: absolute;
                 left: 10%;
-                top: 50%;
+                bottom: 0%;
                 width: 250px;
                 height: auto;
                 padding: 20px 15px 40px 15px;

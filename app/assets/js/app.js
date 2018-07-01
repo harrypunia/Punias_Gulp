@@ -130,7 +130,6 @@ var moreServices = new Vue({
     methods: {
         switchServices: function (el, i) {
             this.currListItem = i;
-            console.log(this.currListItem);
             this.services.push();
         }
     }
@@ -146,30 +145,36 @@ var team = new Vue({
             bigImage: 'assets/img/employee1-large.png',
             quote: 'Being the owner of the organization, I make sure that you as a consumer get, hands down, the best services in the market.'
         }, {
-            name: 'Harry Punia',
-            designation: 'General Manager',
+            name: 'Vijay',
+            designation: 'COO',
             smallImage: 'assets/img/employee2.jpg',
-            bigImage: '',
+            bigImage: 'assets/img/employee2-large.png',
             quote: "Techinally i own the company but my father is running it. God damnit!"
         }, {
-            name: 'Dilsher Singh',
-            designation: 'HR Manager',
+            name: 'Vipin',
+            designation: 'Head Sales and Marketing',
             smallImage: 'assets/img/employee3.jpg',
-            bigImage: '',
+            bigImage: 'assets/img/employee3-large.png',
             quote: "I'm just a firend of harry wandering in this website trying to figure my way otta here."
         }, {
-            name: 'Riya Sachdeva',
-            designation: 'Head Developer',
+            name: 'Zohaib',
+            designation: 'Head Technology',
             smallImage: 'assets/img/employee4.jpg',
-            bigImage: '',
+            bigImage: 'assets/img/employee2-large.jpg',
             quote: 'I was born in delhi and literally became a friend of this dude over the internet. Guess 21st century is kicking it hard on us.'
-        }, ]
+        }, {
+            name: 'Naresh',
+            designation: 'Head HR & Admin',
+            smallImage: 'assets/img/employee4.jpg',
+            bigImage: 'assets/img/employee2-large.jpg',
+            quote: 'I was born in delhi and literally became a friend of this dude over the internet. Guess 21st century is kicking it hard on us.'
+        }]
     },
     methods: {
         switchEmployee: function (el, i) {
             el.currentTarget.classList.add('active');
-            this.employees.push();
             this.currEmployee = i;
+            this.employees.push();
         }
     }
 });

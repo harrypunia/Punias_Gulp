@@ -19,6 +19,10 @@
     &--parent-height {
         height: 100%;
     }
+    
+    &--auto-height {
+        height: auto;
+    }
 
     &__column {
         &-2 {

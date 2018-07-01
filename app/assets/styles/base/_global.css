@@ -2,6 +2,8 @@ html,
 body {
     width: 100vw;
     overflow-x: hidden;
+    background: black;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -33,6 +35,7 @@ h3,
 h4,
 p {
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 hr {
