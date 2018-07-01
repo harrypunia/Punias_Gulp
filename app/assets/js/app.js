@@ -48,16 +48,23 @@ var lazyLoad = new Vue({
 });
 var parallax = new Vue({
     methods: {
-        parallaxTranslate: function (id, val) {
-            id.style.transform = 'translate3d(0, ' + val + 'px, 0)';
+        parallaxTranslate: function (id, val, startStop, target, dist) {
+            var targetPos = document.getElementById(target).getBoundingClientRect().top;
+
+            if (startStop = 'start') {
+                if (targetPos > dist) {
+                    id.style.transform = 'translate3d(0, ' + val + 'px, 0)';
+                }
+            }
         },
         parallaxDraw: function () {
             var heroImg = document.getElementById('heroImg'),
                 heroText = document.getElementById('heroText'),
-                yPos = (window.pageYOffset / 4000);
+                yPos = (window.pageYOffset / 4000),
+                intro = document.getElementById('intro');
 
-            this.parallaxTranslate(heroImg, (yPos * -1000));
-            this.parallaxTranslate(heroText, (yPos * 1000));
+            this.parallaxTranslate(heroImg, (yPos * -1000), 'stop', 'intro', 200);
+            this.parallaxTranslate(heroText, (yPos * 1000), 'stop', 'intro', 600);
 
             requestAnimationFrame(this.parallaxDraw);
         }
@@ -165,4 +172,4 @@ var team = new Vue({
             this.currEmployee = i;
         }
     }
-})
+});
