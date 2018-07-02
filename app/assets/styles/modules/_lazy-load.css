@@ -5,34 +5,40 @@
         transition: opacity .4s ease-out;
     }
     &--rows {
-        .lazy--rows-right {
-            width: 100vw !important;
-        }
-        
         .lazy--rows-right-text {
+            transform: translate3d(-100%, 0, 0);
             opacity: 0;
         }
-        
+
         .lazy--rows-image-text {
-            margin-left: 200px;
+            transform: translate3d(100%, -50%, 0);
             opacity: 0;
         }
     }
     &--services {
-        .services__row {
+        .services__image {
             opacity: 0;
         }
     }
     &--more-services {
-        
-        .more-services__row {
-            width: 100vw !important;
-        }
         .lazy--services-list {
-            margin-left: -200px !important;
+            opacity: 0;
+            transform: translate3d(-50%, -50%, 0);
+
+            @mixin tab {
+                transform: translate3d(0, -100%, 0);
+            }
         }
         .lazy--services-text {
-            opacity: 0;
+            transform: translate3d(100%, -50%, 0);
+
+            @mixin tab {
+                opacity: 0;
+                transform: translate3d(-50%, -100%, 0);
+            }
+        }
+        .lazy--services-image-text {
+            transform: translate3d(-200%, -50%, 0);
         }
     }
 }

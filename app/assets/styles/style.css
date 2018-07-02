@@ -6,12 +6,14 @@
 @import 'modules/_headings';
 @import 'modules/_intro-animation';
 @import 'modules/_services-animation';
+@import 'modules/_loading-animation';
 @import 'modules/_sections';
 @import 'modules/_wrapper';
 @import 'modules/_text-hover';
 @import 'modules/_button';
 @import 'modules/_row';
 @import 'modules/_sprite';
+@import 'modules/_loading';
 @import 'modules/_header';
 @import 'modules/_hero';
 @import 'modules/_intro';

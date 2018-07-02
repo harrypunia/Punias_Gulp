@@ -1,5 +1,6 @@
 .intro {
     box-shadow: 0 -10px 40px -15px black;
+    overflow: hidden;
 
     &__text {
         margin: 0 auto;

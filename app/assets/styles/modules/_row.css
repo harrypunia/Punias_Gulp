@@ -5,7 +5,7 @@
     @mixin tab {
         float: left;
         height: 100vh;
-        height: auto;
+        height: auto !important;
     }
 
     &--tall {
@@ -54,11 +54,11 @@
             width: 66.66%;
             height: 100%;
             overflow: hidden;
-            transition: width .4s ease-out;
 
             @mixin tab {
                 width: 100%;
                 height: auto;
+                padding: 0;
             }
         }
 
@@ -80,7 +80,7 @@
         z-index: 10;
 
         @mixin tab {
-            height: auto;
+            height: auto !important;
         }
         &-right {
             @mixin absRight;

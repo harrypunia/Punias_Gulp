@@ -71,14 +71,16 @@ var lazyLoad = new Vue({
     data: {
         mobile: false,
     },
-    methods: {
+    computed: {
         mobileCheck: function () {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                this.mobile = true;
+                return true;
             } else {
-                this.mobile = false;
+                return false;
             }
-        },
+        }
+    },
+    methods: {
         changeButton: function () {
             var btn = document.getElementById('getInTouch');
             btn.setAttribute('href', "tel: +19311119814");
@@ -108,43 +110,39 @@ var lazyLoad = new Vue({
         }
     },
     created: function () {
-        this.mobileCheck();
-        if (this.mobile == true) {
+        if (this.mobileCheck) {
             this.changeButton();
         };
         window.addEventListener("scroll", this.scrollToViewFunctions, false);
     }
 });
-var parallax = new Vue({
-    methods: {
-        parallaxTranslate: function (id, val, startStop, target, dist) {
-            var targetPos = document.getElementById(target).getBoundingClientRect().top;
-
-            if (startStop = 'start') {
-                if (targetPos > dist) {
-                    id.style.transform = 'translate3d(0, ' + val + 'px, 0)';
-                }
-            }
-        },
-        parallaxDraw: function () {
-            var heroImg = document.getElementById('heroImg'),
-                heroText = document.getElementById('heroText'),
-                yPos = (window.pageYOffset / 4000),
-                intro = document.getElementById('intro');
-
-            this.parallaxTranslate(heroImg, (yPos * -1000), 'stop', 'intro', 200);
-            this.parallaxTranslate(heroText, (yPos * 1000), 'stop', 'intro', 600);
-
-            requestAnimationFrame(this.parallaxDraw);
-        }
-    },
-    created: function () {
-        window.addEventListener("DOMContentLoaded", this.parallaxDraw, false);
-    },
-    destroyed: function () {
-        window.removeEventListener("DOMContentLoaded", this.parallaxDraw, false);
-    }
-})
+//var parallax = new Vue({
+//    methods: {
+//        parallaxTranslate: function (id, val, startStop, target, dist) {
+//            var targetPos = document.getElementById(target).getBoundingClientRect().top;
+//
+//            if (targetPos > dist) {
+//                id.style.transform = 'translate3d(0, ' + val + 'px, 0)';
+//            }
+//        },
+//        parallaxDraw: function () {
+//            var heroImg = document.getElementById('heroImg'),
+//                heroText = document.getElementById('heroText'),
+//                yPos = (window.pageYOffset / 4000),
+//                intro = document.getElementById('intro');
+//
+//            this.parallaxTranslate(heroImg, (yPos * -1000), 'stop', 'intro', 200);
+//            this.parallaxTranslate(heroText, (yPos * 1000), 'stop', 'intro', 600);
+//
+//            requestAnimationFrame(this.parallaxDraw);
+//        }
+//    },
+//    created: function () {
+//        if (lazyLoad.mobileCheck == false) {
+//            window.addEventListener("DOMContentLoaded", this.parallaxDraw, false);
+//        }
+//    }
+//})
 var services = new Vue({
     el: '#services',
     data: {

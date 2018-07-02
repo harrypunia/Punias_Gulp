@@ -1,5 +1,6 @@
 .services {
     font-family: 'Roboto', sans-serif;
+    transition: opacity .5s ease-out;
 
     &__text {
         position: relative;
@@ -29,30 +30,21 @@
             transition: opacity .2s ease-in;
         }
     }
-
-    &__row {
-        transition: opacity .4s ease-out;
-
-        &:nth-child(2) {
-            transition-delay: .2s;
-        }
-        &:last-child {
-            transition-delay: .4s;
-        }
-    }
-
     &__row:hover &__image {
         filter: brightness(50%);
-        height: 100%;
-        transition: filter .2s ease-in, height .3s ease-out;
+        transform: scale3d(1, 1, 1) translate(-50%, -50%);
+        transition: transform .4s ease-out, filter .2s ease-in;
     }
 
     &__image {
+        will-change: transform;
         @mixin absCenter;
         filter: brightness(30%);
-        height: 105%;
         width: auto;
-        transition: filter .2s ease-in, height .3s ease-out;
+        height: 100%;
+        transform: scale3d(1.05, 1.05, 1) translate(-50%, -50%);
+        transform-origin: top left;
+        transition: transform .4s ease-out, filter .2s ease-in, opacity .4s ease-out;
     }
 }
 

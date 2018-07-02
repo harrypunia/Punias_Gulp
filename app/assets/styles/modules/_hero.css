@@ -10,8 +10,8 @@
         width: 100%;
         bottom: 100px;
         opacity: 0;
-        animation: text-span-up .5s ease-out;
-        animation-delay: .4s;
+        animation: text-span-up .8s ease-out;
+        animation-delay: .6s;
         animation-fill-mode: forwards;
 
         @mixin phone {
@@ -32,10 +32,10 @@
             position: absolute;
             left: 92vw;
             bottom: 10vh;
-            transform: translateX(-50%);
+            transform: translate3d(-50%, 0, 0);
             opacity: 0;
-            animation: text-span-up .5s ease-out;
-            animation-delay: .5s;
+            animation: services-span-up .8s ease-out;
+            animation-delay: .8s;
             animation-fill-mode: forwards;
             cursor: pointer;
 
@@ -68,11 +68,12 @@
         }
     }
     &__image {
+        will-change: transform;
         position: absolute;
         left: 0px;
         right: 0px;
         min-width: 110vw;
         min-height: 100vh;
-        animation: hero-zoom-out 1s ease-in-out 1;
+        animation: hero-zoom-out 1s cubic-bezier(.51, .29, .31, .75) 1;
     }
 }

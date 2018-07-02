@@ -3,9 +3,9 @@
     height: 50px;
     width: 100vw;
     z-index: 1;
-    animation: navIn .5s ease-out;
+    animation: navIn .8s ease-out;
     opacity: 0;
-    animation-delay: .3s;
+    animation-delay: .4s;
     animation-fill-mode: forwards;
 
     @mixin phone {

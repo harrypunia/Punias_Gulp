@@ -7,47 +7,84 @@
         height: 80%;
         border-radius: 0 50px 50px 0px;
         box-shadow: 0px 0px 30px -8px black;
-        transition: box-shadow .2s ease-in, margin-left .5s ease-out;
-        transition-delay: 0s, .3s;
+        transition: transform .4s ease-out, opacity .4s ease-out;
+        transition-delay: .6s, .8s;
         z-index: 10;
+
+        @mixin tab {
+            position: relative;
+            width: 100vw;
+            height: 150px;
+            top: 0px;
+            transform: translate(0, 0);
+            border-radius: 0 0 50px 50px;
+        }
 
         &:hover {
             box-shadow: 0px 0px 15px -4px black;
-            transition: box-shadow .2s ease-out;
         }
 
         ul {
             margin: 0 auto;
 
+            @mixin tab {
+                width: 400px;
+                text-align: center;
+            }
+
             li {
                 margin: 15px 0px;
                 cursor: pointer;
+
+                @mixin tab {
+                    margin: 0 15px;
+                    display: inline-block;
+                }
             }
         }
     }
 
     &__text {
-        margin-left: 64%;
-        transform: translateX(-50%);
-        width: 500px;
-        height: 80%;
+        position: relative;
+        top: 50%;
+        left: 65%;
+        transform: translate3d(-50%, -50%, 0);
         @mixin flexCenter;
         text-align: center;
-        transition: opacity .2s ease-out;
-        transition-delay: .3s;
+        width: 500px;
+        height: 60%;
+        transition: transform .4s ease-out, opacity .2s ease-out;
+        transition-delay: .2s;
+
+        @mixin tab {
+            display: block;
+            width: auto;
+            left: 50%;
+            top: 150px;
+            height: auto !important;
+        }
 
         &__heading {
-            position: absolute;
+            position: relative;
+            top: 25%;
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
+
+            @mixin tab {
+                position: relative;
+            }
         }
 
         &__para {
-            position: absolute;
-            top: 50%;
+            position: relative;
+            top: 40%;
             text-align: left;
             width: 100%;
+
+            @mixin tab {
+                position: relative;
+            }
         }
 
         @mixin tab {
@@ -58,7 +95,11 @@
 
     &__image-text {
         @mixin absCenter;
+        width: 80%;
+        will-change: transform, opacity;
         z-index: 1;
+        transition: transform .4s ease-out;
+        transition-delay: .4s;
 
         & h4 {
             width: 70%;
