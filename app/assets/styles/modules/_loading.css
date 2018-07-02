@@ -14,9 +14,10 @@ body.preventScroll {
     width: 100vw;
     height: 100vh;
     background: black;
+    overflow: hidden;
     
     &__logo {
-        position: fixed;
+        position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%) scale(2);
