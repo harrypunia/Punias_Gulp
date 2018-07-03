@@ -152,7 +152,7 @@ h2,
 h3,
 h4,
 p {
-    color: white;
+    color: black;
     font-family: 'Roboto', sans-serif;
 }
 hr {
@@ -367,6 +367,9 @@ hr {
             letter-spacing: .3em;
             text-indent: .3em;
         }
+.define-text--white {
+        color: white !important;
+    }
 @-webkit-keyframes navIn {
     from {
         -webkit-transform: translate3d(0, -100%, 0);
@@ -577,10 +580,10 @@ hr {
         margin-top: 100vh;
     }
 .section--dark {
-        background: #16171e;
+        background: #ffffff;
     }
 .section--mid-tone {
-        background: #372a42;
+        background: #ffffff;
     }
 .wrapper {
     padding: 25px 50px;
@@ -935,7 +938,7 @@ body.preventScroll {
 }
 @media(max-width: 600px) {
 .header {
-        background: #16171e;
+        background: #ffffff;
         z-index: 5
 }
     }
@@ -1029,7 +1032,7 @@ body.preventScroll {
                 height: 40px;
                 border-radius: 25px 25px 30px 30px;
                 border: 1px solid white;
-                background-color: rgba(22,23,30, 0.6);
+                background-color: rgba(255,255,255, 0.6);
             }
 .hero__text__services__scroll-indicator-ball {
                     position: absolute;
