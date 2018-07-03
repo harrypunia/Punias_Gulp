@@ -9,7 +9,12 @@
         border-radius: 5em;
         transition: transform .2s ease-in, box-shadow .2s ease-in;
         background-color: transparent;
+
         &:hover {
+            @mixin phone {
+                transform: scale(1);
+                box-shadow: 0 0 20px -5px black;
+            }
             transform: scale(.95);
             box-shadow: none;
             transition: transform .2s ease-out, box-shadow .2s ease-out;
@@ -22,7 +27,7 @@
         &--l-margin-correction {
             margin-left: -5px;
         }
-        
+
         &--unique {
             border-radius: 0px;
         }
@@ -34,7 +39,7 @@
             background-color: $mainRed;
             color: white;
         }
-        
+
         &--orange {
             background-color: $mainOrange;
             color: white;

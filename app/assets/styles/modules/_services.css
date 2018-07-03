@@ -11,6 +11,10 @@
         margin: auto auto;
         z-index: 1;
 
+        @mixin tab {
+            top: 35%;
+        }
+
         &__icon {
             display: block;
             margin-left: auto;
@@ -27,31 +31,86 @@
             float: left;
             text-align: left;
             opacity: 0;
-            transition: opacity .2s ease-in;
+            height: 0px;
+            padding: 0px;
+            overflow: hidden;
+
+            @mixin tab {
+                width: 100%;
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+                opacity: 1;
+                height: auto;
+                padding: 20px 10px;
+                background: rgba($mainDark, 0.8);
+            }
+
+            @mixin phone {}
         }
     }
+    &__row {
+        @mixin desktop {
+            width: 100vw !important;
+            height: 500px;
+
+            & .services__image {
+                width: auto;
+                height: 450px;
+            }
+        }
+    }
+
     &__row:hover &__image {
-        filter: brightness(50%);
-        transform: scale3d(1, 1, 1) translate(-50%, -50%);
-        transition: transform .4s ease-out, filter .2s ease-in;
+        filter: brightness(100%);
+        transform: scale3d(1.05, 1.05, 1) translate(-50%, -50%);
+        transition: transform .2s ease-out, filter .2s ease-in;
+
+        @mixin tab {
+            filter: brightness(80%);
+            transform: scale3d(1, 1, 1) translate(-50%, -50%);
+        }
     }
 
     &__image {
         will-change: transform;
         @mixin absCenter;
-        filter: brightness(30%);
-        width: auto;
-        height: 100%;
-        transform: scale3d(1.05, 1.05, 1) translate(-50%, -50%);
+        filter: brightness(70%);
+        width: 90%;
+        height: auto;
+        transform: scale3d(1, 1, 1) translate(-50%, -50%);
         transform-origin: top left;
-        transition: transform .4s ease-out, filter .2s ease-in, opacity .4s ease-out;
+        transition: transform .2s ease-out, filter .2s ease-in, opacity .4s ease-out;
+
+        @mixin tab {
+            filter: brightness(80%);
+        }
     }
 }
 
 .active {
-
     & + .services__text__para {
+        position: relative;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
         opacity: 1;
-        transition: opacity .2s ease-out;
+        -webkit-backdrop-filter: blur(10px);
+        background: rgba($mainDark, 0.8);
+        height: auto;
+        padding: 20px 10px;
+        transition: opacity .2s ease-out, height .2s ease-out;
+
+        @mixin desktop {
+            width: 80%;
+        }
+
+        @mixin tab {
+            width: 100%;
+        }
+    }
+
+    & + .services__image {
+        display: none !important;
     }
 }

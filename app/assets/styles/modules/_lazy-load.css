@@ -1,5 +1,4 @@
 .lazy {
-
     &--opacity {
         opacity: 1;
         transition: opacity .4s ease-out;
@@ -17,7 +16,7 @@
     }
     &--services {
         .services__image {
-            opacity: 0;
+            transform: scale3d(0.9, 0.9, 1) translate(-50%, -50%);
         }
     }
     &--more-services {
