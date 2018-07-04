@@ -90,7 +90,7 @@
         margin-top: 30px;
         font-size: 1rem;
         text-align: right !important;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(0, 0, 0, 0.6);
 
         @mixin phone {
             margin-top: 50px;
@@ -124,10 +124,14 @@
     }
     &--invert {
         color: transparent;
-        -webkit-text-stroke: 1px white;
+        -webkit-text-stroke: 2px #333333;
     }
     &--shadow {
-        text-shadow: 1px 1px 2px black;
+        text-shadow: 1px 1px 2px #333333;
+
+        &-soft {
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        }
     }
     &--t-margin {
         &-tiny {
@@ -179,9 +183,8 @@
             letter-spacing: .3em;
             text-indent: .3em;
         }
-
     }
-    
+
     &--white {
         color: white !important;
     }

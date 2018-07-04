@@ -14,34 +14,33 @@
 <body class="preventScroll">
     <div id="loadingWrapper">
         <intro id="loading" class="loading">
-            <span id="loadingLogo" class="loading__logo sprite-icon sprite-icon--logo_white"></span>
+            <span id="loadingLogo" class="loading__logo sprite-icon sprite-icon--logo_dark"></span>
         </intro>
     </div>
     <div id="preload" class="preload">
         <header class="header">
             <div class="wrapper">
-                <a class="header__logo header__logo-white sprite-icon sprite-icon--logo_white"></a>
                 <a class="header__logo header__logo-dark sprite-icon sprite-icon--logo_black"></a>
                 <nav class="header__navigation define-text--no-select text-hover">
                     <ul class="Rob">
-                        <li><a onclick="zen(services)" class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Services</a></li>
-                        <li><a onclick="zen(team)" class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Team</a></li>
-                        <li><a onclick="zen()" class="define-text__subheading--small define-text--shadow define-text--light define-text--no-select--pointer">Contact</a></li>
+                        <li><a onclick="zen(services)" class="define-text__subheading--small define-text--no-select--pointer">Services</a></li>
+                        <li><a onclick="zen(team)" class="define-text__subheading--small define-text--no-select--pointer">Team</a></li>
+                        <li><a onclick="zen()" class="define-text__subheading--small define-text--no-select--pointer">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <div id="hero" class="hero">
             <picture>
-                <source media="(min-width: 600px)" srcset="assets/img/hero-large-hi-dpi.jpg 2877w, assets/img/hero-large.jpg 1439w" alt="Night city view." />
-                <img id="heroImg" class="hero__image" srcset="assets/img/hero-small-hi-dpi.jpg 1000w, assets/img/hero-small.jpg 500w" alt="Night city view.">
+                <source media="(min-width: 800px)" id="heroImg" class="hero__image" srcset="assets/img/hero/hero_web/hero-2k.jpg 2500w, assets/img/hero/hero_web/hero-1k.jpg 1920w, assets/img/hero/hero_web/hero.jpg 1600w" alt="White Building Interior." />
+                <img media="(min-width: 800px)" id="heroImg" class="hero__image" srcset="assets/img/hero/hero_mob/hero-2k.jpg 1200w, assets/img/hero/hero_mob/hero-1k.jpg 950w, assets/img/hero/hero_mob/hero.jpg 750w" alt="White Building Interior." />
             </picture>
             <div class="wrapper">
                 <div id="heroText" class="hero__text">
-                    <h1 class="define-text--white define-text__small-heading define-text--light define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
+                    <h1 class="define-text__small-heading define-text--regular define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
                     <button class="button--medium button__color--red button--medium--l-margin-correction"><a id="getInTouch" href="mailto:support@punias.com">Get in Touch</a></button>
                 </div>
-                <h2 onclick="zen(erpImage)" class="define-text--white hero__text__services define-text-subheading define-text--bold define-text--spacing-large">Explore<br/><span class="hero__text__services__scroll-indicator"><span class="hero__text__services__scroll-indicator-ball"></span></span>
+                <h2 onclick="zen(erpImage)" class="hero__text__services define-text-subheading define-text--bold define-text--spacing-large">Explore<br/><span class="hero__text__services__scroll-indicator"><span class="hero__text__services__scroll-indicator-ball"></span></span>
                 </h2>
             </div>
         </div>
@@ -64,15 +63,14 @@
             <div id="erpImage" class="erp section">
                 <div id="erp__rows" class="lazy--rows row">
                     <div class="row__column-4">
-                        <div class="lazy--rows-image-text erp__image-text">
+                        <div class="lazy--rows-image-text erp__image-text define-text--shadow-soft">
                             <h4 class="define-text__subheading--tiny define-text--light define-text--white">A SMARTER CHOICE
                                 <hr />
                             </h4>
                             <h1 class="define-text__heading--medium define-text--bold define-text--white">BECOME A CENTRALIZED ENTERPRISE.</h1>
                         </div>
                         <picture>
-                            <source media="(min-width: 800px)" sizes="33.33vw" class="lazyload erp__image" data-srcset="assets/img/erp-hi-dpi.jpg 750w, assets/img/erp.jpg 500w" alt="Data analytics on screen.">
-                            <img class="lazyload erp__image" sizes="33.333vw" data-srcset="assets/img/erp_mobile-hi-dpi.jpg 750w, assets/img/erp_mobile.jpg 500w" alt="Data analytics on screen.">
+                            <img class="lazyload erp__image" sizes="33.33vw" data-srcset="assets/img/erp/erp_web/erp-2k.jpg 1200w, assets/img/erp/erp_web/erp-1k.jpg 950w, assets/img/erp/erp_web/erp.jpg 750w" alt="White Business Building Exterior." align="right">
                         </picture>
                     </div>
                     <div class="row__column-8 row--content-center row--oversize row--oversize-right section--mid-tone define-text--light">
@@ -124,8 +122,8 @@
                             <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                         </div>
                         <picture>
-                            <source media="(min-width: 1200px)" sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/services_implement-hi-dpi.jpg 750w, assets/img/services/services_web/services_implement.jpg 500w" alt="Sand Castles." />
-                            <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/services_implement-hi-dpi.jpg 900w, assets/img/services/services_mob/services_implement.jpg 750w" alt="Sand Castles." />
+                            <source media="(min-width: 1200px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/implement-1k.jpg 600w, assets/img/services/services_web/implement.jpg 500w" alt="Sand Castles." />
+                            <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/implement-1k.jpg 1000w, assets/img/services/services_mob/implement.jpg 750w" alt="Sand Castles." />
                         </picture>
                     </div>
                     <div class="row__column-4 services__row">
@@ -135,8 +133,8 @@
                             <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                         </div>
                         <picture>
-                            <source media="(min-width: 1200px)" sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/services_maintain-hi-dpi.jpg 750w, assets/img/services/services_web/services_maintain.jpg 500w" alt="Stones balancing" />
-                            <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/services_maintain-hi-dpi.jpg 900w, assets/img/services/services_mob/services_maintain.jpg 750w" alt="Stones balancing" />
+                            <source media="(min-width: 1200px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/maintain-1k.jpg 600w, assets/img/services/services_web/maintain.jpg 500w" alt="Stones balancing" />
+                            <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/maintain-1k.jpg 1000w, assets/img/services/services_mob/maintain.jpg 750w" alt="Stones balancing" />
                         </picture>
                     </div>
                     <div class="row__column-4 services__row">
@@ -146,8 +144,8 @@
                             <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
                         </div>
                         <picture>
-                            <source media="(min-width: 1200px)" sizes="33.33vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/services_upgrade-hi-dpi.jpg 750w, assets/img/services/services_web/services_upgrade.jpg 500w" alt="Building tools" />
-                            <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/services_upgrade-hi-dpi.jpg 900w, assets/img/services/services_mob/services_upgrade.jpg 750w" alt="Building tools" />
+                            <source media="(min-width: 1200px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/upgrade-1k.jpg 600w, assets/img/services/services_web/upgrade.jpg 500w" alt="Building tools" />
+                            <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/upgrade-1k.jpg 1000w, assets/img/services/services_mob/upgrade.jpg 750w" alt="Building tools" />
                         </picture>
                     </div>
                 </div>
@@ -156,14 +154,14 @@
                 <div class="row">
                     <div class="row__column-4 row--right">
                         <div class="lazy--services-image-text more-services__image-text">
-                            <h4 class="define-text__subheading--tiny define-text--light define-text--white">GET MORE FORM US
+                            <h4 class="define-text__subheading--tiny define-text--light define-text--white define-text--shadow-soft">GET MORE FORM US
                                 <hr />
                             </h4>
-                            <h1 class="define-text__heading--medium define-text--bold define-text--white">WE HAVE MORE TO OFFER.</h1>
+                            <h1 class="define-text__heading--medium define-text--bold define-text--white define-text--shadow-soft">WE HAVE MORE TO OFFER.</h1>
                         </div>
                         <picture>
-                            <source media="(min-width: 800px)" sizes="33vw" class="lazyload more-services__image" data-srcset="assets/img/more_services/more_services_web/more_services-hi-dpi.jpg 900w, assets/img/more_services/more_services_web/more_services.jpg 750w" alt="Crowded market.">
-                            <img class="lazyload more-services__image" sizes="100vw" data-srcset="assets/img/more_services/more_services_mob/more_services_mobile-hi-dpi.jpg 900w, assets/img/more_services/more_services_mob/more_services_mobile.jpg 750w" alt="Crowded market.">
+                            <source media="(min-width: 800px)" sizes="33vw" class="lazyload more-services__image" data-srcset="assets/img/more_services/more_services_web/more-services-2k.jpg 1200w, assets/img/more_services/more_services_web/more-services-1k.jpg 1000w, assets/img/more_services/more_services_web/more-services.jpg 750w" alt="Crowded market.">
+                            <img class="lazyload more-services__image" sizes="100vw" data-srcset="assets/img/more_services/more_services_mob/more-services-2k.jpg 1200w, assets/img/more_services/more_services_mob/more-services-1k.jpg 1000w, assets/img/more_services/more_services_mob/more-services.jpg 750w" alt="Royal White Building.">
                         </picture>
                     </div>
                     <div class="more-services__row row__column-8 section--mid-tone define-text--light row--oversize row--oversize-left">

@@ -2,7 +2,7 @@ html,
 body {
     width: 100vw;
     overflow-x: hidden;
-    background: white;
+    background: #fff;
     scroll-behavior: smooth;
 }
 
@@ -14,7 +14,7 @@ main {
 
 a {
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
 * {
@@ -34,13 +34,13 @@ h2,
 h3,
 h4,
 p {
-    color: #333333;
+    color: black;
     font-family: 'Roboto', sans-serif;
 }
 
 hr {
     border: none;
     height: 1px;
-    background: white;
+    background: #fff;
     width: auto;
 }

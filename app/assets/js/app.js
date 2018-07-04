@@ -119,7 +119,7 @@ var moreServices = new Vue({
             description: 'We provide trainings in: 1. SAP User trainings in all modules. 2. MS-Excel Training. 3. MS-Word and Power-point Trainings.'
         }, {
             name: 'MS-Excel Macros',
-            description: 'PUNIAS has done projects on MS-Excel Macro tools for companies like KOHLER and Exicom. As of today many users are stuck with performing same complex tasks in Excel every day or week or month. We develop macros for such repetitive and complex excel worksheets thereby reducing time wasted on such manual excel work and saving lot of cost for the Company. We have developed and E-Way Bill tool using excel macros for generation of bulk e-way bills through government portal.'
+            description: 'PUNIAS has done projects on MS-Excel Macro tools for companies like KOHLER and Exicom. As of today many users are stuck with performing same complex tasks in Excel every day or week or month. We develop macros for such repetitive and complex excel worksheets thereby reducing time wasted on such manual excel work and saving lot of cost for the Company.'
         }, {
             name: 'Digitization',
             description: 'Digitisation: We help organizations, digitise all their physical documents. For this we implement Document Management System, which has all built-in document features like accessibility controls; document search; document editing controls; document release workflows; document versions etc.'
@@ -163,7 +163,7 @@ var team = new Vue({
         }, {
             name: 'Naresh',
             designation: 'Head HR & Admin',
-            smallImage: 'assets/img/employee4.jpg',
+            smallImage: 'assets/img/employee5.jpg',
             bigImage: 'assets/img/employee2-large.jpg',
             quote: 'I was born in delhi and literally became a friend of this dude over the internet. Guess 21st century is kicking it hard on us.'
         }]

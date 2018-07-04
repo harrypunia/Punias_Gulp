@@ -24,19 +24,6 @@
             position: relative;
             margin: 2px 0 0 50%;
             transform: translate(-50%, -50%);
-            
-            &-white {
-                display: none !important;
-            }
-            &-dark {
-                display: block !important;
-            }
-        }
-        &-dark {
-            display: none;
-        }
-        &-white {
-            display: block;
         }
     }
 

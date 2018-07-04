@@ -1,9 +1,9 @@
 .erp {
     
     &__image {
-        width: auto;
-        height: 100%;
-        filter: hue-rotate(90deg) brightness(50%);
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
 
         @mixin tab {
             display: block;
