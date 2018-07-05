@@ -1,76 +1,40 @@
 .team {
-    overflow: hidden;
-    height: 1000px;
-    
-
-    &__headings {
-        text-align: center;
+  position: relative;
+  float: left;
+  height: auto;
+  background-image: url('../../assets/img/texture.svg');
+  background-repeat: repeat;
+  background-size: auto;
+  overflow: hidden;
+  &__headings {
+    position: relative;
+    text-align: center;
+  }
+  &__learn-more {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    bottom: 0px;
+    transform: translate3d(0, 100%, 0);
+    background-color: #151515;
+    transition: transform .2s ease-in;
+    transition-delay: .2s;
+    &__name {
+      text-align: center;
+      margin-top: 1%;
+      color: white;
     }
-
-    &__employee {
-
-        &__list {
-            overflow: visible;
-
-            &--members {
-                margin-left: 30px;
-                margin-top: -50px;
-            }
-        }
-
-        &__current {
-            position: relative;
-            padding: 0 40px;
-            overflow: visible;
-            height: 550px;
-
-            @mixin phone {
-                display: none;
-            }
-
-            &__above-image {
-                position: relative;
-                float: left;
-                text-align: left;
-                z-index: 2;
-            }
-
-            &__quote {
-                width: 100%;
-
-                &__drop {
-                    color: $mainRed;
-                    float: left;
-                    font-size: 5rem;
-                    line-height: 3.5rem;
-                    padding-right: .05em;
-                    margin-left: -.45em;
-                }
-            }
-            button {
-                clear: both;
-            }
-
-            &__image {
-                position: absolute;
-                right: -50px;
-                bottom: 0px;
-                z-index: 1;
-            }
-
-            &__bio {
-                position: absolute;
-                left: 10%;
-                bottom: 0%;
-                width: 250px;
-                height: auto;
-                padding: 20px 15px 40px 15px;
-                border: 1px solid white;
-
-                h1 {
-                    text-align: center;
-                }
-            }
-        }
-    }
+  }
+  .personna:hover~.team__learn-more {
+    transform: translateY(90%);
+    transition: transform .2s ease-out;
+  }
+  .activeLearnMore {
+    transform: translateY(0);
+    transition: transform .4s ease-out;
+  }
+  .noHover {
+    opacity: 0;
+    pointer-events: none !important;
+  }
 }

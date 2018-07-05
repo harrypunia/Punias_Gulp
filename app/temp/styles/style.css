@@ -589,44 +589,44 @@ hr {
         background: #ffffff;
     }
 .wrapper {
-    padding: 25px 50px;
-    margin: 0 auto;
-    width: 100%;
+  padding: 25px 50px;
+  margin: 0 auto;
+  width: 100%;
 }
 @media(max-width: 600px) {
 .wrapper {
-        padding: 25px 15px
+    padding: 25px 15px
 }
     }
 .wrapper--medium {
-        width: 80vw;
-    }
+    width: 80vw;
+  }
 .wrapper--t-extra-padding {
-        padding-top: 150px;
-    }
+    padding-top: 150px;
+  }
 .wrapper--tb-tiny-padding {
-        padding: 40px 50px;
-    }
+    padding: 40px 50px;
+  }
 @media(max-width: 600px) {
 .wrapper--tb-tiny-padding {
-            padding: 20px 15px
-    }
+      padding: 20px 15px
+  }
     }
 .wrapper--tb-padding {
-        padding: 80px 50px;
-    }
+    padding: 80px 50px;
+  }
 @media(max-width: 600px) {
 .wrapper--tb-padding {
-            padding: 40px 15px
-    }
+      padding: 40px 15px
+  }
     }
 .wrapper--tb-extra-padding {
-        padding: 150px 50px;
-    }
+    padding: 150px 50px;
+  }
 @media(max-width: 600px) {
 .wrapper--tb-extra-padding {
-            padding: 100px 15px
-    }
+      padding: 100px 15px
+  }
     }
 .text-hover a {
         display: block;
@@ -1443,119 +1443,84 @@ body.preventScroll {
     display: none;
 }
 .team {
-    overflow: hidden;
-    height: 1000px;
+  position: relative;
+  float: left;
+  height: auto;
+  background-image: url('../../assets/img/texture.svg');
+  background-repeat: repeat;
+  background-size: auto;
+  overflow: hidden;
 }
 .team__headings {
-        text-align: center;
-    }
-.team__employee__list {
-            overflow: visible;
-        }
-.team__employee__list--members {
-                margin-left: 30px;
-                margin-top: -50px;
-            }
-.team__employee__current {
-            position: relative;
-            padding: 0 40px;
-            overflow: visible;
-            height: 550px;
-        }
-@media(max-width: 600px) {
-.team__employee__current {
-                display: none
-        }
-    }
-.team__employee__current__above-image {
-                position: relative;
-                float: left;
-                text-align: left;
-                z-index: 2;
-            }
-.team__employee__current__quote {
-                width: 100%;
-            }
-.team__employee__current__quote__drop {
-                    color: #f44669;
-                    float: left;
-                    font-size: 5rem;
-                    line-height: 3.5rem;
-                    padding-right: .05em;
-                    margin-left: -.45em;
-                }
-.team__employee__current button {
-                clear: both;
-            }
-.team__employee__current__image {
-                position: absolute;
-                right: -50px;
-                bottom: 0px;
-                z-index: 1;
-            }
-.team__employee__current__bio {
-                position: absolute;
-                left: 10%;
-                bottom: 0%;
-                width: 250px;
-                height: auto;
-                padding: 20px 15px 40px 15px;
-                border: 1px solid white;
-            }
-.team__employee__current__bio h1 {
-                    text-align: center;
-                }
-.personna {
     position: relative;
-    height: 90px;
-    width: 250px;
-    margin: 30px;
+    text-align: center;
+  }
+.team__learn-more {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    bottom: 0px;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    background-color: #151515;
+    transition: -webkit-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+    transition-delay: .2s;
+  }
+.team__learn-more__name {
+      text-align: center;
+      margin-top: 1%;
+      color: white;
+    }
+.team .personna:hover~.team__learn-more {
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
+    transition: -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+  }
+.team .activeLearnMore {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    transition: -webkit-transform .4s ease-out;
+    transition: transform .4s ease-out;
+    transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+  }
+.team .noHover {
+    opacity: 0;
+    pointer-events: none !important;
+  }
+.personna {
+  position: relative;
+  float: left;
+  width: 90px;
+  height: 90px;
+  margin: 50px 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: -webkit-transform .2s ease-in;
+  transition: transform .2s ease-in;
+  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
 }
 .personna__image {
-        float: left;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        overflow: hidden;
-        cursor: pointer;
-        box-shadow: 0 0 10px black;
-        transition: -webkit-transform .2s ease-in;
-        transition: transform .2s ease-in;
-        transition: transform .2s ease-in, -webkit-transform .2s ease-in;
-    }
-.personna__image:hover {
-            -webkit-transform: scale(1.1) rotate(-20deg);
-                    transform: scale(1.1) rotate(-20deg);
-            transition: -webkit-transform .2s ease-out;
-            transition: transform .2s ease-out;
-            transition: transform .2s ease-out, -webkit-transform .2s ease-out;
-        }
-.personna__image:hover + h4 {
-                margin-right: 0px;
-                opacity: 1;
-                transition: margin-right .2s ease-in, opacity .2s ease-in;
-            }
-.personna__image:hover + h4 span {
-                    opacity: 1;
-                    margin-right: 0px;
-                }
-.personna__name {
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
-        margin-right: 20px;
-        opacity: 0;
-        transition: margin-right .2s ease-out, opacity .2s ease-out;
-    }
-.personna__name span {
-            float: right;
-            opacity: 0;
-            margin-right: 10px;
-            transition: inherit;
-            transition-delay: .1s;
-        }
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+  }
+.personna:hover {
+    -webkit-transform: scale(1.1) rotate(-20deg);
+            transform: scale(1.1) rotate(-20deg);
+    transition: -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+  }
+.personna-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 .lazy--opacity {
         opacity: 1;
         transition: opacity .4s ease-out;

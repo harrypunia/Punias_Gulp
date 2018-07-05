@@ -1,41 +1,32 @@
 .wrapper {
-    padding: 25px 50px;
-    margin: 0 auto;
-    width: 100%;
-    
+  padding: 25px 50px;
+  margin: 0 auto;
+  width: 100%;
+  @mixin phone {
+    padding: 25px 15px;
+  }
+  &--medium {
+    width: 80vw;
+  }
+  &--t-extra-padding {
+    padding-top: 150px;
+  }
+  &--tb-tiny-padding {
+    padding: 40px 50px;
     @mixin phone {
-        padding: 25px 15px;
+      padding: 20px 15px;
     }
-
-    &--medium {
-        width: 80vw;
+  }
+  &--tb-padding {
+    padding: 80px 50px;
+    @mixin phone {
+      padding: 40px 15px;
     }
-
-    &--t-extra-padding {
-        padding-top: 150px;
+  }
+  &--tb-extra-padding {
+    padding: 150px 50px;
+    @mixin phone {
+      padding: 100px 15px;
     }
-    
-    &--tb-tiny-padding {
-        padding: 40px 50px;
-        
-        @mixin phone {
-            padding: 20px 15px;
-        }
-    }
-    
-    &--tb-padding {
-        padding: 80px 50px;
-        
-        @mixin phone {
-            padding: 40px 15px;
-        }
-    }
-    
-    &--tb-extra-padding {
-        padding: 150px 50px;
-        
-        @mixin phone {
-            padding: 100px 15px;
-        }
-    }
+  }
 }

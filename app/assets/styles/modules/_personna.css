@@ -1,49 +1,25 @@
 .personna {
-    position: relative;
-    height: 90px;
-    width: 250px;
-    margin: 30px;
-
-    &__image {
-        float: left;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        overflow: hidden;
-        cursor: pointer;
-        box-shadow: 0 0 10px black;
-        transition: transform .2s ease-in;
-
-        &:hover {
-            transform: scale(1.1) rotate(-20deg);
-            transition: transform .2s ease-out;
-
-
-            + h4 {
-                margin-right: 0px;
-                opacity: 1;
-                transition: margin-right .2s ease-in, opacity .2s ease-in;
-
-                span {
-                    opacity: 1;
-                    margin-right: 0px;
-                }
-            }
-        }
-    }
-
-    &__name {
-        @mixin absRight;
-        margin-right: 20px;
-        opacity: 0;
-        transition: margin-right .2s ease-out, opacity .2s ease-out;
-
-        span {
-            float: right;
-            opacity: 0;
-            margin-right: 10px;
-            transition: inherit;
-            transition-delay: .1s;
-        }
-    }
+  position: relative;
+  float: left;
+  width: 90px;
+  height: 90px;
+  margin: 50px 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform .2s ease-in;
+  &__image {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+  }
+  &:hover {
+    transform: scale(1.1) rotate(-20deg);
+    transition: transform .2s ease-out;
+  }
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }

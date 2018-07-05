@@ -205,6 +205,8 @@ var team = new Vue({
     el: '#team',
     data: {
         currEmployee: 0,
+        mouseOverEmployee: '',
+        learnMoreStatus: false,
         employees: [{
             name: 'Baljit S. Punia',
             designation: 'CEO',
@@ -238,10 +240,16 @@ var team = new Vue({
         }]
     },
     methods: {
-        switchEmployee: function (el, i) {
+        switchEmployee(el, i) {
             el.currentTarget.classList.add('active');
             this.currEmployee = i;
             this.employees.push();
+        },
+        showName(name) {
+          this.mouseOverEmployee = name;
+        },
+        openLearnMore(object) {
+          this.learnMoreStatus = true;
         }
     }
 });
