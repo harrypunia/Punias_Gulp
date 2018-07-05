@@ -21,5 +21,14 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    @mixin tab {
+      display: inline-block;
+    }
   }
+}
+
+.noHover {
+  left: -100vw;
+  pointer-events: none !important;
+  opacity: 0;
 }

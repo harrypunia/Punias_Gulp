@@ -11,8 +11,11 @@
     &--dark {
         background: $mainDark;
     }
-    
+
     &--mid-tone {
         background: $mainMid;
+    }
+    &--black {
+      background: #151515;
     }
 }

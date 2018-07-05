@@ -1,80 +1,74 @@
 .hero {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 0;
-
-    &__text {
-        position: absolute;
-        width: 100%;
-        bottom: 30px;
-        opacity: 0;
-        animation: text-span-up .8s ease-out;
-        animation-delay: .6s;
-        animation-fill-mode: forwards;
-
-        @mixin phone {
-            position: absolute;
-            width: 100%;
-            top: 30vh;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        @mixin phone {
-            button {
-                margin-top: 20vh;
-            }
-        }
-
-        &__services {
-            position: absolute;
-            left: 92vw;
-            bottom: 10vh;
-            transform: translate3d(-50%, 0, 0);
-            opacity: 0;
-            animation: services-span-up .8s ease-out;
-            animation-delay: .8s;
-            animation-fill-mode: forwards;
-            cursor: pointer;
-            color: white;
-
-            @mixin tab {
-                display: none;
-            }
-
-            &__scroll-indicator {
-                position: absolute;
-                left: 50%;
-                top: 50px;
-                transform: translate(-50%, -50%);
-                width: 25px;
-                height: 40px;
-                border-radius: 25px 25px 30px 30px;
-                border: 1px solid #333333;
-                background-color: rgba(#efefef, 0.6);
-
-                &-ball {
-                    position: absolute;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 50%;
-                    background-color: rgba(0, 0, 0, 0.8);
-                    animation: ball-scroll 3s ease-in-out infinite;
-                }
-            }
-        }
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  &__text {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    opacity: 0;
+    transform: translate(0, 0);
+    animation: text-span-up .8s ease-out;
+    animation-delay: .6s;
+    animation-fill-mode: forwards;
+    @mixin phone {
+      position: absolute;
+      width: 100%;
+      top: 30vh;
+      margin: 0 auto;
+      text-align: center;
     }
-    &__image {
-        will-change: transform;
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        min-width: 110vw;
-        min-height: 100vh;
-        animation: hero-zoom-out 1s cubic-bezier(.51, .29, .31, .75) 1;
+    @mixin phone {
+      button {
+        margin-top: 20vh;
+      }
     }
+    &__services {
+      position: absolute;
+      left: 90vw;
+      bottom: 10vh;
+      transform: translate3d(-50%, 0, 0);
+      opacity: 0;
+      animation: services-span-up .8s ease-out;
+      animation-delay: .8s;
+      animation-fill-mode: forwards;
+      cursor: pointer;
+      @mixin tab {
+        display: none;
+      }
+      &__scroll-indicator {
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 40px;
+        border-radius: 25px 25px 30px 30px;
+        border: 1px solid #333333;
+        background-color: rgba(#efefef, 0.6);
+        &-ball {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.8);
+          animation: ball-scroll 3s ease-in-out infinite;
+        }
+      }
+    }
+  }
+  &__image {
+    will-change: transform;
+    position: absolute;
+    right: -20px;
+    bottom: 0px;
+    min-width: 110vw;
+    min-height: 100vh;
+    transform-origin: center center;
+    animation: hero-zoom-out 1s cubic-bezier(.51, .29, .31, .75) 1;
+  }
 }

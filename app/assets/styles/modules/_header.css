@@ -1,40 +1,40 @@
 .header {
-    position: fixed;
+  position: fixed;
+  height: 50px;
+  width: 100vw;
+  z-index: 1;
+  background: $mainDark;
+  box-shadow: 0 0 20px -10px black;
+  transform: translate3d(0, -150%, 0);
+  animation: navIn .8s ease-in;
+  animation-delay: .4s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+  &__wrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
     height: 50px;
-    width: 100vw;
-    z-index: 1;
-    animation: navIn .8s ease-out;
-    opacity: 0;
-    animation-delay: .4s;
-    animation-fill-mode: forwards;
-
+    display: flex;
+  }
+  &__logo {
+    cursor: pointer;
+    margin: auto 20px auto 0;
     @mixin phone {
-        background: $mainDark;
-        z-index: 5;
+      position: relative;
+      margin: 2px 0 0 50%;
+      transform: translate(-50%, -50%);
     }
-
-    &__logo {
-        float: left;
-        cursor: pointer;
-        margin-right: 20px;
-        margin-top: 25px;
-        transform: translateY(-50%);
-
-        @mixin phone {
-            position: relative;
-            margin: 2px 0 0 50%;
-            transform: translate(-50%, -50%);
-        }
+  }
+  &__navigation {
+    width: auto;
+    margin: auto 0;
+    li {
+      display: inline-block;
+      font-family: 'Roboto', sans-serif;
+      margin: 0 20px;
+      @mixin phone {
+        display: none;
+      }
     }
-
-    &__navigation li {
-        display: inline-block;
-        font-family: 'Roboto', sans-serif;
-        line-height: 50px;
-        margin: 0 20px;
-
-        @mixin phone {
-            display: none;
-        }
-    }
+  }
 }

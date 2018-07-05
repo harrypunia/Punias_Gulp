@@ -1,191 +1,173 @@
 .define-text {
-    /*    Categories*/
-    &__heading {
+  /*    Categories*/
+  &__heading {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    @mixin phone {
+      font-size: 2.2rem;
+      line-height: 1.5;
+    }
+    &--medium {
+      font-size: 2.8rem;
+      letter-spacing: .025em;
+      line-height: 1.2;
+      @mixin desktop {
         font-size: 2.5rem;
-        line-height: 1.2;
-
-        @mixin phone {
-            font-size: 2.2rem;
-            line-height: 1.5;
-        }
-
-        &--medium {
-            font-size: 2.8rem;
-            letter-spacing: .025em;
-            line-height: 1.2;
-
-            @mixin desktop {
-                font-size: 2.5rem;
-            }
-
-            @mixin tab {
-                font-size: 3rem;
-                text-align: center;
-            }
-
-            @mixin phone {
-                font-size: 2rem;
-            }
-        }
-
-        &--large {
-            font-size: 4.5rem;
-            letter-spacing: .2em;
-            line-height: 1;
-
-            @mixin phone {
-                font-size: 3rem;
-            }
-        }
+      }
+      @mixin tab {
+        font-size: 3rem;
+        text-align: center;
+      }
+      @mixin phone {
+        font-size: 2rem;
+      }
     }
-    &__small-heading {
-        font-size: 1.6rem;
-        line-height: 1.2;
-        letter-spacing: .025em;
-
-        @mixin phone {
-            font-size: 1.5rem;
-        }
+    &--large {
+      font-size: 4.5rem;
+      letter-spacing: .2em;
+      line-height: 1;
+      @mixin phone {
+        font-size: 3rem;
+      }
     }
-    &__subheading {
-        font-size: 1.2rem;
-        line-height: 1;
-
-        @mixin phone {
-            font-size: .8rem;
-        }
-
-        &--small {
-            font-size: 1rem;
-        }
-
-        &--tiny {
-            font-size: .8rem;
-
-            @mixin tab {
-                text-align: center;
-                margin: 0 auto;
-            }
-        }
+  }
+  &__small-heading {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: .025em;
+    @mixin phone {
+      font-size: 1.5rem;
     }
-    &__para {
-        font-size: 1rem;
-        line-height: 2;
-
-        @mixin phone {
-            font-size: 1.1rem;
-        }
-
-        &--tiny {
-            font-size: .6rem;
-        }
-        &--small {
-            font-size: .8rem;
-        }
-        &--small-line-height {
-            line-height: 1.5;
-        }
+  }
+  &__subheading {
+    font-size: 1.2rem;
+    line-height: 1;
+    @mixin phone {
+      font-size: .8rem;
     }
-    &__quote {
-        margin-top: 30px;
-        font-size: 1rem;
-        text-align: right !important;
-        color: rgba(0, 0, 0, 0.6);
-
-        @mixin phone {
-            margin-top: 50px;
-            font-size: .8rem;
-        }
+    &--small {
+      font-size: 1rem;
     }
-    /*    Modifiers*/
-    &--xlight {
-        font-weight: 100;
+    &--tiny {
+      font-size: .8rem;
+      @mixin tab {
+        text-align: center;
+        margin: 0 auto;
+      }
     }
-    &--light {
-        font-weight: 200;
+  }
+  &__para {
+    font-size: 1rem;
+    line-height: 2;
+    @mixin phone {
+      font-size: 1.1rem;
     }
-    &--bold {
-        font-weight: 600;
+    &--tiny {
+      font-size: .6rem;
     }
-    &--extra-bold {
-        font-weight: 800;
+    &--small {
+      font-size: .8rem;
     }
-    &--highlight {
-        color: $mainOrange;
+    &--small-line-height {
+      line-height: 1.5;
     }
-    &--no-select {
-        cursor: default;
-        user-select: none;
-
-        &--pointer {
-            user-select: none;
-            cursor: pointer;
-        }
+  }
+  &__quote {
+    margin-top: 30px;
+    font-size: 1rem;
+    text-align: right !important;
+    color: rgba(0, 0, 0, 0.6);
+    @mixin phone {
+      margin-top: 50px;
+      font-size: .8rem;
     }
-    &--invert {
-        color: transparent;
-        -webkit-text-stroke: 2px #333333;
+  }
+  /*    Modifiers*/
+  &--xlight {
+    font-weight: 100;
+  }
+  &--light {
+    font-weight: 200;
+  }
+  &--bold {
+    font-weight: 600;
+  }
+  &--extra-bold {
+    font-weight: 800;
+  }
+  &--highlight {
+    color: $mainOrange;
+  }
+  &--no-select {
+    cursor: default;
+    user-select: none;
+    &--pointer {
+      user-select: none;
+      cursor: pointer;
     }
-    &--shadow {
-        text-shadow: 1px 1px 2px #333333;
-
-        &-soft {
-            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-        }
+  }
+  &--invert {
+    color: transparent;
+    -webkit-text-stroke: 2px #333333;
+  }
+  &--shadow {
+    text-shadow: 1px 1px 2px #333333;
+    &-soft {
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     }
-    &--t-margin {
-        &-tiny {
-            margin-top: 10px;
-        }
-        &-small {
-            margin-top: 20px;
-        }
-        &-medium {
-            margin-top: 30px;
-        }
-        &-large {
-            margin-top: 40px;
-        }
-        &-xlarge {
-            margin-top: 80px;
-        }
-        &-jumbo {
-            margin-top: 120px;
-        }
-        &-phone {
-            @mixin tab {
-                margin-top: 50px;
-            }
-        }
+  }
+  &--t-margin {
+    &-tiny {
+      margin-top: 10px;
     }
-    &--b-margin {
-        &-medium {
-            margin-bottom: 30px;
-        }
+    &-small {
+      margin-top: 20px;
     }
-    &--dim {
-        color: rgba(255, 255, 255, 0.6);
+    &-medium {
+      margin-top: 30px;
     }
-    &--spacing {
-        &-tiny {
-            letter-spacing: .05em;
-            text-indent: .05em;
-        }
-        &-small {
-            letter-spacing: .1em;
-            text-indent: .1em;
-        }
-        &-medium {
-            letter-spacing: .2em;
-            text-indent: .2em;
-        }
-        &-large {
-            letter-spacing: .3em;
-            text-indent: .3em;
-        }
+    &-large {
+      margin-top: 40px;
     }
-
-    &--white {
-        color: white !important;
+    &-xlarge {
+      margin-top: 80px;
     }
+    &-jumbo {
+      margin-top: 120px;
+    }
+    &-phone {
+      @mixin tab {
+        margin-top: 50px;
+      }
+    }
+  }
+  &--b-margin {
+    &-medium {
+      margin-bottom: 30px;
+    }
+  }
+  &--dim {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &--spacing {
+    &-tiny {
+      letter-spacing: .05em;
+      text-indent: .05em;
+    }
+    &-small {
+      letter-spacing: .1em;
+      text-indent: .1em;
+    }
+    &-medium {
+      letter-spacing: .2em;
+      text-indent: .2em;
+    }
+    &-large {
+      letter-spacing: .3em;
+      text-indent: .3em;
+    }
+  }
+  &--white {
+    color: white !important;
+  }
 }

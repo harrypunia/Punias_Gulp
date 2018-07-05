@@ -1,62 +1,51 @@
 @keyframes navIn {
-    from {
-        transform: translate3d(0, -100%, 0);
-        opacity: 0;
-    }
-    to {
-        transform: translate3d(0, 0%, 0);
-        opacity: 1;
-    }
+  from {
+    transform: translate3d(0, -150%, 0);
+  }
+  to {
+    transform: translate3d(0, 0%, 0);
+  }
 }
-
 @keyframes hero-zoom-out {
-    from {
-        opacity: 0;
-        transform: scale(1.2);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: scale(1.2);
+  }
 }
-
 @keyframes text-span-up {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 50%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0%, 0);
-    }
+  from {
+    opacity: 0;
+    transform: translate(0, 50%);
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 @keyframes services-span-up {
-    from {
-        opacity: 0;
-        transform: translate3d(-50%, 200px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(-50%, 0, 0);
-    }
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, 200px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
 }
-
 @keyframes ball-scroll {
-    0% {
-        top: 0%;
-        opacity: 0;
-    }
-    20% {
-        top: 30%;
-        opacity: 1;
-    }
-    80% {
-        top: 30%;
-        opacity: 1;
-    }
-    100% {
-        top: 100%;
-        opacity: 0;
-    }
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  20% {
+    top: 30%;
+    opacity: 1;
+  }
+  80% {
+    top: 30%;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
 }
