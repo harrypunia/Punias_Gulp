@@ -71,13 +71,15 @@ var hero = new Vue({
   },
   methods: {
     parallax(event) {
-      this.mouseX = ((event.clientX / window.innerWidth) - 0.5);
-      this.mouseY = ((event.clientY / window.innerHeight) - 0.5);
-      this.image = document.getElementById('heroImg');
-      // this.text = document.getElementById('heroText')
+      if (window.innerWidth > 600) {
+        this.mouseX = ((event.clientX / window.innerWidth) - 0.5);
+        this.mouseY = ((event.clientY / window.innerHeight) - 0.5);
+        this.image = document.getElementById('heroImg');
+        // this.text = document.getElementById('heroText')
 
-      this.image.style.transform = 'translate(' + this.mouseX + '%, ' + this.mouseY + '%)';
-      // this.text.style.transform = 'translate(' + this.mouseX * 4 + 'vw, ' + this.mouseY * 4 + 'vh)';
+        this.image.style.transform = 'translate(' + this.mouseX + '%, ' + this.mouseY + '%)';
+        // this.text.style.transform = 'translate(' + this.mouseX * 4 + 'vw, ' + this.mouseY * 4 + 'vh)';
+      }
     }
   }
 });

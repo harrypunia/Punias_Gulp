@@ -16,9 +16,7 @@
     height: 80%;
     border-radius: 0 50px 50px 0px;
     box-shadow: 0px 0px 15px #ccc;
-    transition: transform .4s ease-out, opacity .4s ease-out;
-    transition-delay: .6s, .8s, 0s;
-    transition: box-shadow .2s ease-in;
+    transition: transform .4s ease-out, opacity .4s ease-out, box-shadow .2s ease-out;
     z-index: 10;
     @mixin tab {
       position: relative;
@@ -56,7 +54,7 @@
     @mixin flexCenter;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate3d(0, -50%, 0);
     width: 60%;
     height: 50%;
     transition: transform .4s ease-out, opacity .2s ease-out;
@@ -64,7 +62,7 @@
     margin-left: auto;
     margin-right: auto;
     @mixin tab {
-      transform: none;
+      transform: translate3d(0, 0, 0);
       float: left;
       clear: both;
       height: 500px !important;

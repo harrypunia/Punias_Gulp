@@ -4,6 +4,7 @@
   height: 100vh;
   overflow: hidden;
   z-index: 0;
+  -webkit-backface-visibility: hidden;
   &__text {
     position: absolute;
     width: 100%;

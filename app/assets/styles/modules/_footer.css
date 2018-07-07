@@ -1,6 +1,7 @@
 .footer {
   &__wrapper {
     float: left;
+    overflow: hidden;
   }
   &__logo {
     width: 50%;

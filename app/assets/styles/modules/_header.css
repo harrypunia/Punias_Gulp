@@ -9,6 +9,7 @@
   animation: navIn .8s ease-out;
   animation-delay: .4s;
   animation-fill-mode: forwards;
+  -webkit-backface-visibility: hidden;
   z-index: 5;
   &__wrapper {
     padding-top: 0px;
