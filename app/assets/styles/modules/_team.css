@@ -40,23 +40,26 @@
     }
     &__image {
       position: absolute;
-      right: -50%;
+      right: 0%;
       top: 50%;
-      transform: translate(0%, -50%);
-      transition: right .5s ease-out;
+      transform: translate(100%, -50%);
+      transition: transform .5s ease-out;
     }
+  }
+  .noHover:hover~.team__learn-more {
+    transform: inherit !important;
   }
   .personna:hover~.team__learn-more {
     transform: translateY(90%);
-    transition: transform .2s ease-out;
+    transition: transform .4s ease-out;
   }
   .activeLearnMore {
     transform: translateY(0);
     transition: transform .4s ease-out;
   }
   .imageIn {
-    right: 0px;
-    transition: right .5s ease-out;
+    transform: translate(0%, -50%);
+    transition: transform .5s ease-out;
     transition-delay: .2s;
   }
 }

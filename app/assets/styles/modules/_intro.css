@@ -9,7 +9,7 @@
         @mixin phone {
             text-align: left;
         }
-                
+
         &__subheading {
             @mixin tab {
                 display: none;

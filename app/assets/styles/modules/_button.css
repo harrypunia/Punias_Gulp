@@ -3,7 +3,7 @@
     &--medium {
         position: relative;
         cursor: pointer;
-        box-shadow: 0 0 20px -5px black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .4);
         font-size: 1.5rem;
         padding: .5em 1em;
         border-radius: 5em;
@@ -13,9 +13,9 @@
         &:hover {
             @mixin phone {
                 transform: scale(1);
-                box-shadow: 0 0 20px -5px black;
+                box-shadow: 0 0 10px rgba(0,0,0, 0.2);
             }
-            transform: scale(.95);
+            transform: scale(.98);
             box-shadow: none;
             transition: transform .2s ease-out, box-shadow .2s ease-out;
         }

@@ -3,38 +3,114 @@
     float: left;
   }
   &__logo {
-    width: 100%;
-    float: left;
+    width: 50%;
+    min-width: 500px;
+    clear: both;
+    margin: 0 auto 50px auto;
     height: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     span {
       display: block;
       transform: scale(1.2);
     }
   }
-  &__contact {
+  &__topics-and-content-wrapper {
+    position: absolute;
+    padding: 20px 40px;
+    bottom: 0px;
+    left: 0px;
+    width: 60vw;
+    height: 280px;
+    box-shadow: 0 0 20px #efefef;
+  }
+  &__topics {
     float: left;
     height: 200px;
-    width: 66.66%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    user-select: none;
     h2 {
       margin-left: 25px;
       margin-bottom: 10px;
-      color: #aaa;
+      color: #999;
       transition: transform .2s ease-out;
       &:hover {
-        color: #efefef;
+        color: #333;
         cursor: pointer;
         transform: scale(1.1) translate(5%, 0);
       }
     }
   }
-  &__social {
-    float: left;
+  &__content {
+    float: right;
     height: 200px;
-    width: 33.33%;
+    width: 60%;
+    &--locations-maps {
+      width: 100%;
+      height: 200px;
+      background: rgba(#333, 0.1);
+    }
+    &--clients {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      li {
+        cursor: pointer;
+        margin: 15px 0;
+        transition: transform .2s ease-in;
+        &:hover {
+          transform: scale(1.1);
+          transition: transform .2s ease-out;
+        }
+      }
+    }
+    &--subscribe {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .form__button {
+        border: none;
+        margin-top: 20px;
+      }
+    }
   }
+  &__copyright {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 40vw;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    hr {
+      background: #ccc !important;
+      width: 90%;
+    }
+    p {
+      font-size: .7rem;
+      color: #ccc;
+    }
+  }
+}
+.footerActive {
+  color: $mainRed !important;
+  transform: scale(1.1) translate(5%, 0) !important;
 }

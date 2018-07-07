@@ -1,117 +1,64 @@
 .row {
-    width: 100%;
-    height: 90vh;
-
-    @mixin tab {
-        float: left;
-        height: 100vh;
-        height: auto !important;
-    }
-
-    &--tall {
-        height: 110vh;
-
-        @mixin tab {
-            height: 100vh;
-        }
-    }
-
-    &--parent-height {
-        height: 100%;
-    }
-    
-    &--auto-height {
+  width: 100%;
+  height: 90vh;
+  @mixin tab {
+    float: left;
+    height: 100vh;
+    height: auto !important;
+  }
+  &__column {
+    &-4 {
+      position: relative;
+      float: left;
+      width: 33.33%;
+      height: inherit;
+      overflow: hidden;
+      @mixin tab {
+        width: 100%;
         height: auto;
+      }
     }
-
-    &__column {
-        &-2 {
-            position: relative;
-            float: left;
-            width: 16.66%;
-            height: inherit;
-            overflow: hidden;
-            @mixin tab {
-                width: 100%;
-            }
-        }
-
-        &-4 {
-            position: relative;
-            float: left;
-            width: 33.33%;
-            height: inherit;
-            overflow: hidden;
-            @mixin tab {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        &-8 {
-            position: relative;
-            float: left;
-            width: 66.66%;
-            height: 100%;
-            overflow: hidden;
-
-            @mixin tab {
-                width: 100%;
-                height: auto;
-                padding: 0;
-            }
-        }
-
-        &-10 {
-            position: relative;
-            float: left;
-            width: 83.33%;
-            height: inherit;
-            overflow: hidden;
-            @mixin tab {
-                width: 100%;
-            }
-        }
-
+    &-8 {
+      position: relative;
+      float: left;
+      width: 66.66%;
+      height: 100%;
+      overflow: hidden;
+      @mixin tab {
+        width: 100%;
+        height: auto;
+        padding: 0;
+      }
     }
-    &--oversize {
-        height: 100vh;
-        box-shadow: 0 0 20px -10px black;
-        z-index: 10;
-
-        @mixin tab {
-            height: auto !important;
-        }
-        &-right {
-            @mixin absRight;
-        }
-        &-left {
-            @mixin absLeft;
-        }
-        @mixin tab {
-            &-right {
-                position: relative;
-                float: left;
-                transform: none;
-                left: none;
-                top: none;
-            }
-            &-left {
-                position: relative;
-                float: left;
-                transform: none;
-                left: none;
-                top: none;
-            }
-        }
+  }
+  &--oversize {
+    height: 100vh;
+    box-shadow: 0 0 20px -10px black;
+    z-index: 10;
+    @mixin tab {
+      height: auto !important;
     }
-    &--content-center {
-        @mixin flexCenter;
+    &-right {
+      @mixin absRight;
     }
-    &--right {
-        float: right;
-        @mixin tab {
-            float: left;
-        }
+    &-left {
+      @mixin absLeft;
     }
+    @mixin tab {
+      &-right {
+        position: relative;
+        float: left;
+        transform: none;
+        left: none;
+        top: none;
+      }
+      &-left {
+        position: relative;
+        float: left;
+        transform: none;
+        left: none;
+        top: none;
+      }
+    }
+  }
 }

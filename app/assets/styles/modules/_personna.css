@@ -26,9 +26,3 @@
     }
   }
 }
-
-.noHover {
-  left: -100vw;
-  pointer-events: none !important;
-  opacity: 0;
-}
