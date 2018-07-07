@@ -133,7 +133,7 @@ var team = new Vue({
     learnMoreStatus: false,
     selectedEmployee: 0,
     employees: [{
-      name: 'Baljit S. Punia',
+      name: 'Baljit',
       designation: 'CEO',
       smallImage: 'assets/img/employee1.jpg',
       bigImage: 'assets/img/employee1-large.png',
@@ -151,13 +151,13 @@ var team = new Vue({
       bigImage: 'assets/img/employee3-large.png',
       quote: "I'm just a firend of harry wandering in this website trying to figure my way otta here."
     }, {
-      name: 'Zohaib',
+      name: 'Naresh',
       designation: 'Head Technology',
       smallImage: 'assets/img/employee4.jpg',
       bigImage: 'assets/img/employee2-large.jpg',
       quote: 'I was born in delhi and literally became a friend of this dude over the internet. Guess 21st century is kicking it hard on us.'
     }, {
-      name: 'Naresh',
+      name: 'Zohaib',
       designation: 'Head HR & Admin',
       smallImage: 'assets/img/employee5.jpg',
       bigImage: 'assets/img/employee2-large.jpg',

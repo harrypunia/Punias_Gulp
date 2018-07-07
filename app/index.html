@@ -8,35 +8,39 @@
   <link rel="stylesheet" href="temp/styles/style.css">
   <!--endbuild-->
   <title>Punias Marketing and Consulting LLP</title>
-  <!-- build:js /assets/js/vender.js -->
+  <!--build:js /assets/js/vender.js -->
   <script src="temp/scripts/vendor.js"></script>
   <!--endbuild-->
+  <!--build:js /assets/js/vue.min.js-->
   <script src="assets/js/vue.min.js"></script>
+  <!--endbuild-->
+  <!--build:js /assets/js/zenscroll-min.js-->
   <script src="assets/js/zenscroll-min.js"></script>
+  <!--endbuild-->
 </head>
 
 <body>
   <div>
     <header class="header">
       <div class="wrapper header__wrapper">
-        <a onclick="zen(body)" class="header__logo header__logo-dark sprite-icon sprite-icon--logo_black"></a>
+        <a onclick="zen(body)" class="header__logo header__logo-dark sprite-icon sprite-icon--logo_white"></a>
         <nav class="header__navigation define-text--no-select text-hover">
           <ul class="Rob">
-            <li><a onclick="zen(services)" class="define-text__subheading--small define-text--no-select--pointer">Services</a></li>
-            <li><a onclick="zen(team)" class="define-text__subheading--small define-text--no-select--pointer">Team</a></li>
-            <li><a onclick="zen(footer)" class="define-text__subheading--small define-text--no-select--pointer">Contact</a></li>
+            <li><a onclick="zen(services)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Services</a></li>
+            <li><a onclick="zen(moreServices)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Solutions</a></li>
+            <li><a onclick="zen(team)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Team</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div id="hero" @mousemove="parallax($event)" class="hero">
       <picture>
-        <source media="(min-width: 800px)" class="hero__image" srcset="assets/img/hero/hero_web/hero-2k.jpg 2500w, assets/img/hero/hero_web/hero-1k.jpg 1920w, assets/img/hero/hero_web/hero.jpg 1600w" alt="White Building Interior." />
-        <img id="heroImg" class="hero__image" srcset="assets/img/hero/hero_mob/hero-2k.jpg 1200w, assets/img/hero/hero_mob/hero-1k.jpg 950w, assets/img/hero/hero_mob/hero.jpg 750w" alt="White Building Interior." />
+        <source media="(min-width: 800px)" class="hero__image lazyload" data-srcset="assets/img/hero/hero_web/hero-2k.jpg 2500w, assets/img/hero/hero_web/hero-1k.jpg 1920w, assets/img/hero/hero_web/hero.jpg 1600w" alt="White Building Interior."/>
+        <img id="heroImg" class="hero__image lazyload" data-srcset="assets/img/hero/hero_mob/hero-2k.jpg 1200w, assets/img/hero/hero_mob/hero-1k.jpg 950w, assets/img/hero/hero_mob/hero.jpg 750w" alt="White Building Interior." />
       </picture>
       <div class="wrapper">
         <div id="heroText" class="hero__text">
-          <h1 class="define-text__small-heading define-text--regular define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
+          <h1 class="define-text__small-heading define-text--regular define-text--white define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
           <button class="button--medium button__color--red button--medium--l-margin-correction"><a id="getInTouch" href="mailto:support@punias.com">Get in Touch</a></button>
           <h2 onclick="zen(erpImage)" class="hero__text__services define-text-subheading define-text--bold define-text--spacing-large">Explore<br/><span class="hero__text__services__scroll-indicator"><span class="hero__text__services__scroll-indicator-ball"></span></span></h2>
         </div>
@@ -67,7 +71,8 @@
               <h1 class="define-text__heading--medium define-text--bold define-text--white">BECOME A CENTRALIZED ENTERPRISE.</h1>
             </div>
             <picture>
-              <img class="lazyload erp__image" sizes="33.33vw" data-srcset="assets/img/erp/erp_web/erp-2k.jpg 1200w, assets/img/erp/erp_web/erp-1k.jpg 950w, assets/img/erp/erp_web/erp.jpg 750w" alt="White Business Building Exterior." align="right">
+              <source media="(min-width: 800px)" class="lazyload erp__image" sizes="33.33vw" data-srcset="assets/img/erp/erp_web/erp-2k.jpg 1200w, assets/img/erp/erp_web/erp-1k.jpg 950w, assets/img/erp/erp_web/erp.jpg 750w" alt="White Business Building Exterior."/>
+              <img class="lazyload erp__image" sizes="33.33vw" data-srcset="assets/img/erp/erp_mob/erp-2k.jpg 1200w, assets/img/erp/erp_mob/erp-1k.jpg 950w, assets/img/erp/erp_mob/erp.jpg 750w" alt="White Business Building Exterior." align="left">
             </picture>
           </div>
           <div class="row__column-8 row--oversize row--oversize-right section--mid-tone define-text--light">
@@ -80,25 +85,23 @@
                 <ul class="erp__text__services-list define-text--t-margin-large">
                   <li>
                     <span class="erp__text__services-list__icon sprite-icon sprite-icon--network"></span>
-                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">
-                                            Effective Data Communication
-                                        </h4>
+                    <h4 class="define-text--t-margin-small define-text__subheading">Effective Data Communication</h4>
                     <p class="define-text__para--small define-text--t-margin-tiny">Prevents confusion between multiple departments.</p>
                   </li>
                   <li>
                     <span class="erp__text__services-list__icon sprite-icon sprite-icon--clock"></span>
-                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Timely Information</h4>
+                    <h4 class="define-text--t-margin-small define-text__subheading">Timely Information</h4>
                     <p class="define-text__para--small define-text--t-margin-tiny">Improve pre-planning and never loose a customer again</p>
                   </li>
                   <li>
                     <span class="erp__text__services-list__icon sprite-icon sprite-icon--duplicate"></span>
-                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Duplication Prevention
+                    <h4 class="define-text--t-margin-small define-text__subheading">Duplication Prevention
                                         </h4>
                     <p class="define-text__para--small define-text--t-margin-tiny">Eliminates data duplication and inconsistencies</p>
                   </li>
                   <li>
                     <span class="erp__text__services-list__icon sprite-icon sprite-icon--coin"></span>
-                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Lower Resource Costs
+                    <h4 class="define-text--t-margin-small define-text__subheading">Lower Resource Costs
                                         </h4>
                     <p class="define-text__para--small define-text--t-margin-tiny">For inventory, materials &amp; human resources</p>
                   </li>

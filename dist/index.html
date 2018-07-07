@@ -7,36 +7,32 @@
   <link rel="stylesheet" href="/assets/styles/styles.css"/>
   <title>Punias Marketing and Consulting LLP</title>
   <script src="/assets/js/vender.js"></script>
-  <script src="assets/js/vue.min.js"></script>
-  <script src="assets/js/zenscroll-min.js"></script>
+  <script src="/assets/js/vue.min.js"></script>
+  <script src="/assets/js/zenscroll-min.js"></script>
 </head>
-<body class="preventScroll">
-  <div id="loadingWrapper">
-    <intro id="loading" class="loading">
-      <span id="loadingLogo" class="loading__logo sprite-icon sprite-icon--logo_black"></span>
-    </intro>
-  </div>
-  <div id="preload" class="preload">
+
+<body>
+  <div>
     <header class="header">
       <div class="wrapper header__wrapper">
-        <a onclick="zen(preload)" class="header__logo header__logo-dark sprite-icon sprite-icon--logo_black"></a>
+        <a onclick="zen(body)" class="header__logo header__logo-dark sprite-icon sprite-icon--logo_white"></a>
         <nav class="header__navigation define-text--no-select text-hover">
           <ul class="Rob">
-            <li><a onclick="zen(services)" class="define-text__subheading--small define-text--no-select--pointer">Services</a></li>
-            <li><a onclick="zen(team)" class="define-text__subheading--small define-text--no-select--pointer">Team</a></li>
-            <li><a onclick="zen(footer)" class="define-text__subheading--small define-text--no-select--pointer">Contact</a></li>
+            <li><a onclick="zen(services)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Services</a></li>
+            <li><a onclick="zen(moreServices)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Solutions</a></li>
+            <li><a onclick="zen(team)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Team</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div id="hero" @mousemove="parallax($event)" class="hero">
       <picture>
-        <source media="(min-width: 800px)" class="hero__image" srcset="assets/img/hero/hero_web/hero-2k.jpg 2500w, assets/img/hero/hero_web/hero-1k.jpg 1920w, assets/img/hero/hero_web/hero.jpg 1600w" alt="White Building Interior." />
-        <img media="(min-width: 800px)" id="heroImg" class="hero__image" srcset="assets/img/hero/hero_mob/hero-2k.jpg 1200w, assets/img/hero/hero_mob/hero-1k.jpg 950w, assets/img/hero/hero_mob/hero.jpg 750w" alt="White Building Interior." />
+        <source media="(min-width: 800px)" class="hero__image lazyload" data-srcset="assets/img/hero/hero_web/hero-2k.jpg 2500w, assets/img/hero/hero_web/hero-1k.jpg 1920w, assets/img/hero/hero_web/hero.jpg 1600w" alt="White Building Interior."/>
+        <img id="heroImg" class="hero__image lazyload" data-srcset="assets/img/hero/hero_mob/hero-2k.jpg 1200w, assets/img/hero/hero_mob/hero-1k.jpg 950w, assets/img/hero/hero_mob/hero.jpg 750w" alt="White Building Interior." />
       </picture>
       <div class="wrapper">
         <div id="heroText" class="hero__text">
-          <h1 class="define-text__small-heading define-text--regular define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
+          <h1 class="define-text__small-heading define-text--regular define-text--white define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
           <button class="button--medium button__color--red button--medium--l-margin-correction"><a id="getInTouch" href="mailto:support@punias.com">Get in Touch</a></button>
           <h2 onclick="zen(erpImage)" class="hero__text__services define-text-subheading define-text--bold define-text--spacing-large">Explore<br/><span class="hero__text__services__scroll-indicator"><span class="hero__text__services__scroll-indicator-ball"></span></span></h2>
         </div>
@@ -63,16 +59,15 @@
         <div id="erp__rows" class="lazy--rows row">
           <div class="row__column-4">
             <div class="lazy--rows-image-text erp__image-text define-text--shadow-soft">
-              <h4 class="define-text__subheading--tiny define-text--light define-text--white">A SMARTER CHOICE
-                                <hr />
-                            </h4>
+              <h4 class="define-text__subheading--tiny define-text--light define-text--white">A SMARTER CHOICE<hr /></h4>
               <h1 class="define-text__heading--medium define-text--bold define-text--white">BECOME A CENTRALIZED ENTERPRISE.</h1>
             </div>
             <picture>
-              <img class="lazyload erp__image" sizes="33.33vw" data-srcset="assets/img/erp/erp_web/erp-2k.jpg 1200w, assets/img/erp/erp_web/erp-1k.jpg 950w, assets/img/erp/erp_web/erp.jpg 750w" alt="White Business Building Exterior." align="right">
+              <source media="(min-width: 800px)" class="lazyload erp__image" sizes="33.33vw" data-srcset="assets/img/erp/erp_web/erp-2k.jpg 1200w, assets/img/erp/erp_web/erp-1k.jpg 950w, assets/img/erp/erp_web/erp.jpg 750w" alt="White Business Building Exterior."/>
+              <img class="lazyload erp__image" sizes="33.33vw" data-srcset="assets/img/erp/erp_mob/erp-2k.jpg 1200w, assets/img/erp/erp_mob/erp-1k.jpg 950w, assets/img/erp/erp_mob/erp.jpg 750w" alt="White Business Building Exterior." align="left">
             </picture>
           </div>
-          <div class="row__column-8 row--content-center row--oversize row--oversize-right section--mid-tone define-text--light">
+          <div class="row__column-8 row--oversize row--oversize-right section--mid-tone define-text--light">
             <div class="wrapper--tb-extra-padding">
               <div class="lazy--rows-right-text erp__text">
                 <span class="erp__text__icon sprite-icon sprite-icon--line-chart"></span>
@@ -82,25 +77,23 @@
                 <ul class="erp__text__services-list define-text--t-margin-large">
                   <li>
                     <span class="erp__text__services-list__icon sprite-icon sprite-icon--network"></span>
-                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">
-                                            Effective Data Communication
-                                        </h4>
+                    <h4 class="define-text--t-margin-small define-text__subheading">Effective Data Communication</h4>
                     <p class="define-text__para--small define-text--t-margin-tiny">Prevents confusion between multiple departments.</p>
                   </li>
                   <li>
                     <span class="erp__text__services-list__icon sprite-icon sprite-icon--clock"></span>
-                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Timely Information</h4>
+                    <h4 class="define-text--t-margin-small define-text__subheading">Timely Information</h4>
                     <p class="define-text__para--small define-text--t-margin-tiny">Improve pre-planning and never loose a customer again</p>
                   </li>
                   <li>
                     <span class="erp__text__services-list__icon sprite-icon sprite-icon--duplicate"></span>
-                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Duplication Prevention
+                    <h4 class="define-text--t-margin-small define-text__subheading">Duplication Prevention
                                         </h4>
                     <p class="define-text__para--small define-text--t-margin-tiny">Eliminates data duplication and inconsistencies</p>
                   </li>
                   <li>
                     <span class="erp__text__services-list__icon sprite-icon sprite-icon--coin"></span>
-                    <h4 class="define-text--t-margin-small define-text__subheading define-text--bold">Lower Resource Costs
+                    <h4 class="define-text--t-margin-small define-text__subheading">Lower Resource Costs
                                         </h4>
                     <p class="define-text__para--small define-text--t-margin-tiny">For inventory, materials &amp; human resources</p>
                   </li>
@@ -151,7 +144,7 @@
       </div>
       <div id="moreServices" class="lazy--more-services more-services section">
         <div class="row">
-          <div class="row__column-4 row--right">
+          <div class="row__column-4">
             <div class="lazy--services-image-text more-services__image-text">
               <h4 class="define-text__subheading--tiny define-text--light define-text--white define-text--shadow-soft">GET MORE FORM US
                                 <hr />
@@ -206,17 +199,56 @@
         </div>
       </div>
     </main>
-    <footer id="footer" class="footer section section--black">
+    <footer id="footer" class="footer section section--mid-tone">
       <div class="footer__wrapper wrapper wrapper--tb-padding">
         <div class="footer__logo">
-          <span class="sprite-icon sprite-icon--logo_white"></span>
+          <span class="sprite-icon sprite-icon--logo_black"></span>
         </div>
-        <div class="footer__contact">
-          <h2 class="define-text__heading">Hello</h2>
-          <h2 class="define-text__heading">Darkness</h2>
-          <h2 class="define-text__heading">My Old Friend</h2>
+        <div class="footer__topics-and-content-wrapper">
+          <div class="footer__topics">
+            <h2 @click="showContent($event)" id="locations" class="define-text__heading">Locations</h2>
+            <h2 @click="showContent($event)" id="clients" class="define-text__heading footerActive">Clients</h2>
+            <h2 @click="showContent($event)" id="subscribe" class="define-text__heading">Subscribe</h2>
+          </div>
+          <div class="footer__content">
+            <div v-if="activeTopic == 'locations'" class="footer__content--locations">
+              <iframe class="footer__content--locations-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.5858254318923!2d77.07822141511772!3d28.49201728247352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d190cef0afbc7%3A0xae5cf35407c0c316!2sPUNIAS+Consulting!5e0!3m2!1sen!2sca!4v1530917711783"
+                allowfullscreen></iframe>
+            </div>
+            <div v-if="activeTopic == 'clients'" class="footer__content--clients">
+              <ul class="footer__content--clients-list define-text__subheading">
+                <li>Hindustan Times</li>
+                <li>Exicom</li>
+                <li>KOHLER</li>
+                <li>Car Dekho</li>
+              </ul>
+            </div>
+            <div v-if="activeTopic == 'subscribe'" class="footer__content--subscribe">
+              <form onclick="preventDafault()" autocomplete="on">
+                <input class="input--medium" type="email" placeholder="Email" />
+                <input type="submit" class="form__button button--medium button__color--gradient" />
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="footer__social"></div>
+        <ul class="footer__social">
+          <li class="footer__social__icon-wrapper">
+            <a href="https://www.facebook.com/puniasconsulting/" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--facebook"></span></a>
+          </li>
+          <li class="footer__social__icon-wrapper">
+            <a href="https://twitter.com/puniaconsulting?lang=en" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--twitter"></span></a>
+          </li>
+          <li class="footer__social__icon-wrapper">
+            <a href="https://www.linkedin.com/company/punias-consulting" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--linked-in"></span></a>
+          </li>
+          <li class="footer__social__icon-wrapper">
+            <a href="https://plus.google.com" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--google-plus"></span></a>
+          </li>
+        </ul>
+        <div class="footer__copyright">
+          <hr>
+          <p class="define-text__para define-text--light">Copright © 2018 Punias Marketing Consulting LLP, All rights reserved.</p>
+        </div>
       </div>
     </footer>
   </div>
@@ -225,33 +257,6 @@
     function zen(id) {
       zenscroll.to(id);
     }
-  </script>
-  <script>
-    var loading = document.getElementById('loading'),
-      preload = document.getElementById('preload'),
-      loadingLogo = document.getElementById('loadingLogo'),
-      loadingWrapper = document.getElementById('loadingWrapper');
-
-    function softLoading() {
-      loading.style.animation = 'loading-out 1s cubic-bezier(.42, 0, .88, .41)';
-      loading.style.animationDelay = '1s';
-      loading.style.animationFillMode = 'forwards';
-      loadingLogo.style.animation = 'logo-in 2s ease-in-out';
-      loadingLogo.style.animationFillMode = 'forwards';
-    }
-
-    function finishLoading() {
-      document.body.classList.remove('preventScroll');
-      loading.innerHTML = '';
-      preload.classList.remove('preload');
-      loadingWrapper.innerHTML = '';
-    }
-    window.addEventListener("load", function() {
-      softLoading();
-      loading.addEventListener("animationstart", function() {
-        loading.addEventListener("animationend", finishLoading, false);
-      })
-    });
   </script>
 </body>
 

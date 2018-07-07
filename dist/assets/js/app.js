@@ -132,10 +132,10 @@ var header = new Vue({
       this.mouseX = event.clientX / window.innerWidth - 0.5;
       this.mouseY = event.clientY / window.innerHeight - 0.5;
       this.image = document.getElementById('heroImg');
-      this.text = document.getElementById('heroText');
+      // this.text = document.getElementById('heroText')
 
       this.image.style.transform = 'translate(' + this.mouseX + '%, ' + this.mouseY + '%)';
-      this.text.style.transform = 'translate(' + this.mouseX * 4 + 'vw, ' + this.mouseY * 4 + 'vh)';
+      // this.text.style.transform = 'translate(' + this.mouseX * 4 + 'vw, ' + this.mouseY * 4 + 'vh)';
     }
   }
 });
@@ -252,6 +252,19 @@ var team = new Vue({
     },
     closeLearnMore: function closeLearnMore() {
       this.learnMoreStatus = false;
+    }
+  }
+});
+var footer = new Vue({
+  el: '#footer',
+  data: {
+    activeTopic: 'clients'
+  },
+  methods: {
+    showContent: function showContent(e) {
+      document.getElementById(this.activeTopic).classList.remove('footerActive');
+      this.activeTopic = e.currentTarget.id;
+      document.getElementById(e.currentTarget.id).classList.add('footerActive');
     }
   }
 });
