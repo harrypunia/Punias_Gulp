@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="">
-
 <head>
   <meta charset="utf-8">
+  <meta name="theme-color" content="#f44669">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/styles/styles.css"/>
+  <link rel="stylesheet" href="/assets/styles/styles-3c8ce6859e.css"/>
   <title>Punias Marketing and Consulting LLP</title>
-  <script src="/assets/js/vender.js"></script>
-  <script src="/assets/js/vue.min.js"></script>
-  <script src="/assets/js/zenscroll-min.js"></script>
 </head>
-
 <body>
   <div>
-    <header class="header">
+    <header id="header" class="header">
       <div class="wrapper header__wrapper">
         <a onclick="zen(body)" class="header__logo header__logo-dark sprite-icon sprite-icon--logo_white"></a>
         <nav class="header__navigation define-text--no-select text-hover">
           <ul class="Rob">
-            <li><a onclick="zen(services)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Services</a></li>
-            <li><a onclick="zen(moreServices)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Solutions</a></li>
-            <li><a onclick="zen(team)" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Team</a></li>
+            <li><a @click="zenScrollTo('services')" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Services</a></li>
+            <li><a @click="zenScrollTo('moreServices')" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Solutions</a></li>
+            <li><a @click="zenScrollTo('team')" class="define-text--white define-text__subheading--small define-text--no-select--pointer">Team</a></li>
           </ul>
         </nav>
       </div>
@@ -33,7 +29,7 @@
       <div class="wrapper">
         <div id="heroText" class="hero__text">
           <h1 class="define-text__small-heading define-text--regular define-text--white define-text--no-select">Experts at KILLING<br /><strong>DATA</strong> clutters from your<br /><strong class="define-text--invert define-text__heading--large">BUSINESS</strong></h1>
-          <button class="button--medium button__color--red button--medium--l-margin-correction"><a id="getInTouch" href="mailto:support@punias.com">Get in Touch</a></button>
+          <button class="button--medium button__color--red button--medium--l-margin-correction"><a aria-label="Mail or Call Punias Support" id="getInTouch" href="mailto:support@punias.com">Get in Touch</a></button>
           <h2 onclick="zen(erpImage)" class="hero__text__services define-text-subheading define-text--bold define-text--spacing-large">Explore<br/><span class="hero__text__services__scroll-indicator"><span class="hero__text__services__scroll-indicator-ball"></span></span></h2>
         </div>
       </div>
@@ -98,7 +94,7 @@
                     <p class="define-text__para--small define-text--t-margin-tiny">For inventory, materials &amp; human resources</p>
                   </li>
                 </ul>
-                <button class="button--medium button__color--gradient define-text--t-margin-large"><a target="_blank" rel="noreferrer noopener" href="https://www.sap.com/products/s4hana-erp-cloud.html">Learn about SAP</a></button>
+                <button class="button--medium button__color--gradient define-text--t-margin-large"><a aria-label="Redirect to SAP Official Website" target="_blank" rel="noreferrer noopener" href="https://www.sap.com/products/s4hana-erp-cloud.html">Learn about SAP</a></button>
                 <p class="define-text__para--tiny define-text--dim define-text--t-margin-tiny">Redirects to SAP official website</p>
               </div>
             </div>
@@ -179,7 +175,7 @@
           </div>
         </div>
       </div>
-      <div id="team" class="team section section--dark">
+      <div id="team" class="team section section--dark lazyload">
         <div class="wrapper wrapper--tb-extra-padding">
           <div class="team__headings define-text--no-select">
             <h1 class="define-text__heading define-text--light">Your <span class="define-text--bold define-text--highlight">TEAM</span></h1>
@@ -187,12 +183,12 @@
           </div>
           <div class="personna-wrapper">
             <div @mouseover="showName(em.name)" :class="{ noHover : learnMoreStatus }" @click="openLearnMore(em, index)" class="personna" v-for="(em, index) in employees">
-              <img @click="switchEmployee($event, index)" class="lazyload personna__image" :data-src="em.smallImage">
+              <img @click="switchEmployee($event, index)" class="lazyload personna__image" :data-src="em.smallImage" alt="Employees' mini image">
             </div>
             <div class="team__learn-more" :class="{ activeLearnMore : learnMoreStatus }">
               <div class="team__learn-more__name">{{ mouseOverEmployee }}</div>
               <span @click="closeLearnMore" class="team__learn-more__close sprite-icon sprite-icon--close"></span>
-              <img :class="{ imageIn : learnMoreStatus }" class="lazyload team__learn-more__image" :src="employees[selectedEmployee].bigImage" alt="">
+              <img :class="{ imageIn : learnMoreStatus }" class="lazyload team__learn-more__image" :src="employees[selectedEmployee].bigImage" alt="Team Persnal Images">
               <h4></h4>
             </div>
           </div>
@@ -233,16 +229,16 @@
         </div>
         <ul class="footer__social">
           <li class="footer__social__icon-wrapper">
-            <a href="https://www.facebook.com/puniasconsulting/" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--facebook"></span></a>
+            <a aria-label="Facebook Social Media" href="https://www.facebook.com/puniasconsulting/" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--facebook"></span></a>
           </li>
           <li class="footer__social__icon-wrapper">
-            <a href="https://twitter.com/puniaconsulting?lang=en" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--twitter"></span></a>
+            <a aria-label="Twitter Social Media" href="https://twitter.com/puniaconsulting?lang=en" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--twitter"></span></a>
           </li>
           <li class="footer__social__icon-wrapper">
-            <a href="https://www.linkedin.com/company/punias-consulting" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--linked-in"></span></a>
+            <a aria-label="Linked In Social Media" href="https://www.linkedin.com/company/punias-consulting" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--linked-in"></span></a>
           </li>
           <li class="footer__social__icon-wrapper">
-            <a href="https://plus.google.com" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--google-plus"></span></a>
+            <a aria-label="Google Plus Social Media" href="https://plus.google.com" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--google-plus"></span></a>
           </li>
         </ul>
         <div class="footer__copyright">
@@ -252,12 +248,7 @@
       </div>
     </footer>
   </div>
-  <script src="/assets/js/app.js"></script>
-  <script>
-    function zen(id) {
-      zenscroll.to(id);
-    }
-  </script>
+  <script src="/assets/js/app-d195e598c6.js"></script>
 </body>
 
 </html>

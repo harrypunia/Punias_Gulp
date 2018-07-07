@@ -1,3 +1,8 @@
+import 'lazysizes';
+var zenscroll = require('zenscroll/zenscroll-min.js');
+var Vue = require('vue/dist/vue.min.js');
+// Included all libraries above this.
+
 var lazyLoad = new Vue({
   data: {
     mobile: false,
@@ -48,6 +53,15 @@ var lazyLoad = new Vue({
   }
 });
 var header = new Vue({
+  el: '#header',
+  methods: {
+    zenScrollTo(e) {
+      var id = document.getElementById(e);
+      zenscroll.to(id);
+    }
+  }
+});
+var hero = new Vue({
   el: '#hero',
   data: {
     image: '',
