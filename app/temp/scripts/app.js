@@ -290,13 +290,13 @@ var team = new Vue({
       name: 'Naresh',
       designation: 'Head Technology',
       smallImage: 'assets/img/employee4.jpg',
-      bigImage: 'assets/img/employee2-large.jpg',
+      bigImage: 'assets/img/employee4-large.png',
       quote: 'I was born in delhi and literally became a friend of this dude over the internet. Guess 21st century is kicking it hard on us.'
     }, {
       name: 'Zohaib',
       designation: 'Head HR & Admin',
       smallImage: 'assets/img/employee5.jpg',
-      bigImage: 'assets/img/employee2-large.jpg',
+      bigImage: 'assets/img/employee5-large.png',
       quote: 'I was born in delhi and literally became a friend of this dude over the internet. Guess 21st century is kicking it hard on us.'
     }]
   },
