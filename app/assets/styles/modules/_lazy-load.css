@@ -1,4 +1,11 @@
 .lazy {
+  &--header-white {
+    background: white !important;
+
+    a {
+      color: #333 !important;
+    }
+  }
   &--opacity {
     opacity: 1;
     transition: opacity .4s ease-out;

@@ -135,6 +135,25 @@ var lazyLoad = new Vue({
         if (objectPos < offset) {
           object.classList.remove(className);
         }
+      } else {
+        var target = document.getElementById(addRemove),
+            targetPos = target.getBoundingClientRect().bottom;
+
+        if (objectPos - targetPos < offset) {
+          target.classList.add(className);
+          if (addRemove == 'header') {
+            var targetLogo = target.getElementsByTagName("A")[0];
+            targetLogo.classList.remove('sprite-icon--logo_white');
+            targetLogo.classList.add('sprite-icon--logo_black');
+          }
+        } else {
+          target.classList.remove(className);
+          if (addRemove == 'header') {
+            var targetLogo = target.getElementsByTagName("A")[0];
+            targetLogo.classList.add('sprite-icon--logo_white');
+            targetLogo.classList.remove('sprite-icon--logo_black');
+          }
+        }
       }
     },
     scrollToViewFunctions: function scrollToViewFunctions() {
@@ -143,6 +162,7 @@ var lazyLoad = new Vue({
       this.scrollToView('erp__rows', 400, 'remove', 'lazy--rows');
       this.scrollToView('services', 550, 'remove', 'lazy--services');
       this.scrollToView('moreServices', 400, 'remove', 'lazy--more-services');
+      this.scrollToView('intro', 0, 'header', 'lazy--header-white');
     }
   },
   created: function created() {
