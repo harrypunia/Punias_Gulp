@@ -49,6 +49,9 @@
       transition: transform .5s ease-out;
     }
   }
+  .noHover {
+    transform: translateY(50vh);
+  }
   .noHover:hover~.team__learn-more {
     transform: inherit !important;
   }
