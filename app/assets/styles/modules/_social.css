@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   &__icon-wrapper {
     float: left;
     width: 60px;
@@ -31,7 +30,14 @@
       &:hover>span {
         transform: rotate(-45deg);
         transition: transform .2s ease-out;
+        @mixin tab {
+          transform: none;
+        }
       }
     }
+  }
+  @mixin tab {
+    height: 100px;
+    width: 100vw;
   }
 }

@@ -1,55 +1,49 @@
 .button {
-    /*Sizes & Features*/
-    &--medium {
-        position: relative;
-        cursor: pointer;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-        font-size: 1.5rem;
-        padding: .5em 1em;
-        border-radius: 5em;
-        transition: transform .2s ease-in, box-shadow .2s ease-in;
-        background-color: transparent;
-
-        &:hover {
-            @mixin phone {
-                transform: scale(1);
-                box-shadow: 0 0 10px rgba(0,0,0, 0.2);
-            }
-            transform: scale(.98);
-            box-shadow: none;
-            transition: transform .2s ease-out, box-shadow .2s ease-out;
-        }
-
-        &:active {
-            transform: scale(.925);
-        }
-
-        &--l-margin-correction {
-            margin-left: -5px;
-        }
-
-        &--unique {
-            border-radius: 0px;
-        }
+  /*Sizes & Features*/
+  &--medium {
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    font-size: 1.5rem;
+    padding: .5em 1em;
+    border-radius: 5em;
+    transition: transform .2s ease-in, box-shadow .2s ease-in;
+    background-color: transparent;
+    &:hover {
+      @mixin phone {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      transform: scale(.98);
+      box-shadow: none;
+      transition: transform .2s ease-out, box-shadow .2s ease-out;
     }
-
-    /*Colors*/
-    &__color {
-        &--red {
-            background-color: $mainRed;
-            color: white;
-        }
-
-        &--orange {
-            background-color: $mainOrange;
-            color: white;
-        }
-
-        &--gradient {
-            background-image: linear-gradient(to right, $mainRed, $mainOrange);
-            background-size: 200% 100%;
-            animation: buttonSpan 5s ease-in-out infinite;
-            color: white;
-        }
+    &:active {
+      transform: scale(.925);
     }
+    &--l-margin-correction {
+      margin-left: -5px;
+    }
+    &--banner {
+      border-radius: 0px;
+      pointer-events: none;
+    }
+  }
+  /*Colors*/
+  &__color {
+    &--red {
+      background-color: $mainRed;
+      color: white;
+    }
+    &--orange {
+      background-color: $mainOrange;
+      color: white;
+    }
+    &--gradient {
+      background-image: linear-gradient(to right, $mainRed, $mainOrange);
+      background-size: 200% 100%;
+      animation: buttonSpan 5s ease-in-out infinite;
+      color: white;
+    }
+  }
 }

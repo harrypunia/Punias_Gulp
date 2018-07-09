@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div>
+  <div id="page">
     <header id="header" class="header">
       <div class="wrapper header__wrapper">
         <a onclick="zen(body)" class="header__logo header__logo-dark sprite-icon sprite-icon--logo_white"></a>
@@ -110,34 +110,34 @@
           <div class="row__column-4 services__row">
             <div class="services__text">
               <span class="services__text__icon sprite-icon sprite-icon--services_implement-icon"></span>
-              <button id="implement" @click='showText($event)' class="active define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">IMPLEMENT</button>
+              <button class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--banner button__color--orange">IMPLEMENT</button>
               <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
             </div>
             <picture>
-              <source media="(min-width: 1200px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/implement-1k.jpg 600w, assets/img/services/services_web/implement.jpg 500w" alt="Sand Castles." />
-              <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/implement-1k.jpg 1000w, assets/img/services/services_mob/implement.jpg 750w" alt="Sand Castles." />
+              <source media="(min-width: 1050px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/implement-1k.jpg 600w, assets/img/services/services_web/implement.jpg 500w" alt="Sand Castles." />
+              <img sizes="100vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/implement-1k.jpg 1000w, assets/img/services/services_mob/implement.jpg 750w" alt="Sand Castles." />
             </picture>
           </div>
           <div class="row__column-4 services__row">
             <div class="services__text">
               <span class="services__text__icon sprite-icon sprite-icon--services_maintain-icon"></span>
-              <button id="maintain" @click='showText($event)' class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">MAINTAIN</button>
+              <button class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--banner button__color--orange">MAINTAIN</button>
               <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
             </div>
             <picture>
-              <source media="(min-width: 1200px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/maintain-1k.jpg 600w, assets/img/services/services_web/maintain.jpg 500w" alt="Stones balancing" />
-              <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/maintain-1k.jpg 1000w, assets/img/services/services_mob/maintain.jpg 750w" alt="Stones balancing" />
+              <source media="(min-width: 1050px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/maintain-1k.jpg 600w, assets/img/services/services_web/maintain.jpg 500w" alt="Stones balancing" />
+              <img sizes="100vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/maintain-1k.jpg 1000w, assets/img/services/services_mob/maintain.jpg 750w" alt="Stones balancing" />
             </picture>
           </div>
           <div class="row__column-4 services__row">
             <div class="services__text">
               <span class="services__text__icon sprite-icon sprite-icon--services_upgrade-icon"></span>
-              <button id="upgrade" @click='showText($event)' class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--unique button__color--gradient">UPGRADE</button>
+              <button class="define-text--light define-text--spacing-medium define-text--t-margin-small button--medium button--medium--banner button__color--orange">UPGRADE</button>
               <p class="define-text--t-margin-small services__text__para define-text--light define-text__para">Get the most out of your business by centeralizing it with SAP. The cloud services provide easier access to information in real-time. You also get a simplified version of your entire data with graphically pleasing information.</p>
             </div>
             <picture>
-              <source media="(min-width: 1200px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/upgrade-1k.jpg 600w, assets/img/services/services_web/upgrade.jpg 500w" alt="Building tools" />
-              <img sizes="90vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/upgrade-1k.jpg 1000w, assets/img/services/services_mob/upgrade.jpg 750w" alt="Building tools" />
+              <source media="(min-width: 1050px)" sizes="30vw" class="lazyload services__image" data-srcset="assets/img/services/services_web/upgrade-1k.jpg 600w, assets/img/services/services_web/upgrade.jpg 500w" alt="Building tools" />
+              <img sizes="100vw" class="lazyload services__image" data-srcset="assets/img/services/services_mob/upgrade-1k.jpg 1000w, assets/img/services/services_mob/upgrade.jpg 750w" alt="Building tools" />
             </picture>
           </div>
         </div>
@@ -178,20 +178,20 @@
         </div>
       </div>
       <div id="team" class="team section section--dark">
-        <<div id="lazyload">
+        <div id="lazyload">
           <div class="wrapper wrapper--tb-extra-padding">
             <div class="team__headings define-text--no-select">
               <h1 class="define-text__heading define-text--light">Your <span class="define-text--bold define-text--highlight">TEAM</span></h1>
               <h4 class="define-text__subheading define-text--t-margin-small define-text--light define-text--spacing-large">We're always here to help you take your business to another level.</h4>
             </div>
             <div class="personna-wrapper">
-              <div @mouseover="showName(em.name)" :class="{ noHover : learnMoreStatus }" @click="openLearnMore(em, index)" class="personna" v-for="(em, index) in employees">
+              <div @mouseover="showName(em.name)" :class="{noHover:learnMoreStatus}" @click="openLearnMore(em, index), zenScrollToTeam()" class="personna" v-for="(em, index) in employees">
                 <img @click="switchEmployee($event, index)" class="lazyload personna__image" :data-src="em.smallImage" alt="Employees' mini image">
               </div>
-              <div class="team__learn-more" :class="{ activeLearnMore : learnMoreStatus }">
+              <div class="team__learn-more" :class="{activeLearnMore:learnMoreStatus}">
                 <div class="team__learn-more__name">{{ mouseOverEmployee }}</div>
                 <span @click="closeLearnMore" class="team__learn-more__close sprite-icon sprite-icon--close"></span>
-                <img :class="{ imageIn : learnMoreStatus }" class="lazyload team__learn-more__image" :src="employees[selectedEmployee].bigImage" alt="Team Persnal Images">
+                <img :class="{imageIn:learnMoreStatus}" class="lazyload team__learn-more__image" :src="employees[selectedEmployee].bigImage" alt="Team Persnal Images">
                 <h4></h4>
               </div>
             </div>

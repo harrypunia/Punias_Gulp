@@ -3,53 +3,12 @@
   transition: opacity .5s ease-out;
   .row {
     height: 110vh;
-    @mixin tab {
+    @mixin tabPlus {
       height: 100vh;
     }
   }
-  &__text {
-    position: relative;
-    width: 80%;
-    height: 40%;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: auto auto;
-    z-index: 1;
-    @mixin tab {
-      top: 35%;
-    }
-    &__icon {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    button {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    &__para {
-      float: left;
-      text-align: left;
-      opacity: 0;
-      height: 0px;
-      padding: 0px;
-      overflow: hidden;
-      @mixin tab {
-        width: 100%;
-        float: none;
-        margin-left: auto;
-        margin-right: auto;
-        opacity: 1;
-        height: auto;
-        padding: 20px 10px;
-        background: rgba($mainDark, 0.8);
-      }
-      @mixin phone {}
-    }
-  }
   &__row {
-    @mixin desktop {
+    @mixin tabPlus {
       width: 100vw !important;
       height: 500px;
       & .services__image {
@@ -60,11 +19,40 @@
   }
   &__row:hover &__image {
     filter: brightness(100%);
-    transform: scale3d(1.05, 1.05, 1) translate(-50%, -50%);
+    transform: scale3d(1.02, 1.02, 1) translate(-50%, -50%);
     transition: transform .2s ease-out, filter .2s ease-in;
-    @mixin tab {
-      filter: brightness(80%);
+    @mixin tabPlus {
+      filter: brightness(70%);
       transform: scale3d(1, 1, 1) translate(-50%, -50%);
+    }
+  }
+  &__text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    margin: auto;
+    z-index: 1;
+    @mixin tabPlus {
+      top: 40%;
+      height: 40%;
+    }
+    &__icon, button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__para {
+      padding: 20px 10px;
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba($mainDark, 0.8);
+      @mixin tabPlus {
+        width: 100%;
+        max-width: 700px;
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
   &__image {
@@ -76,32 +64,9 @@
     transform: scale3d(1, 1, 1) translate(-50%, -50%);
     transform-origin: top left;
     transition: transform .2s ease-out, filter .2s ease-in, opacity .4s ease-out;
-    @mixin tab {
-      filter: brightness(80%);
+    @mixin tabPlus {
+      width: 100vw;
+      filter: brightness(70%);
     }
-  }
-}
-
-.active {
-  &+.services__text__para {
-    position: relative;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 1;
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba($mainDark, 0.8);
-    height: auto;
-    padding: 20px 10px;
-    transition: opacity .2s ease-out, height .2s ease-out;
-    @mixin desktop {
-      width: 80%;
-    }
-    @mixin tab {
-      width: 100%;
-    }
-  }
-  &+.services__image {
-    display: none !important;
   }
 }

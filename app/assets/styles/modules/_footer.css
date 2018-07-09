@@ -1,4 +1,12 @@
 .footer {
+  .wrapper {
+    @mixin tab {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-bottom: 10px;
+      padding-top: 30px;
+    }
+  }
   &__wrapper {
     float: left;
     overflow: hidden;
@@ -26,6 +34,17 @@
     width: 60vw;
     height: 280px;
     box-shadow: 0 0 20px #efefef;
+    @mixin tab {
+      position: relative;
+      width: 100vw;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @mixin phone {
+      flex-direction: column;
+    }
   }
   &__topics {
     float: left;
@@ -44,13 +63,46 @@
         color: #333;
         cursor: pointer;
         transform: scale(1.1) translate(5%, 0);
+        @mixin phone {
+          transform: scale(1);
+          color: #999;
+        }
       }
+      @mixin desktop {
+        font-size: 2rem;
+      }
+      @mixin tabPlus {
+        font-size: 1.8rem;
+      }
+      @mixin phone {
+        font-size: 1.5rem;
+      }
+    }
+    @mixin tab {
+      margin-right: 20%;
+    }
+    @mixin phone {
+      margin: 0;
+      width: 100vw;
+      flex-direction: row;
+      height: auto;
     }
   }
   &__content {
     float: right;
     height: 200px;
     width: 60%;
+    @mixin tabPlus {
+      width: 50%;
+    }
+    @mixin tab {
+      width: 100%;
+      float: left;
+    }
+    @mixin phone {
+      width: 90vw;
+      margin-top: 20px;
+    }
     &--locations-maps {
       width: 100%;
       height: 200px;
@@ -70,7 +122,16 @@
         &:hover {
           transform: scale(1.1);
           transition: transform .2s ease-out;
+          @mixin tab {
+            transform: none;
+          }
         }
+        @mixin phone {
+          font-size: 1.2rem;
+        }
+      }
+      @mixin phone {
+        flex-wrap: wrap;
       }
     }
     &--subscribe {
@@ -104,14 +165,25 @@
     hr {
       background: #ccc !important;
       width: 90%;
+      @mixin tab {
+        width: 100vw;
+      }
     }
     p {
       font-size: .7rem;
       color: #ccc;
     }
+    @mixin tab {
+      position: relative;
+      width: 100vw;
+    }
   }
 }
+
 .footerActive {
   color: $mainRed !important;
   transform: scale(1.1) translate(5%, 0) !important;
+  @mixin phone {
+    transform: scale(1.1) !important;
+  }
 }

@@ -101,8 +101,6 @@ __webpack_require__(2);
 
 var zenscroll = __webpack_require__(3);
 var Vue = __webpack_require__(4);
-// Included all libraries above this.
-
 var lazyLoad = new Vue({
   data: {
     mobile: false
@@ -177,7 +175,7 @@ var header = new Vue({
   methods: {
     zenScrollTo: function zenScrollTo(e) {
       var id = document.getElementById(e);
-      zenscroll.to(id);
+      zenscroll.center(id);
     }
   }
 });
@@ -205,23 +203,8 @@ var hero = new Vue({
 });
 var services = new Vue({
   el: '#services',
-  data: {
-    learn: false,
-    currElement: 'implement'
-  },
-  methods: {
-    resetActive: function resetActive() {
-      document.getElementById(this.currElement).classList.remove("active");
-    },
-    showText: function showText(e) {
-      var id = e.currentTarget.id,
-          object = document.getElementById(id);
-
-      this.resetActive();
-      this.currElement = id;
-      object.classList.add("active");
-    }
-  }
+  data: {},
+  methods: {}
 });
 var moreServices = new Vue({
   el: '#moreServices',
@@ -310,12 +293,15 @@ var team = new Vue({
       this.mouseOverEmployee = name;
     },
     openLearnMore: function openLearnMore(object, i) {
-      this.learnMoreStatus = true;
-      this.employees.push();
       this.selectedEmployee = i;
+      this.employees.push();
+      this.learnMoreStatus = true;
     },
     closeLearnMore: function closeLearnMore() {
       this.learnMoreStatus = false;
+    },
+    zenScrollToTeam: function zenScrollToTeam() {
+      zenscroll.center(document.getElementById('team'));
     }
   }
 });

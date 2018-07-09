@@ -4,6 +4,12 @@
   height: auto;
   width: 100vw;
   overflow: hidden;
+  .wrapper {
+    @mixin tab {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+  }
   #lazyload {
     background-image: url('../../assets/img/texture.svg');
     background-repeat: repeat;
@@ -36,17 +42,33 @@
       transform: translate(-50%, -50%) rotate(0deg);
       transition: transform .2s;
       cursor: pointer;
+      z-index: 10;
       &:hover {
         transform: translate(-50%, -50%) rotate(-90deg);
         transition: transform .2s;
+        @mixin tab {
+          transform: translate(-50%, -50%);
+        }
+      }
+      @mixin tab {
       }
     }
     &__image {
       position: absolute;
-      right: 0%;
-      top: 50%;
-      transform: translate(100%, -50%);
+      right: 0px;
+      top: 100%;
+      width: 400px;
+      transform: translate(100%, -100%);
       transition: transform .5s ease-out;
+      @mixin tabPlus {
+        width: 350px;
+      }
+      @mixin tab {
+        width: 300px;
+      }
+      @mixin phone {
+        width: 250px;
+      }
     }
   }
   .noHover {
@@ -64,7 +86,7 @@
     transition: transform .4s ease-out;
   }
   .imageIn {
-    transform: translate(0%, -50%);
+    transform: translate(0%, -100%);
     transition: transform .5s ease-out;
     transition-delay: .2s;
   }

@@ -1,8 +1,6 @@
 import 'lazysizes';
 var zenscroll = require('zenscroll/zenscroll-min.js');
 var Vue = require('vue/dist/vue.min.js');
-// Included all libraries above this.
-
 var lazyLoad = new Vue({
   data: {
     mobile: false,
@@ -77,7 +75,7 @@ var header = new Vue({
   methods: {
     zenScrollTo(e) {
       var id = document.getElementById(e);
-      zenscroll.to(id);
+      zenscroll.center(id);
     }
   }
 });
@@ -105,23 +103,8 @@ var hero = new Vue({
 });
 var services = new Vue({
   el: '#services',
-  data: {
-    learn: false,
-    currElement: 'implement'
-  },
-  methods: {
-    resetActive: function() {
-      document.getElementById(this.currElement).classList.remove("active");
-    },
-    showText: function(e) {
-      var id = e.currentTarget.id,
-        object = document.getElementById(id);
-
-      this.resetActive();
-      this.currElement = id;
-      object.classList.add("active");
-    }
-  }
+  data: {},
+  methods: {}
 });
 var moreServices = new Vue({
   el: '#moreServices',
@@ -210,12 +193,15 @@ var team = new Vue({
       this.mouseOverEmployee = name;
     },
     openLearnMore(object, i) {
-      this.learnMoreStatus = true;
-      this.employees.push();
       this.selectedEmployee = i;
+      this.employees.push();
+      this.learnMoreStatus = true;
     },
     closeLearnMore() {
       this.learnMoreStatus = false;
+    },
+    zenScrollToTeam() {
+      zenscroll.center(document.getElementById('team'));
     }
   }
 });
