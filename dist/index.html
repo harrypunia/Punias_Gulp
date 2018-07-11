@@ -5,10 +5,9 @@
   <meta charset="utf-8">
   <meta name="theme-color" content="#f44669">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/styles/styles-0c28af2691.css"/>
+  <link rel="stylesheet" href="/assets/styles/styles-59e3ccdfde.css"/>
   <title>Punias Marketing and Consulting LLP</title>
 </head>
-
 <body>
   <div>
     <header id="header" class="header">
@@ -187,11 +186,17 @@
                 <img class="lazyload personna__image" :data-src="em.smallImage" alt="Employees' mini image">
               </div>
               <div class="team__learn-more" :class="{activeLearnMore:learnMoreStatus}">
-                <div class="team__learn-more__name">{{ mouseOverEmployee }}</div>
+                <div v-if="learnMoreStatus == false" class="team__learn-more__name">{{ mouseOverEmployee }}</div>
                 <span @click="closeLearnMore" class="team__learn-more__close sprite-icon sprite-icon--close"></span>
                 <div class="team__learn-more__image" v-for="employee in employees">
-                  <transition name="fade">
-                    <img v-if="employee.active == true" :src="employee.bigImage" alt="Team Personal Images" :key="employee.bigImage">
+                  <transition name="vSpanLeft">
+                    <img v-if="employee.active" :src="employee.bigImage" alt="Team Personal Images" :key="employee.bigImage">
+                  </transition>
+                  <transition name="vSpanRight">
+                    <div v-if="employee.active" class="team__learn-more__image-text">
+                      <h2 class="team__learn-more__image-text__heading define-text__heading define-text--no-select" :key="employee.name">{{employee.name}}&shy; <span class="define-text--light team__learn-more__image-text__heading-light">{{employee.designation}}</span></h2>
+                      <h4 class="team__learn-more__image-text__para define-text__para define-text--light  define-text--t-margin-tiny" :key="employee.quote">&ldquo;{{employee.quote}}&rdquo;</h4>
+                    </div>
                   </transition>
                 </div>
               </div>
@@ -253,7 +258,7 @@
       </div>
     </footer>
   </div>
-  <script src="/assets/js/app-ee1b7b90b6.js"></script>
+  <script src="/assets/js/app-11738e3e0a.js"></script>
 </body>
 
 </html>
