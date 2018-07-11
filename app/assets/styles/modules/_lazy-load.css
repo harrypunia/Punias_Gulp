@@ -11,36 +11,41 @@
   }
   &--rows {
     .lazy--rows-right-text {
-      transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-5%, 0, 0);
       opacity: 0;
     }
     .lazy--rows-image-text {
-      transform: translate3d(100%, -50%, 0);
+      transform: translate3d(-40%, -50%, 0);
       opacity: 0;
+      @mixin tab {
+        transform: translate3d(-45%, -50%, 0);
+      }
     }
   }
   &--services {
     .services__image {
-      transform: scale3d(0.9, 0.9, 1) translate(-50%, -50%);
+      opacity: 0;
+      transform: scale3d(0.95, 0.95, 1) translate(-50%, -50%);
     }
   }
   &--more-services {
     .lazy--services-list {
       opacity: 0;
-      transform: translate3d(-50%, -50%, 0);
+      transform: translate3d(-5%, -50%, 0);
       @mixin tab {
-        transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -10%, 0);
       }
     }
     .lazy--services-text {
       opacity: 0;
-      transform: translate3d(100%, -50%, 0);
+      transform: translate3d(5%, -50%, 0);
       @mixin tab {
-        transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -10%, 0);
       }
     }
     .lazy--services-image-text {
-      transform: translate3d(-200%, -50%, 0);
+      opacity: 0;
+      transform: translate3d(-60%, -50%, 0);
     }
   }
 }

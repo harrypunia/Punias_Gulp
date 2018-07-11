@@ -1,6 +1,7 @@
 .hero {
   position: fixed;
   width: 100vw;
+  min-width: 350px;
   height: 100vh;
   overflow: hidden;
   z-index: 0;
@@ -15,15 +16,18 @@
     animation-delay: .6s;
     animation-fill-mode: forwards;
     @mixin phone {
-      position: absolute;
-      width: 100%;
-      top: 30vh;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      width: 100vw;
+      height: 100vh;
+      @mixin absCenter;
     }
     @mixin phone {
       button {
-        margin-top: 20vh;
+        margin-top: 50px;
       }
     }
     &__services {

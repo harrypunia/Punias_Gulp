@@ -2,6 +2,7 @@
     float: left;
     position: relative;
     width: 100vw;
+    min-width: 350px;
     font-family: 'Roboto', sans-serif;
 
     &--clear-top {

@@ -8,6 +8,7 @@
     @mixin tab {
       padding-top: 20px;
       padding-bottom: 40px;
+      height: 550px;
     }
   }
   #lazyload {
@@ -21,22 +22,27 @@
   }
   &__learn-more {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     bottom: 0px;
     transform: translate3d(0, 100%, 0);
     background-color: $mainOrange;
     transition: transform .2s ease-in;
-    transition-delay: .2s;
+    transition-delay: .4s;
     overflow: hidden;
     &__name {
+      position: absolute;
+      left: 50%;
+      top: 20px;
       text-align: center;
-      margin-top: 1%;
       color: white;
+      @mixin tab {
+        top: 15px;
+      }
     }
     &__close {
       position: absolute;
-      left: 50%;
+      left: 60%;
       top: 50%;
       border-radius: 50%;
       transform: translate(-50%, -50%) rotate(0deg);
@@ -46,28 +52,98 @@
       &:hover {
         transform: translate(-50%, -50%) rotate(-90deg);
         transition: transform .2s;
-        @mixin tab {
-          transform: translate(-50%, -50%);
-        }
       }
       @mixin tab {
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
     &__image {
-      position: absolute;
-      right: 0px;
-      top: 100%;
-      width: 400px;
-      transform: translate(100%, -100%);
-      transition: transform .5s ease-out;
-      @mixin tabPlus {
-        width: 350px;
+      img {
+        position: absolute;
+        right: 0px;
+        top: 100%;
+        width: 400px;
+        transform: translateY(-100%);
+        @mixin tabPlus {
+          width: 350px;
+        }
+        @mixin tab {
+          width: 300px;
+        }
+        @mixin phone {
+          width: 250px;
+        }
       }
-      @mixin tab {
-        width: 300px;
-      }
-      @mixin phone {
-        width: 250px;
+      &-text {
+        position: relative;
+        width: 40%;
+        min-width: 350px;
+        height: 400px;
+        margin: 90px 0;
+        opacity: 1;
+        padding: 50px 25px;
+        background: white;
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 0 20px -10px black;
+        &__heading {
+          color: #333;
+          @mixin tab {
+            text-align: left;
+            color: white;
+          }
+          &-light {
+            display: inline-block;
+            background: #151515;
+            padding: 0 10px;
+            hyphens: none;
+            white-space: nowrap;
+            font-size: 2.2rem;
+            color: white;
+            @mixin tab {
+              color: $mainOrange;
+            }
+            @mixin phone {
+              font-size: 1.5rem;
+            }
+          }
+          @mixin tab {
+            position: absolute;
+            bottom: 50px;
+          }
+        }
+        &__para {
+          width: auto;
+          margin-top: 50px;
+          color: #333;
+          @mixin tab {
+            color: white;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          @mixin phone {
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+          }
+        }
+        @mixin tabPlus {
+          width: 50vw;
+        }
+        @mixin tab {
+          position: absolute;
+          background: none;
+          box-shadow: none;
+          margin: 0;
+          padding: 0 25px;
+          height: 550px;
+          display: block;
+        }
+        @mixin phone {
+          padding: 0 10px;
+        }
       }
     }
   }
@@ -84,10 +160,5 @@
   .activeLearnMore {
     transform: translateY(0);
     transition: transform .4s ease-out;
-  }
-  .imageIn {
-    transform: translate(0%, -100%);
-    transition: transform .5s ease-out;
-    transition-delay: .2s;
   }
 }

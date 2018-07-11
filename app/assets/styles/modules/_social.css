@@ -35,9 +35,17 @@
         }
       }
     }
+    @mixin phone {
+      transform: scale(0.8);
+      margin: 0 10px;
+    }
   }
   @mixin tab {
     height: 100px;
-    width: 100vw;
+    width: 100%;
+    margin-top: 10px;
+  }
+  @mixin phone {
+    height: 70px;
   }
 }

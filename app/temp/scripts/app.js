@@ -247,57 +247,57 @@ var moreServices = new Vue({
 var team = new Vue({
   el: '#team',
   data: {
-    currEmployee: 0,
+    currEmployee: '',
     mouseOverEmployee: '',
     learnMoreStatus: false,
-    selectedEmployee: 0,
     employees: [{
       name: 'Baljit',
       designation: 'CEO',
       smallImage: 'assets/img/employee1.jpg',
       bigImage: 'assets/img/employee1-large.png',
-      quote: 'Being the owner of the organization, I make sure that you as a consumer get, hands down, the best services in the market.'
+      quote: 'Being the owner of the organization, I make sure that you as a consumer get, hands down, the best services in the market.',
+      active: false
     }, {
       name: 'Vijay',
       designation: 'COO',
       smallImage: 'assets/img/employee2.jpg',
       bigImage: 'assets/img/employee2-large.png',
-      quote: "Techinally i own the company but my father is running it. God damnit!"
+      quote: "As the COO, I handle the projects and manage your organization like it was mine.",
+      active: false
     }, {
       name: 'Vipin',
-      designation: 'Head Sales and Marketing',
+      designation: 'Head Sales/Marketing',
       smallImage: 'assets/img/employee3.jpg',
       bigImage: 'assets/img/employee3-large.png',
-      quote: "I'm just a firend of harry wandering in this website trying to figure my way otta here."
+      quote: "Many businesses are struggling as a startup or have plateaued, hence I strive to reach them so that they can benefit from us.",
+      active: false
     }, {
       name: 'Naresh',
       designation: 'Head Technology',
       smallImage: 'assets/img/employee4.jpg',
       bigImage: 'assets/img/employee4-large.png',
-      quote: 'I was born in delhi and literally became a friend of this dude over the internet. Guess 21st century is kicking it hard on us.'
+      quote: 'I comprehend that your business requires complex data management services and relative technology for that, and for so, I assure to keep it all in check.',
+      active: false
     }, {
       name: 'Zohaib',
       designation: 'Head HR & Admin',
       smallImage: 'assets/img/employee5.jpg',
       bigImage: 'assets/img/employee5-large.png',
-      quote: 'I was born in delhi and literally became a friend of this dude over the internet. Guess 21st century is kicking it hard on us.'
+      quote: "I make sure our employees are well employed and carry a positive motive towards their field and our clients",
+      active: false
     }]
   },
   methods: {
-    switchEmployee: function switchEmployee(el, i) {
-      el.currentTarget.classList.add('active');
-      this.currEmployee = i;
-      this.employees.push();
-    },
     showName: function showName(name) {
       this.mouseOverEmployee = name;
     },
     openLearnMore: function openLearnMore(object, i) {
-      this.selectedEmployee = i;
-      this.employees.push();
+      object.active = true;
+      this.currEmployee = i;
       this.learnMoreStatus = true;
     },
     closeLearnMore: function closeLearnMore() {
+      this.employees[this.currEmployee].active = false;
       this.learnMoreStatus = false;
     },
     zenScrollToTeam: function zenScrollToTeam() {

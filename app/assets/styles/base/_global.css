@@ -1,31 +1,40 @@
 html, body {
   width: 100vw;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   background: #fff;
   scroll-behavior: smooth;
+  height: auto;
+  min-width: 350px;
 }
+
 main {
   position: relative;
   z-index: 2;
   width: 100vw;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 * {
   box-sizing: border-box;
 }
+
 button {
   border: none;
 }
+
 button:focus {
   outline: none;
 }
+
 h1, h2, h3, h4, p {
   color: #333;
   font-family: 'Roboto', sans-serif;
 }
+
 hr {
   border: none;
   height: 1px;

@@ -13,7 +13,6 @@
   }
   &__logo {
     width: 50%;
-    min-width: 500px;
     clear: both;
     margin: 0 auto 50px auto;
     height: 50px;
@@ -36,7 +35,7 @@
     box-shadow: 0 0 20px #efefef;
     @mixin tab {
       position: relative;
-      width: 100vw;
+      width: 100%;
       height: auto;
       display: flex;
       justify-content: center;
@@ -75,7 +74,9 @@
         font-size: 1.8rem;
       }
       @mixin phone {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        margin-left: 10px;
+        margin-right: 10px;
       }
     }
     @mixin tab {
@@ -100,7 +101,7 @@
       float: left;
     }
     @mixin phone {
-      width: 90vw;
+      width: 90%;
       margin-top: 20px;
     }
     &--locations-maps {
@@ -156,26 +157,30 @@
     bottom: 0px;
     right: 0px;
     width: 40vw;
-    height: 50px;
+    height: auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     hr {
-      background: #ccc !important;
+      background: #eee !important;
       width: 90%;
       @mixin tab {
-        width: 100vw;
+        width: 100%;
       }
     }
     p {
       font-size: .7rem;
-      color: #ccc;
+      color: #bbb;
+      @mixin phone {
+        font-size: 0.6rem;
+      }
     }
     @mixin tab {
       position: relative;
-      width: 100vw;
+      width: 100%;
+      text-align: center;
     }
   }
 }

@@ -1,35 +1,31 @@
 .intro {
-    box-shadow: 0 -10px 40px -30px black;
-    overflow: hidden;
-
-    &__text {
-        margin: 0 auto;
-        text-align: center;
-
-        @mixin phone {
-            text-align: left;
-        }
-
-        &__subheading {
-            @mixin tab {
-                display: none;
-            }
-        }
-
-        &--small-width {
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0;
-        }
-
-        &--medium-width {
-            max-width: 1200px;
-            margin: 0 auto;
-            opacity: 0;
-        }
-
-        &__para {
-            text-align: left;
-        }
+  box-shadow: 0 -10px 40px -30px black;
+  overflow: hidden;
+  &__text {
+    margin: 0 auto;
+    text-align: center;
+    @mixin phone {
+      text-align: left;
     }
+    &__subheading {
+      display: flex;
+      justify-content: center;
+      @mixin tab {
+        display: none;
+      }
+    }
+    &--small-width {
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0;
+    }
+    &--medium-width {
+      max-width: 1200px;
+      margin: 0 auto;
+      opacity: 0;
+    }
+    &__para {
+      text-align: left;
+    }
+  }
 }

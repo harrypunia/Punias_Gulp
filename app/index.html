@@ -10,9 +10,8 @@
   <!--endbuild-->
   <title>Punias Marketing and Consulting LLP</title>
 </head>
-
 <body>
-  <div id="page">
+  <div>
     <header id="header" class="header">
       <div class="wrapper header__wrapper">
         <a onclick="zen(body)" class="header__logo header__logo-dark sprite-icon sprite-icon--logo_white"></a>
@@ -43,7 +42,7 @@
         <div class="wrapper wrapper--tb-extra-padding">
           <div class="intro__text define-text--light">
             <div id="intro--heading" class="intro__text--small-width define-text__heading">
-              <h1 class="define-text__heading">Everyone knows, poor <span class="define-text--highlight define-text--bold">DATA MANAGEMENT</span> can destroy any <span class="define-text--highlight define-text--bold">BUSINESS</span></h1>
+              <h1 class="intro__text__heading define-text__heading">Everyone knows, poor <span class="define-text--highlight define-text--bold">DATA MANAGEMENT</span> can destroy any <span class="define-text--highlight define-text--bold">BUSINESS</span></h1>
               <h4 class="intro__text__subheading define-text--t-margin-small define-text__subheading define-text--light define-text--spacing-large">Your business needs you more than your data.</h4>
             </div>
             <div id="intro--para" class="intro__text--medium-width define-text__para">
@@ -186,71 +185,80 @@
             </div>
             <div class="personna-wrapper">
               <div @mouseover="showName(em.name)" :class="{noHover:learnMoreStatus}" @click="openLearnMore(em, index), zenScrollToTeam()" class="personna" v-for="(em, index) in employees">
-                <img @click="switchEmployee($event, index)" class="lazyload personna__image" :data-src="em.smallImage" alt="Employees' mini image">
+                <img class="lazyload personna__image" :data-src="em.smallImage" alt="Employees' mini image">
               </div>
               <div class="team__learn-more" :class="{activeLearnMore:learnMoreStatus}">
-                <div class="team__learn-more__name">{{ mouseOverEmployee }}</div>
+                <div v-if="learnMoreStatus == false" class="team__learn-more__name">{{ mouseOverEmployee }}</div>
                 <span @click="closeLearnMore" class="team__learn-more__close sprite-icon sprite-icon--close"></span>
-                <img :class="{imageIn:learnMoreStatus}" class="lazyload team__learn-more__image" :src="employees[selectedEmployee].bigImage" alt="Team Persnal Images">
-                <h4></h4>
+                <div class="team__learn-more__image" v-for="employee in employees">
+                  <transition name="vSpanLeft">
+                    <img v-if="employee.active" :src="employee.bigImage" alt="Team Personal Images" :key="employee.bigImage">
+                  </transition>
+                  <transition name="vSpanRight">
+                    <div v-if="employee.active" class="team__learn-more__image-text">
+                      <h2 class="team__learn-more__image-text__heading define-text__heading define-text--no-select" :key="employee.name">{{employee.name}}&shy; <span class="define-text--light team__learn-more__image-text__heading-light">{{employee.designation}}</span></h2>
+                      <h4 class="team__learn-more__image-text__para define-text__para define-text--light  define-text--t-margin-tiny" :key="employee.quote">&ldquo;{{employee.quote}}&rdquo;</h4>
+                    </div>
+                  </transition>
+                </div>
               </div>
             </div>
           </div>
-      </div>
-  </div>
-  </main>
-  <footer id="footer" class="footer section section--mid-tone">
-    <div class="footer__wrapper wrapper wrapper--tb-padding">
-      <div class="footer__logo">
-        <span class="sprite-icon sprite-icon--logo_black"></span>
-      </div>
-      <div class="footer__topics-and-content-wrapper">
-        <div class="footer__topics">
-          <h2 @click="showContent($event)" id="locations" class="define-text__heading">Locations</h2>
-          <h2 @click="showContent($event)" id="clients" class="define-text__heading footerActive">Clients</h2>
-          <h2 @click="showContent($event)" id="subscribe" class="define-text__heading">Subscribe</h2>
-        </div>
-        <div class="footer__content">
-          <div v-if="activeTopic == 'locations'" class="footer__content--locations">
-            <iframe class="footer__content--locations-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.5858254318923!2d77.07822141511772!3d28.49201728247352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d190cef0afbc7%3A0xae5cf35407c0c316!2sPUNIAS+Consulting!5e0!3m2!1sen!2sca!4v1530917711783"
-              allowfullscreen></iframe>
-          </div>
-          <div v-if="activeTopic == 'clients'" class="footer__content--clients">
-            <ul class="footer__content--clients-list define-text__subheading">
-              <li>Hindustan Times</li>
-              <li>Exicom</li>
-              <li>KOHLER</li>
-              <li>Car Dekho</li>
-            </ul>
-          </div>
-          <div v-if="activeTopic == 'subscribe'" class="footer__content--subscribe">
-            <form onclick="preventDafault()" autocomplete="on">
-              <input class="input--medium" type="email" placeholder="Email" />
-              <input type="submit" class="form__button button--medium button__color--gradient" />
-            </form>
-          </div>
         </div>
       </div>
-      <ul class="footer__social">
-        <li class="footer__social__icon-wrapper">
-          <a aria-label="Facebook Social Media" href="https://www.facebook.com/puniasconsulting/" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--facebook"></span></a>
-        </li>
-        <li class="footer__social__icon-wrapper">
-          <a aria-label="Twitter Social Media" href="https://twitter.com/puniaconsulting?lang=en" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--twitter"></span></a>
-        </li>
-        <li class="footer__social__icon-wrapper">
-          <a aria-label="Linked In Social Media" href="https://www.linkedin.com/company/punias-consulting" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--linked-in"></span></a>
-        </li>
-        <li class="footer__social__icon-wrapper">
-          <a aria-label="Google Plus Social Media" href="https://plus.google.com" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--google-plus"></span></a>
-        </li>
-      </ul>
-      <div class="footer__copyright">
-        <hr>
-        <p class="define-text__para define-text--light">Copright © 2018 Punias Marketing Consulting LLP, All rights reserved.</p>
+    </main>
+    <footer id="footer" class="footer section section--mid-tone">
+      <div class="footer__wrapper wrapper wrapper--tb-padding">
+        <div class="footer__logo">
+          <span class="sprite-icon sprite-icon--logo_black"></span>
+        </div>
+        <div class="footer__topics-and-content-wrapper">
+          <div class="footer__topics">
+            <h2 @click="showContent($event)" id="locations" class="define-text__heading">Locations</h2>
+            <h2 @click="showContent($event)" id="clients" class="define-text__heading footerActive">Clients</h2>
+            <h2 @click="showContent($event)" id="subscribe" class="define-text__heading">Subscribe</h2>
+          </div>
+          <div class="footer__content">
+            <div v-if="activeTopic == 'locations'" class="footer__content--locations">
+              <iframe class="footer__content--locations-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.5858254318923!2d77.07822141511772!3d28.49201728247352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d190cef0afbc7%3A0xae5cf35407c0c316!2sPUNIAS+Consulting!5e0!3m2!1sen!2sca!4v1530917711783"
+                allowfullscreen></iframe>
+            </div>
+            <div v-if="activeTopic == 'clients'" class="footer__content--clients">
+              <ul class="footer__content--clients-list define-text__subheading">
+                <li>Hindustan Times</li>
+                <li>Exicom</li>
+                <li>KOHLER</li>
+                <li>Car Dekho</li>
+              </ul>
+            </div>
+            <div v-if="activeTopic == 'subscribe'" class="footer__content--subscribe">
+              <form onclick="preventDafault()" autocomplete="on">
+                <input class="input--medium" type="email" placeholder="Email" />
+                <input type="submit" class="form__button button--medium button__color--gradient" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <ul class="footer__social">
+          <li class="footer__social__icon-wrapper">
+            <a aria-label="Facebook Social Media" href="https://www.facebook.com/puniasconsulting/" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--facebook"></span></a>
+          </li>
+          <li class="footer__social__icon-wrapper">
+            <a aria-label="Twitter Social Media" href="https://twitter.com/puniaconsulting?lang=en" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--twitter"></span></a>
+          </li>
+          <li class="footer__social__icon-wrapper">
+            <a aria-label="Linked In Social Media" href="https://www.linkedin.com/company/punias-consulting" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--linked-in"></span></a>
+          </li>
+          <li class="footer__social__icon-wrapper">
+            <a aria-label="Google Plus Social Media" href="https://plus.google.com" target="_blank" rel="noreferrer noopener"><span class="sprite-icon sprite-icon--social--google-plus"></span></a>
+          </li>
+        </ul>
+        <div class="footer__copyright">
+          <hr>
+          <p class="define-text__para define-text--light">Copright © 2018 Punias Marketing Consulting LLP, All rights reserved.</p>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   </div>
   <!--build:js /assets/js/app.js-->
   <script src="temp/scripts/app.js"></script>

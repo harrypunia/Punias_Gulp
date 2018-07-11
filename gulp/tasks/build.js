@@ -15,7 +15,6 @@ gulp.task('previewDist',['build'], function() {
     }
   });
 });
-
 gulp.task('deleteDist', function() {
   return del('./dist');
 });
@@ -31,7 +30,6 @@ gulp.task('optImages', ['deleteDist'], function() {
     }))
     .pipe(gulp.dest("./dist/assets/img"));
 });
-
 gulp.task('usemin', ['deleteDist'], function() {
   return gulp.src('./app/index.html')
     .pipe(usemin({

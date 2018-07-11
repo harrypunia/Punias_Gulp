@@ -11,6 +11,7 @@
       position: relative;
       float: left;
       width: 33.33%;
+      min-width: 350px;
       height: inherit;
       overflow: hidden;
       @mixin tab {
@@ -22,6 +23,7 @@
       position: relative;
       float: left;
       width: 66.66%;
+      min-width: 350px;
       height: 100%;
       overflow: hidden;
       @mixin tab {
